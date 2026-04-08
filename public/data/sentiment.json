@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-04-08T00:00:00Z",
+  "model": "gemini-1.5-pro",
+  "source": "seed-data",
+  "overall_sentiment": "cautiously_optimistic",
+  "overall_score": 62,
+  "summary": "Malaysia's WFH fuel-crisis policy is showing early positive signals in mobility reduction, but long-term effectiveness depends on private sector participation and structural PT investment. The MF-Index at 58 reflects a meaningful departure from pre-crisis normal without reaching lockdown-level suppression.",
+  "signals": [
+    {
+      "dimension": "Fuel savings impact",
+      "score": 71,
+      "dir": "positive",
+      "detail": "Public sector WFH delivering ~29M litres/week \u2014 40% of MCO peak savings at a fraction of the economic cost. Extending to private professional sector could double this figure within 30 days."
+    },
+    {
+      "dimension": "PT ridership pressure",
+      "score": 55,
+      "dir": "neutral",
+      "detail": "Ridership projected to fall 8\u201312% as commuter trips decline. This eases Prasarana overcrowding during peak hours but creates revenue pressure that may slow PT investment."
+    },
+    {
+      "dimension": "Economic risk",
+      "score": 68,
+      "dir": "positive",
+      "detail": "Unlike MCO, retail, logistics, and manufacturing continue at near-full mobility. 2020\u20132022 precedent shows minimal GDP impact from 40% WFH in the services sector."
+    },
+    {
+      "dimension": "Policy equity",
+      "score": 41,
+      "dir": "negative",
+      "detail": "WFH mandate exclusively benefits urban office workers. Logistics drivers, factory workers, and field staff \u2014 who travel furthest and spend proportionally more on fuel \u2014 receive no relief."
+    },
+    {
+      "dimension": "Long-term modal shift",
+      "score": 58,
+      "dir": "neutral",
+      "detail": "Extended WFH risks eroding PT ridership habits. Workers breaking their daily commute rhythm may default to private car travel when the mandate ends, reversing hard-won modal shift gains."
+    }
+  ],
+  "recommendation": "Extend WFH to private professional sector via corporate tax incentive (50% deduction on remote-work infrastructure) to double fuel savings to ~58M L/week. Simultaneously accelerate MRT3 Circle Line to lock in PT habits before WFH ends. Target MF-Index below 50 within 60 days.",
+  "data_date": "2026-04-08",
+  "alert": null
+}

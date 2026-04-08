@@ -1,0 +1,62 @@
+name: Daily ETL + Gemini Sentiment
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 06:00 AM MYT (UTC+8 = UTC-8h → 22:00 UTC prev day)
+  workflow_dispatch:         # manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write            # allow git push back to repo
+
+jobs:
+  etl:
+    name: Fetch APIs → Compute Index → Gemini Sentiment → Commit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'etl/requirements.txt'
+
+      - name: Install Python dependencies
+        run: pip install -r etl/requirements.txt
+
+      - name: Step 1 — Fetch APIs & compute MF-Index
+        run: python etl/fetch_apis.py
+
+      - name: Step 2 — Gemini sentiment analysis
+        run: python etl/sentiment_gemini.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Step 3 — Country comparison data
+        run: python etl/country_compare.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git diff --staged --quiet \
+            || git commit -m "data: daily update $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## ETL Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- Date: $(date -u +'%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          if [ -f public/data/last_updated.json ]; then
+            MF=$(python3 -c "import json; d=json.load(open('public/data/last_updated.json')); print(d.get('mf_index','?'))")
+            echo "- MF-Index: $MF" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "- Outputs: public/data/mf_index_daily.json, sentiment.json, country_compare.json" >> $GITHUB_STEP_SUMMARY
