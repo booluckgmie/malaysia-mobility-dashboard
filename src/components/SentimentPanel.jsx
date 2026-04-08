@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Brain, RefreshCw, TrendingUp, TrendingDown, Minus } from 'lucide-react'
+import { Brain, TrendingUp, TrendingDown, Minus } from 'lucide-react'
 
 // Fallback sentiment data when Gemini is not yet run
 const FALLBACK_SENTIMENT = {
@@ -20,10 +20,12 @@ const FALLBACK_SENTIMENT = {
   model: 'gemini-1.5-pro',
 }
 
+// FIX: Added 'unknown' fallback to prevent crash if data direction is missing or misspelled
 const DIRECTION_ICONS = {
   positive: { icon: TrendingUp,   color: '#3B6D11', bg: '#EAF3DE' },
   neutral:  { icon: Minus,        color: '#BA7517', bg: '#FAEEDA' },
   negative: { icon: TrendingDown, color: '#A32D2D', bg: '#FCEBEB' },
+  unknown:  { icon: Minus,        color: '#9CA3AF', bg: '#F3F4F6' } 
 }
 
 function ScoreBar({ score, color }) {
@@ -46,29 +48,35 @@ export default function SentimentPanel({ pipelineData }) {
   const [expanded, setExpanded] = useState(null)
 
   useEffect(() => {
-    // Try pipeline-generated sentiment first
     if (pipelineData) {
       setSentiment(pipelineData)
       setLoading(false)
       return
     }
-    // Try fetching from /data/sentiment.json
+
     fetch('/data/sentiment.json')
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(d => { setSentiment(d); setLoading(false) })
-      .catch(() => { setSentiment(FALLBACK_SENTIMENT); setLoading(false) })
+      .catch(() => { 
+        setSentiment(FALLBACK_SENTIMENT); 
+        setLoading(false);
+      })
   }, [pipelineData])
 
   if (loading) return (
-    <div className="glass rounded-3xl p-8 flex items-center justify-center h-48">
-      <div className="flex items-center gap-2 text-gray-400">
-        <div className="w-4 h-4 border-2 border-blue-200 border-t-blue-500 rounded-full animate-spin" />
-        Loading AI insights...
+    <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="glass rounded-3xl p-8 flex items-center justify-center h-48">
+        <div className="flex items-center gap-2 text-gray-400">
+          <div className="w-4 h-4 border-2 border-blue-200 border-t-blue-500 rounded-full animate-spin" />
+          Loading AI insights...
+        </div>
       </div>
     </div>
   )
-  
-if (!sentiment) return null; // Don't render anything until data is ready
+
+  // FIX: Final safety gate. If data is still missing, don't map it.
+  if (!sentiment || !sentiment.signals) return null;
+
   const d = sentiment
   const overallColor = d.overall_score >= 70 ? '#3B6D11' : d.overall_score >= 50 ? '#BA7517' : '#A32D2D'
 
@@ -82,7 +90,6 @@ if (!sentiment) return null; // Don't render anything until data is ready
         </p>
       </div>
 
-      {/* Overall sentiment card */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
         className="glass rounded-3xl p-8 mb-6">
         <div className="flex items-start justify-between flex-wrap gap-4">
@@ -93,7 +100,7 @@ if (!sentiment) return null; // Don't render anything until data is ready
             <div>
               <div className="text-xs text-gray-400 font-medium">Overall policy sentiment</div>
               <div className="text-sm font-semibold text-gray-700 capitalize mt-0.5">
-                {d.overall_sentiment.replace(/_/g, ' ')}
+                {d.overall_sentiment?.replace(/_/g, ' ') || 'Calculating...'}
               </div>
             </div>
           </div>
@@ -104,10 +111,8 @@ if (!sentiment) return null; // Don't render anything until data is ready
         </div>
 
         <ScoreBar score={d.overall_score} color={overallColor} />
-
         <p className="text-sm text-gray-600 leading-relaxed mt-5 mb-5 border-l-2 border-blue-200 pl-4">{d.summary}</p>
 
-        {/* Source badge */}
         <div className="flex items-center gap-2 text-xs text-gray-400">
           <span className="px-2 py-1 rounded-full bg-blue-50 text-blue-600 font-medium">{d.model}</span>
           {d.source === 'embedded-fallback'
@@ -117,11 +122,12 @@ if (!sentiment) return null; // Don't render anything until data is ready
         </div>
       </motion.div>
 
-      {/* Signal cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         {d.signals.map((s, i) => {
-          const dir = DIRECTION_ICONS[s.direction]
-          const Icon = dir.icon
+          // FIX: Added '|| DIRECTION_ICONS.unknown' to handle invalid directions in the JSON
+          const dir = DIRECTION_ICONS[s.direction?.toLowerCase()] || DIRECTION_ICONS.unknown;
+          const Icon = dir.icon;
+          
           return (
             <motion.div key={s.dimension}
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
@@ -146,14 +152,12 @@ if (!sentiment) return null; // Don't render anything until data is ready
                   </motion.p>
                 )}
               </AnimatePresence>
-
               <div className="text-xs text-gray-300 mt-2">{expanded === i ? '▲ collapse' : '▼ expand analysis'}</div>
             </motion.div>
           )
         })}
       </div>
 
-      {/* Recommendation */}
       <div className="glass rounded-3xl p-6 border border-blue-100">
         <div className="text-xs font-medium text-blue-600 uppercase tracking-widest mb-3">Gemini recommendation</div>
         <p className="text-sm text-gray-700 leading-relaxed">{d.recommendation}</p>
