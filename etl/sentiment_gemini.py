@@ -103,7 +103,7 @@ def run_sentiment():
     prompt = build_prompt(data)
 
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-pro",
+        model_name="models/gemini-1.5-pro",
         generation_config=genai.GenerationConfig(
             temperature=0.2,        # low temp = consistent, factual
             max_output_tokens=2048,
