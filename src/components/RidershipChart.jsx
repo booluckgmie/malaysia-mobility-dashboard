@@ -102,62 +102,6 @@ export default function RidershipChart() {
         </div>
         <div className="text-[10px] text-gray-400 mt-4 italic">Source: Prasarana/KTMB Reports · 2026 Projection</div>
       </div>
-
-    {/* Live 21-day chart - ONLY SHOW IF DATA EXISTS AND IS NOT ZERO */}
-      {!loading && !error && liveChartData.some(d => d.total > 0) ? (
-        <div className="glass rounded-3xl p-6 min-h-[300px]">
-          <div className="flex items-center justify-between mb-5">
-            <div>
-              <div className="text-xs font-medium text-gray-400 uppercase tracking-widest flex items-center gap-2">
-                Live Daily Ridership
-                <span className="flex items-center gap-1 text-green-600">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  live
-                </span>
-              </div>
-              <div className="text-sm text-gray-600 mt-0.5">Last 21 days · data.gov.my API</div>
-            </div>
-            {latestVal !== null && (
-              <div className="text-right">
-                <div className="text-xl font-semibold text-blue-600">{fmtM(latestVal)}</div>
-                <div className="text-xs">
-                  {delta !== null && (
-                    <span className={delta >= 0 ? 'text-green-600' : 'text-red-600'}>
-                      {delta >= 0 ? '+' : ''}{fmtM(delta)} vs yesterday
-                    </span>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-      
-          <div className="h-[200px] w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <ComposedChart data={liveChartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" vertical={false} />
-                <XAxis dataKey="name" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
-                <YAxis tick={{ fontSize: 10 }} tickFormatter={v => v + 'k'} axisLine={false} tickLine={false} />
-                <Tooltip 
-                  cursor={{ fill: '#f0f4f8' }}
-                  content={({ active, payload }) => {
-                    if (active && payload && payload.length) {
-                      return (
-                        <div className="glass p-2 text-xs shadow-md border border-white bg-white/90">
-                          <div className="font-bold text-gray-800">{payload[0].payload.date}</div>
-                          <div className="text-blue-600">{fmtNum(payload[0].value * 1000)} trips</div>
-                        </div>
-                      )
-                    }
-                    return null;
-                  }}
-                />
-                <Bar dataKey="total" fill="#378ADD" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
-                <Line dataKey="total" type="monotone" stroke="#185FA5" strokeWidth={1.5} dot={false} />
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-      ) : null}
                 <Bar dataKey="total" fill="#378ADD" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
                 <Line dataKey="total" type="monotone" stroke="#185FA5" strokeWidth={1.5} dot={false} />
               </ComposedChart>
