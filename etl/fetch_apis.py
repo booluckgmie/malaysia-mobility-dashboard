@@ -115,8 +115,8 @@ def main():
     employment_raw = fetch("employment_by_industry", limit=8)
 
     # 4. Vehicle registrations
-    print("  → vehicles_type")
-    vehicles_raw = fetch("vehicles_type", limit=18)
+    print("  → ridership_headline")
+    vehicles_raw = fetch("ridership_headline", limit=18)
     vehicles_raw.sort(key=lambda x: x.get("date", "") or x.get("month", ""))
 
     # 5. Compute MF-Index
@@ -180,7 +180,7 @@ def main():
             "ridership": "api.data.gov.my · ridership_headline · no auth",
             "fuel":      "api.data.gov.my · fuelprice · no auth",
             "employment":"api.data.gov.my · employment_by_industry · no auth",
-            "vehicles":  "api.data.gov.my · vehicles_type · no auth",
+            "vehicles":  "api.data.gov.my · ridership_headline · no auth",
         },
     }
 
