@@ -121,11 +121,17 @@ def run_sentiment():
 
     try:
         sentiment = json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        print(f"❌ JSON parse error: {e}")
-        print(f"Raw: {raw_text[:500]}")
-        sys.exit(1)
-
+        
+    except Exception as e:
+            print(f"❌ Gemini Error: {e}")
+            # If it's still a 404, let's try the flash model as a backup
+            print("🔄 Attempting backup with gemini-1.5-flash...")
+            model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+            response = model.generate_content(prompt)
+            # Note: Flash might return markdown, so we handle it:
+            text = response.text.replace('```json', '').replace('```', '').strip()
+            sentiment = json.loads(text)
+        
     # Inject guaranteed timestamp
     sentiment["generated_at"] = datetime.now(timezone.utc).isoformat()
 
