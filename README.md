@@ -82,7 +82,7 @@ Go to: **GitHub repo → Settings → Secrets and variables → Actions → New 
 | PT Ridership | `api.data.gov.my/data-catalogue?id=ridership_headline` | Daily |
 | Fuel Price | `api.data.gov.my/data-catalogue?id=fuelprice` | Weekly |
 | Employment | `api.data.gov.my/data-catalogue?id=employment_by_industry` | Quarterly |
-| Vehicles | `api.data.gov.my/data-catalogue?id=ridership_headline` | Monthly |
+| Vehicles | `api.data.gov.my/data-catalogue?id=vehicles_type` | Monthly |
 
 ### Historical (embedded, no API call needed)
 - Google Community Mobility Reports Malaysia 2020–Q1 2024
