@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Activity } from 'lucide-react'
 
-// UPDATE THIS
 export default function Nav({ activeSection, onNav, lastUpdated, apiSource, sections }) {
   const [scrolled, setScrolled] = useState(false)
 
@@ -33,7 +32,7 @@ export default function Nav({ activeSection, onNav, lastUpdated, apiSource, sect
 
         {/* Nav pills */}
         <div className="flex items-center gap-1 overflow-x-auto glass-sm rounded-full px-2 py-1.5 flex-1 max-w-2xl">
-          {sections.map((sec) => (
+          {sections && sections.map((sec) => (
             <button
               key={sec.id}
               onClick={() => onNav(sec.id)}
@@ -44,10 +43,6 @@ export default function Nav({ activeSection, onNav, lastUpdated, apiSource, sect
                 }`}
             >
               {sec.label}
-            </button>
-          ))}
-        </div>
-              {LABELS[i]}
             </button>
           ))}
         </div>
