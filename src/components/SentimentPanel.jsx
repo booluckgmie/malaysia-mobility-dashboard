@@ -67,7 +67,8 @@ export default function SentimentPanel({ pipelineData }) {
       </div>
     </div>
   )
-
+  
+if (!sentiment) return null; // Don't render anything until data is ready
   const d = sentiment
   const overallColor = d.overall_score >= 70 ? '#3B6D11' : d.overall_score >= 50 ? '#BA7517' : '#A32D2D'
 
