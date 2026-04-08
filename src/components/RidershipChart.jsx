@@ -103,7 +103,8 @@ export default function RidershipChart() {
         <div className="text-[10px] text-gray-400 mt-4 italic">Source: Prasarana/KTMB Reports · 2026 Projection</div>
       </div>
 
-      {/* Live 21-day chart */}
+    {/* Live 21-day chart - ONLY SHOW IF DATA EXISTS AND IS NOT ZERO */}
+    {!loading && !error && liveChartData.some(d => d.total > 0) ? (
       <div className="glass rounded-3xl p-6 min-h-[300px]">
         <div className="flex items-center justify-between mb-5">
           <div>
@@ -166,7 +167,7 @@ export default function RidershipChart() {
                     }
                     return null;
                   }}
-                />
+                /> */
                 <Bar dataKey="total" fill="#378ADD" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
                 <Line dataKey="total" type="monotone" stroke="#185FA5" strokeWidth={1.5} dot={false} />
               </ComposedChart>
