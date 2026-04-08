@@ -104,51 +104,34 @@ export default function RidershipChart() {
       </div>
 
     {/* Live 21-day chart - ONLY SHOW IF DATA EXISTS AND IS NOT ZERO */}
-    {!loading && !error && liveChartData.some(d => d.total > 0) ? (
-      <div className="glass rounded-3xl p-6 min-h-[300px]">
-        <div className="flex items-center justify-between mb-5">
-          <div>
-            <div className="text-xs font-medium text-gray-400 uppercase tracking-widest flex items-center gap-2">
-              Live Daily Ridership
-              {!loading && !error && (
+      {!loading && !error && liveChartData.some(d => d.total > 0) ? (
+        <div className="glass rounded-3xl p-6 min-h-[300px]">
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <div className="text-xs font-medium text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                Live Daily Ridership
                 <span className="flex items-center gap-1 text-green-600">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                   live
                 </span>
-              )}
+              </div>
+              <div className="text-sm text-gray-600 mt-0.5">Last 21 days · data.gov.my API</div>
             </div>
-            <div className="text-sm text-gray-600 mt-0.5">Last 21 days · data.gov.my API</div>
+            {latestVal !== null && (
+              <div className="text-right">
+                <div className="text-xl font-semibold text-blue-600">{fmtM(latestVal)}</div>
+                <div className="text-xs">
+                  {delta !== null && (
+                    <span className={delta >= 0 ? 'text-green-600' : 'text-red-600'}>
+                      {delta >= 0 ? '+' : ''}{fmtM(delta)} vs yesterday
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
-          {latestVal !== null && (
-            <div className="text-right">
-              <div className="text-xl font-semibold text-blue-600">{fmtM(latestVal)}</div>
-              <div className="text-xs">
-                {delta !== null && (
-                  <span className={delta >= 0 ? 'text-green-600' : 'text-red-600'}>
-                    {delta >= 0 ? '+' : ''}{fmtM(delta)} vs yesterday
-                  </span>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="h-[200px] w-full">
-          {loading ? (
-            <div className="h-full flex items-center justify-center">
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <div className="w-4 h-4 border-2 border-blue-200 border-t-blue-500 rounded-full animate-spin" />
-                Connecting to data.gov.my...
-              </div>
-            </div>
-          ) : error ? (
-            <div className="h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-sm text-amber-600 mb-1">⚠ Data unavailable</div>
-                <div className="text-[10px] text-gray-400 max-w-[200px]">{error}</div>
-              </div>
-            </div>
-          ) : liveChartData.length > 0 ? (
+      
+          <div className="h-[200px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <ComposedChart data={liveChartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f5f5f5" vertical={false} />
@@ -167,7 +150,14 @@ export default function RidershipChart() {
                     }
                     return null;
                   }}
-                /> */
+                />
+                <Bar dataKey="total" fill="#378ADD" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
+                <Line dataKey="total" type="monotone" stroke="#185FA5" strokeWidth={1.5} dot={false} />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      ) : null}
                 <Bar dataKey="total" fill="#378ADD" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
                 <Line dataKey="total" type="monotone" stroke="#185FA5" strokeWidth={1.5} dot={false} />
               </ComposedChart>
