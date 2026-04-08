@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Activity } from 'lucide-react'
 
-const SECTIONS = ['overview', 'story', 'live-data', 'sectors', 'countries', 'sentiment', 'pipeline']
-const LABELS   = ['Overview', 'Story', 'Live Data', 'Sectors', 'Countries', 'AI Insights', 'Pipeline']
-
-export default function Nav({ activeSection, onNav, lastUpdated, apiSource }) {
+// UPDATE THIS
+export default function Nav({ activeSection, onNav, lastUpdated, apiSource, sections }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -35,16 +33,20 @@ export default function Nav({ activeSection, onNav, lastUpdated, apiSource }) {
 
         {/* Nav pills */}
         <div className="flex items-center gap-1 overflow-x-auto glass-sm rounded-full px-2 py-1.5 flex-1 max-w-2xl">
-          {SECTIONS.map((sec, i) => (
+          {sections.map((sec) => (
             <button
-              key={sec}
-              onClick={() => onNav(sec)}
+              key={sec.id}
+              onClick={() => onNav(sec.id)}
               className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap
-                ${activeSection === sec
+                ${activeSection === sec.id
                   ? 'bg-white shadow-sm text-blue-700'
                   : 'text-gray-500 hover:text-gray-700 hover:bg-white/50'
                 }`}
             >
+              {sec.label}
+            </button>
+          ))}
+        </div>
               {LABELS[i]}
             </button>
           ))}
