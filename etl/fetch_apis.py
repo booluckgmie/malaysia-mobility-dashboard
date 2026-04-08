@@ -180,7 +180,7 @@ def main():
             "ridership": "api.data.gov.my · ridership_headline · no auth",
             "fuel":      "api.data.gov.my · fuelprice · no auth",
             "employment":"api.data.gov.my · employment_by_industry · no auth",
-            "vehicles":  "api.data.gov.my · ridership_headline · no auth",
+            "vehicles":  "api.data.gov.my · vehicles_type · no auth",
         },
     }
 
