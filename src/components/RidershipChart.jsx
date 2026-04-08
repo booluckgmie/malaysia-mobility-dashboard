@@ -40,14 +40,25 @@ export default function RidershipChart() {
     }))
   }, [])
 
-  // 2. Build live daily data with safety checks
+// 2. Build live daily data with enhanced field-name detection
   const liveChartData = React.useMemo(() => {
     if (!liveData || !Array.isArray(liveData)) return []
-    return liveData.slice(-21).map(d => ({
-      name: d.date ? d.date.slice(5) : 'N/A',
-      total: ((d.trips || d.ridership || d.total || 0) / 1000),
-      date: d.date,
-    }))
+    
+    return liveData.slice(-21).map(d => {
+      // data.gov.my often changes between 'trips', 'abs', 'ridership', or 'total'
+      // We also check if the value is already a small number or a large integer
+      const rawValue = d.trips ?? d.abs ?? d.ridership ?? d.total ?? d.value ?? 0;
+      
+      // If the API returns 500,000, we want 500k. 
+      // If the API already returns 500, we don't want to divide by 1000 (which results in 0.5)
+      const displayValue = rawValue > 10000 ? rawValue / 1000 : rawValue;
+
+      return {
+        name: d.date ? d.date.slice(5) : 'N/A',
+        total: displayValue,
+        date: d.date,
+      };
+    })
   }, [liveData])
 
   const latestVal = liveData && liveData.length > 0 ? (liveData[liveData.length - 1]?.trips || liveData[liveData.length - 1]?.total || 0) : null
