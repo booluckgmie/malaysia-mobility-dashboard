@@ -35,7 +35,9 @@ export default function App() {
   const pipeline = useDataPipeline()
 
   // Compute live MF-Index
-  const latestRidership = riderData ? (riderData[riderData.length - 1]?.trips || riderData[riderData.length - 1]?.total || 0) : 0
+  const latestRidership = riderData && riderData.length > 0 
+  ? (riderData[riderData.length - 1]?.trips || riderData[riderData.length - 1]?.total || 0) 
+  : 0
   const latestFuel      = fuelData  ? Number(fuelData[fuelData.length - 1]?.ron95 || 2.05) : 2.05
   const riderNorm       = latestRidership ? normaliseRidership(latestRidership) : 70
   const fuelNorm        = normaliseFuelPolicy(latestFuel)
