@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-08T00:00:00Z",
-  "model": "gemini-1.5-pro",
-  "source": "seed-data",
-  "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 62,
-  "summary": "Malaysia's WFH fuel-crisis policy is showing early positive signals in mobility reduction, but long-term effectiveness depends on private sector participation and structural PT investment. The MF-Index at 58 reflects a meaningful departure from pre-crisis normal without reaching lockdown-level suppression.",
+  "generated_at": "2026-04-09T03:06:40.538995+00:00",
+  "model": "llama-3.3-70b-versatile",
+  "source": "groq",
+  "overall_sentiment": "cautiously_negative",
+  "overall_score": 40,
+  "summary": "The current mobility data indicates a significant suppression of movement, with an MF-Index of 18, largely due to lockdown-level restrictions. The fuel savings are substantial, with 35.7M litres saved per week, but the lack of public transport ridership and low fuel prices may have unintended economic consequences. The sectoral breakdown reveals varying levels of risk, with the retail and services sector being particularly vulnerable.",
   "signals": [
     {
-      "dimension": "Fuel savings impact",
-      "score": 71,
+      "dimension": "Fuel Savings Impact",
+      "score": 80,
       "dir": "positive",
-      "detail": "Public sector WFH delivering ~29M litres/week \u2014 40% of MCO peak savings at a fraction of the economic cost. Extending to private professional sector could double this figure within 30 days."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the low fuel prices, with RON95 at RM 0.40 per litre, may not be sustainable in the long term and could lead to increased consumption once prices rise. The current fuel savings are a positive outcome, but their sustainability is uncertain."
     },
     {
-      "dimension": "PT ridership pressure",
-      "score": 55,
-      "dir": "neutral",
-      "detail": "Ridership projected to fall 8\u201312% as commuter trips decline. This eases Prasarana overcrowding during peak hours but creates revenue pressure that may slow PT investment."
-    },
-    {
-      "dimension": "Economic risk",
-      "score": 68,
-      "dir": "positive",
-      "detail": "Unlike MCO, retail, logistics, and manufacturing continue at near-full mobility. 2020\u20132022 precedent shows minimal GDP impact from 40% WFH in the services sector."
-    },
-    {
-      "dimension": "Policy equity",
-      "score": 41,
+      "dimension": "PT Ridership Effects",
+      "score": 0,
       "dir": "negative",
-      "detail": "WFH mandate exclusively benefits urban office workers. Logistics drivers, factory workers, and field staff \u2014 who travel furthest and spend proportionally more on fuel \u2014 receive no relief."
+      "detail": "The latest daily public transport ridership is 0 trips, indicating a complete halt in public transport usage. This is a significant concern, as it may lead to a permanent shift away from public transport and towards private vehicles, exacerbating traffic congestion and increasing emissions. The lack of ridership also affects the livelihoods of public transport workers and the overall economy."
     },
     {
-      "dimension": "Long-term modal shift",
-      "score": 58,
+      "dimension": "Economic Risk",
+      "score": 30,
+      "dir": "negative",
+      "detail": "The sectoral breakdown reveals that the retail and services sector is at high risk, with a mobility score of 85 and only 15% of employees working from home. This sector is particularly vulnerable to the lockdown-level restrictions, and the lack of economic activity may have long-term consequences for the sector's recovery. The construction sector is also at high risk, with a mobility score of 95 and only 5% of employees working from home."
+    },
+    {
+      "dimension": "Policy Equity",
+      "score": 50,
       "dir": "neutral",
-      "detail": "Extended WFH risks eroding PT ridership habits. Workers breaking their daily commute rhythm may default to private car travel when the mandate ends, reversing hard-won modal shift gains."
+      "detail": "The WFH adoption rates vary significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This disparity may lead to unequal distribution of benefits and burdens, with some sectors being more affected by the lockdown-level restrictions than others. The policy needs to be more equitable and consider the unique challenges faced by each sector."
+    },
+    {
+      "dimension": "Long-term Modal Shift",
+      "score": 20,
+      "dir": "negative",
+      "detail": "The current data suggests that the lockdown-level restrictions may lead to a permanent shift away from public transport and towards private vehicles. The lack of investment in public transport infrastructure and the low fuel prices may exacerbate this trend, making it challenging to achieve a long-term modal shift towards more sustainable modes of transport. The policy needs to prioritize investments in public transport and promote a shift towards more sustainable modes of transport."
     }
   ],
-  "recommendation": "Extend WFH to private professional sector via corporate tax incentive (50% deduction on remote-work infrastructure) to double fuel savings to ~58M L/week. Simultaneously accelerate MRT3 Circle Line to lock in PT habits before WFH ends. Target MF-Index below 50 within 60 days.",
-  "data_date": "2026-04-08",
+  "recommendation": "The government should consider implementing targeted policies to support the retail and services sector, such as providing financial assistance or relaxing restrictions on a case-by-case basis. Additionally, the government should invest in public transport infrastructure and promote a shift towards more sustainable modes of transport, with a target of increasing public transport ridership by 20% within the next 6 months. The government should also review the fuel pricing mechanism to ensure it is sustainable and aligned with the country's energy policy goals.",
+  "data_date": "2026-04-09",
   "alert": null
 }

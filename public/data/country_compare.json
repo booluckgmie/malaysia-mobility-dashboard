@@ -1,0 +1,156 @@
+{
+  "updated_at": "2026-04-09T03:06:40.809112+00:00",
+  "countries": [
+    {
+      "country": "Malaysia",
+      "code": "MY",
+      "flag": "🇲🇾",
+      "ptModalShare": 21,
+      "carModalShare": 79,
+      "ptTripsPerCapita": 14.8,
+      "wfhRate2026": 40,
+      "ridershipRecovery2025": 97,
+      "mfIndex": 58,
+      "fuelSubsidyGDP": 1.8,
+      "highlight": true,
+      "gdp_usd": 422227005428.688,
+      "gdp_usd_year": "2024",
+      "population": 35557673,
+      "population_year": "2024"
+    },
+    {
+      "country": "Singapore",
+      "code": "SG",
+      "flag": "🇸🇬",
+      "ptModalShare": 67,
+      "carModalShare": 33,
+      "ptTripsPerCapita": 165,
+      "wfhRate2026": 30,
+      "ridershipRecovery2025": 104,
+      "mfIndex": 80,
+      "fuelSubsidyGDP": 0.2,
+      "highlight": false,
+      "gdp_usd": 547386645891.847,
+      "gdp_usd_year": "2024",
+      "population": 6036860,
+      "population_year": "2024"
+    },
+    {
+      "country": "Thailand",
+      "code": "TH",
+      "flag": "🇹🇭",
+      "ptModalShare": 28,
+      "carModalShare": 72,
+      "ptTripsPerCapita": 22,
+      "wfhRate2026": 20,
+      "ridershipRecovery2025": 89,
+      "mfIndex": 65,
+      "fuelSubsidyGDP": 2.1,
+      "highlight": false,
+      "gdp_usd": 526517658841.684,
+      "gdp_usd_year": "2024",
+      "population": 71668011,
+      "population_year": "2024"
+    },
+    {
+      "country": "South Korea",
+      "code": "KR",
+      "flag": "🇰🇷",
+      "ptModalShare": 53,
+      "carModalShare": 47,
+      "ptTripsPerCapita": 98,
+      "wfhRate2026": 22,
+      "ridershipRecovery2025": 101,
+      "mfIndex": 78,
+      "fuelSubsidyGDP": 0.5,
+      "highlight": false,
+      "gdp_usd": 1875388209406.8,
+      "gdp_usd_year": "2024",
+      "population": 51751065,
+      "population_year": "2024"
+    },
+    {
+      "country": "Australia",
+      "code": "AU",
+      "flag": "🇦🇺",
+      "ptModalShare": 18,
+      "carModalShare": 82,
+      "ptTripsPerCapita": 29,
+      "wfhRate2026": 28,
+      "ridershipRecovery2025": 88,
+      "mfIndex": 72,
+      "fuelSubsidyGDP": 0.0,
+      "highlight": false,
+      "gdp_usd": 1757022451652.83,
+      "gdp_usd_year": "2024",
+      "population": 27196812,
+      "population_year": "2024"
+    },
+    {
+      "country": "Japan",
+      "code": "JP",
+      "flag": "🇯🇵",
+      "ptModalShare": 48,
+      "carModalShare": 52,
+      "ptTripsPerCapita": 182,
+      "wfhRate2026": 18,
+      "ridershipRecovery2025": 96,
+      "mfIndex": 82,
+      "fuelSubsidyGDP": 0.0,
+      "highlight": false,
+      "gdp_usd": 4027597523550.58,
+      "gdp_usd_year": "2024",
+      "population": 123975371,
+      "population_year": "2024"
+    }
+  ],
+  "normalised": {
+    "ptModalShare": {
+      "MY": 6,
+      "SG": 100,
+      "TH": 20,
+      "KR": 71,
+      "AU": 0,
+      "JP": 61
+    },
+    "ptTripsPerCapita": {
+      "MY": 0,
+      "SG": 90,
+      "TH": 4,
+      "KR": 50,
+      "AU": 8,
+      "JP": 100
+    },
+    "wfhRate2026": {
+      "MY": 100,
+      "SG": 55,
+      "TH": 9,
+      "KR": 18,
+      "AU": 45,
+      "JP": 0
+    },
+    "ridershipRecovery2025": {
+      "MY": 56,
+      "SG": 100,
+      "TH": 6,
+      "KR": 81,
+      "AU": 0,
+      "JP": 50
+    },
+    "mfIndex": {
+      "MY": 0,
+      "SG": 92,
+      "TH": 29,
+      "KR": 83,
+      "AU": 58,
+      "JP": 100
+    }
+  },
+  "sources": [
+    "IEA Mobility Model 2025",
+    "World Bank Open Data API",
+    "UITP Global Transit Barometer 2025",
+    "Prasarana Annual Report 2025",
+    "LTA Singapore Annual Report 2025"
+  ]
+}
