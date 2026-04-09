@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-09T03:06:40.538995+00:00",
+  "generated_at": "2026-04-09T17:05:20.438247+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
-  "overall_sentiment": "cautiously_negative",
-  "overall_score": 40,
-  "summary": "The current mobility data indicates a significant suppression of movement, with an MF-Index of 18, largely due to lockdown-level restrictions. The fuel savings are substantial, with 35.7M litres saved per week, but the lack of public transport ridership and low fuel prices may have unintended economic consequences. The sectoral breakdown reveals varying levels of risk, with the retail and services sector being particularly vulnerable.",
+  "overall_sentiment": "cautiously_optimistic",
+  "overall_score": 60,
+  "summary": "The current mobility data indicates a moderate level of fuel savings and public transport ridership, with a notable impact from the work-from-home policy. However, the low fuel policy component score and high mobility scores in certain sectors raise concerns. The overall mobility score of 42 suggests a need for continued monitoring and policy adjustments.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 80,
+      "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the low fuel prices, with RON95 at RM 0.40 per litre, may not be sustainable in the long term and could lead to increased consumption once prices rise. The current fuel savings are a positive outcome, but their sustainability is uncertain."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the fuel policy component score of 0 suggests a lack of effective fuel-saving policies in place."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 0,
-      "dir": "negative",
-      "detail": "The latest daily public transport ridership is 0 trips, indicating a complete halt in public transport usage. This is a significant concern, as it may lead to a permanent shift away from public transport and towards private vehicles, exacerbating traffic congestion and increasing emissions. The lack of ridership also affects the livelihoods of public transport workers and the overall economy."
+      "score": 80,
+      "dir": "positive",
+      "detail": "The latest daily public transport ridership of 873,670 trips is a positive sign, but it is still lower than pre-pandemic levels. The ridership component score of 61.1 suggests that there is room for improvement in promoting public transport usage."
     },
     {
       "dimension": "Economic Risk",
-      "score": 30,
+      "score": 40,
       "dir": "negative",
-      "detail": "The sectoral breakdown reveals that the retail and services sector is at high risk, with a mobility score of 85 and only 15% of employees working from home. This sector is particularly vulnerable to the lockdown-level restrictions, and the lack of economic activity may have long-term consequences for the sector's recovery. The construction sector is also at high risk, with a mobility score of 95 and only 5% of employees working from home."
+      "detail": "The high mobility scores in the Retail & Services, Logistics, and Construction sectors indicate a high risk of economic disruption due to their low work-from-home adoption rates. This could lead to increased fuel consumption and decreased productivity."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH adoption rates vary significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This disparity may lead to unequal distribution of benefits and burdens, with some sectors being more affected by the lockdown-level restrictions than others. The policy needs to be more equitable and consider the unique challenges faced by each sector."
+      "detail": "The work-from-home policy has been active for 0 days, and the WFH adoption rates vary significantly across sectors, ranging from 5% in Construction to 60% in Public & GLCs. This suggests a need for more targeted and equitable policy interventions to promote work-from-home adoption."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 20,
+      "score": 30,
       "dir": "negative",
-      "detail": "The current data suggests that the lockdown-level restrictions may lead to a permanent shift away from public transport and towards private vehicles. The lack of investment in public transport infrastructure and the low fuel prices may exacerbate this trend, making it challenging to achieve a long-term modal shift towards more sustainable modes of transport. The policy needs to prioritize investments in public transport and promote a shift towards more sustainable modes of transport."
+      "detail": "The low fuel policy component score and the lack of a comprehensive fuel-saving policy suggest that the current modal shift towards public transport and work-from-home may not be sustainable in the long term. A more comprehensive policy framework is needed to support a long-term shift towards more sustainable modes of transport."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to support the retail and services sector, such as providing financial assistance or relaxing restrictions on a case-by-case basis. Additionally, the government should invest in public transport infrastructure and promote a shift towards more sustainable modes of transport, with a target of increasing public transport ridership by 20% within the next 6 months. The government should also review the fuel pricing mechanism to ensure it is sustainable and aligned with the country's energy policy goals.",
+  "recommendation": "The Ministry of Transport and Energy should consider implementing targeted policies to promote work-from-home adoption in high-risk sectors, such as Retail & Services, Logistics, and Construction. Additionally, a comprehensive fuel-saving policy framework should be developed to support a long-term shift towards more sustainable modes of transport, with specific targets to increase public transport ridership and reduce fuel consumption.",
   "data_date": "2026-04-09",
   "alert": null
 }
