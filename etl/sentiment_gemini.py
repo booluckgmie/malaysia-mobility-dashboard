@@ -1,13 +1,15 @@
 """
 sentiment_gemini.py
-Calls Google Gemini to generate daily policy sentiment analysis
-from consolidated mobility + fuel + WFH data.
+Generates daily policy sentiment analysis using Groq (primary) with
+Gemini as optional fallback.
 
-Requires: GEMINI_API_KEY env var
-Output:   public/data/sentiment.json
+Env vars:
+  GROQ_API_KEY    — required (get free key at console.groq.com)
+  GEMINI_API_KEY  — optional fallback
 
-SDK: google-genai (new, replaces deprecated google-generativeai)
-Install: pip install google-genai
+Output: public/data/sentiment.json
+
+Install: pip install groq google-genai
 """
 import json
 import os
@@ -16,35 +18,47 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+# ── Groq ────────────────────────────────────────────────────────────
 try:
-    from google import genai
-    from google.genai import types
-    from google.genai.errors import ClientError
+    from groq import Groq, RateLimitError, APIStatusError
+    GROQ_AVAILABLE = True
 except ImportError:
-    print("❌ google-genai not installed. Run: pip install google-genai")
-    print("   (Note: this is the NEW SDK, not google-generativeai)")
-    sys.exit(1)
+    GROQ_AVAILABLE = False
+
+# ── Gemini (optional fallback) ───────────────────────────────────────
+try:
+    from google import genai as ggenai
+    from google.genai import types as gtypes
+    from google.genai.errors import ClientError
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
 
 OUTPUT_DIR  = Path(__file__).parent.parent / "public" / "data"
 MF_JSON     = OUTPUT_DIR / "mf_index_daily.json"
 OUTPUT_PATH = OUTPUT_DIR / "sentiment.json"
 
-# -------------------------------------------------------------------
-# Model priority list — ordered best → cheapest/most-available.
-# gemini-2.0-flash     : latest fast model (may hit free-tier quota)
-# gemini-2.0-flash-lite: lighter quota limits
-# gemini-1.5-flash-8b  : smallest / highest free-tier RPM
-# -------------------------------------------------------------------
-MODELS = [
-    "gemini-2.0-flash",
-    "gemini-2.0-flash-lite",
-    "gemini-1.5-flash-8b",
+# ── Groq model priority (free tier, ordered best → most available) ───
+GROQ_MODELS = [
+    "llama-3.3-70b-versatile",   # best quality, generous limits
+    "llama-3.1-8b-instant",      # fast, very high RPM
+    "gemma2-9b-it",              # Google Gemma via Groq
+    "mixtral-8x7b-32768",        # wide context fallback
 ]
 
-MAX_RETRIES    = 3          # retries per model on 429
-RETRY_BASE_SEC = 15         # base wait on 429 (seconds), doubles each attempt
+# ── Gemini model priority ─────────────────────────────────────────────
+GEMINI_MODELS = [
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-lite",
+]
+
+MAX_RETRIES    = 3
+RETRY_BASE_SEC = 15
 
 
+# ────────────────────────────────────────────────────────────────────
+# Data loading
+# ────────────────────────────────────────────────────────────────────
 def load_mf_data() -> dict:
     if MF_JSON.exists():
         with open(MF_JSON) as f:
@@ -52,6 +66,9 @@ def load_mf_data() -> dict:
     return {}
 
 
+# ────────────────────────────────────────────────────────────────────
+# Prompt builder
+# ────────────────────────────────────────────────────────────────────
 def build_prompt(data: dict) -> str:
     mf    = data.get("mf_index", {})
     rider = data.get("ridership", {})
@@ -72,8 +89,7 @@ def build_prompt(data: dict) -> str:
         indent=2,
     )
 
-    return f"""
-You are a senior transport and energy policy analyst for Malaysia. Analyse the following daily mobility data and provide a structured policy sentiment assessment.
+    return f"""You are a senior transport and energy policy analyst for Malaysia. Analyse the following daily mobility data and provide a structured policy sentiment assessment.
 
 ## Current Data ({datetime.now(timezone.utc).strftime('%Y-%m-%d')})
 - MF-Index: {mf.get('score', 58)} / 100 ({mf.get('interpretation', 'Moderate')})
@@ -100,7 +116,7 @@ Respond ONLY with valid JSON (no markdown, no backticks) in exactly this structu
 {{
   "generated_at": "<ISO timestamp>",
   "model": "<model used>",
-  "source": "gemini-live",
+  "source": "<provider>",
   "overall_sentiment": "<one of: very_positive|positive|cautiously_optimistic|neutral|cautiously_negative|negative|critical>",
   "overall_score": <integer 0-100>,
   "summary": "<2-3 sentence executive summary for a minister>",
@@ -118,125 +134,244 @@ Respond ONLY with valid JSON (no markdown, no backticks) in exactly this structu
 }}
 
 Provide exactly 5 signals covering: fuel savings impact, PT ridership effects, economic risk, policy equity, long-term modal shift.
-Tailor the analysis to today's specific data values, not generic statements.
-"""
+Tailor the analysis to today's specific data values, not generic statements."""
 
 
-def call_with_retry(client: "genai.Client", model_name: str, prompt: str) -> str:
-    """
-    Attempt to call the Gemini API with exponential backoff on 429.
-    Returns raw text on success, raises on non-retryable errors.
-    """
-    wait = RETRY_BASE_SEC
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.2,
-                    max_output_tokens=2048,
-                    response_mime_type="application/json",
-                ),
-            )
-            return response.text.strip()
-
-        except ClientError as e:
-            status = getattr(e, "status_code", None) or getattr(e, "code", None)
-
-            if status == 429:
-                # Parse retry_delay from error message if available
-                delay = wait
-                msg = str(e)
-                import re
-                m = re.search(r'retry in (\d+(?:\.\d+)?)s', msg, re.IGNORECASE)
-                if m:
-                    delay = max(float(m.group(1)) + 2, wait)
-
-                if attempt < MAX_RETRIES:
-                    print(f"     ⏳ 429 quota — waiting {delay:.0f}s before retry {attempt}/{MAX_RETRIES - 1}…")
-                    time.sleep(delay)
-                    wait *= 2   # exponential backoff
-                    continue
-                else:
-                    print(f"     ✗ Quota exhausted after {MAX_RETRIES} attempts.")
-                    raise
-
-            elif status == 404:
-                print(f"     ✗ Model not found (404).")
-                raise
-
-            else:
-                print(f"     ✗ ClientError {status}: {e}")
-                raise
-
-        except Exception as e:
-            print(f"     ✗ Unexpected error: {type(e).__name__}: {e}")
-            raise
-
-
+# ────────────────────────────────────────────────────────────────────
+# Helpers
+# ────────────────────────────────────────────────────────────────────
 def strip_fences(text: str) -> str:
-    """Remove markdown code fences if the model ignores response_mime_type."""
+    """Remove markdown code fences if model ignores JSON-mode instruction."""
+    text = text.strip()
     if text.startswith("```"):
         lines = text.splitlines()
         text = "\n".join(l for l in lines if not l.startswith("```"))
     return text.strip()
 
 
+def parse_json(raw: str, model_name: str) -> dict:
+    raw = strip_fences(raw)
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"JSON parse failed for {model_name}: {e}\nSnippet: {raw[:300]}")
+
+
+# ────────────────────────────────────────────────────────────────────
+# Groq caller
+# ────────────────────────────────────────────────────────────────────
+def call_groq(api_key: str, prompt: str) -> tuple[str, str]:
+    """
+    Try each Groq model in order with retry on 429.
+    Returns (raw_text, model_name) on success.
+    Raises RuntimeError if all models fail.
+    """
+    if not GROQ_AVAILABLE:
+        raise RuntimeError("groq package not installed — run: pip install groq")
+
+    client = Groq(api_key=api_key)
+
+    system_msg = (
+        "You are a JSON-only API. You must respond with valid JSON and absolutely "
+        "nothing else — no markdown, no backticks, no explanation."
+    )
+
+    for model_name in GROQ_MODELS:
+        print(f"   → [Groq] Trying {model_name}…")
+        wait = RETRY_BASE_SEC
+
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                completion = client.chat.completions.create(
+                    model=model_name,
+                    messages=[
+                        {"role": "system", "content": system_msg},
+                        {"role": "user",   "content": prompt},
+                    ],
+                    temperature=0.2,
+                    max_tokens=2048,
+                )
+                raw = completion.choices[0].message.content
+                print(f"   ✓ Response from {model_name}")
+                return raw, model_name
+
+            except RateLimitError as e:
+                if attempt < MAX_RETRIES:
+                    # Try to read retry-after from headers
+                    retry_after = getattr(e, "retry_after", None) or wait
+                    delay = float(retry_after) + 2
+                    print(f"     ⏳ 429 — waiting {delay:.0f}s (attempt {attempt}/{MAX_RETRIES - 1})…")
+                    time.sleep(delay)
+                    wait = min(wait * 2, 120)
+                else:
+                    print(f"     ✗ Quota exhausted on {model_name}")
+                    break
+
+            except APIStatusError as e:
+                print(f"     ✗ APIStatusError {e.status_code} on {model_name}: {e.message}")
+                break  # non-retryable, try next model
+
+            except Exception as e:
+                print(f"     ✗ Unexpected error on {model_name}: {type(e).__name__}: {e}")
+                break
+
+        print(f"   ✗ {model_name} failed — trying next…")
+
+    raise RuntimeError("All Groq models exhausted.")
+
+
+# ────────────────────────────────────────────────────────────────────
+# Gemini caller (fallback)
+# ────────────────────────────────────────────────────────────────────
+def call_gemini(api_key: str, prompt: str) -> tuple[str, str]:
+    """
+    Try each Gemini model with retry on 429.
+    Returns (raw_text, model_name) on success.
+    Raises RuntimeError if all models fail.
+    """
+    if not GEMINI_AVAILABLE:
+        raise RuntimeError("google-genai package not installed — run: pip install google-genai")
+
+    client = ggenai.Client(api_key=api_key)
+
+    for model_name in GEMINI_MODELS:
+        print(f"   → [Gemini] Trying {model_name}…")
+        wait = RETRY_BASE_SEC
+
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                    config=gtypes.GenerateContentConfig(
+                        temperature=0.2,
+                        max_output_tokens=2048,
+                        response_mime_type="application/json",
+                    ),
+                )
+                raw = response.text.strip()
+                print(f"   ✓ Response from {model_name}")
+                return raw, model_name
+
+            except ClientError as e:
+                status = getattr(e, "status_code", None) or getattr(e, "code", None)
+                if status == 429:
+                    if attempt < MAX_RETRIES:
+                        import re
+                        m = re.search(r"retry in (\d+(?:\.\d+)?)s", str(e), re.IGNORECASE)
+                        delay = float(m.group(1)) + 2 if m else wait
+                        print(f"     ⏳ 429 — waiting {delay:.0f}s (attempt {attempt}/{MAX_RETRIES - 1})…")
+                        time.sleep(delay)
+                        wait = min(wait * 2, 120)
+                    else:
+                        print(f"     ✗ Quota exhausted on {model_name}")
+                        break
+                else:
+                    print(f"     ✗ ClientError {status} on {model_name}: {e}")
+                    break
+
+            except Exception as e:
+                print(f"     ✗ Unexpected error on {model_name}: {type(e).__name__}: {e}")
+                break
+
+        print(f"   ✗ {model_name} failed — trying next…")
+
+    raise RuntimeError("All Gemini models exhausted.")
+
+
+# ────────────────────────────────────────────────────────────────────
+# Fallback static output (never fail the pipeline)
+# ────────────────────────────────────────────────────────────────────
+def write_fallback(data: dict):
+    score = data.get("mf_index", {}).get("score", 58)
+    sentiment = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "model": "fallback-static",
+        "source": "fallback",
+        "overall_sentiment": "neutral",
+        "overall_score": score,
+        "summary": (
+            "Sentiment analysis unavailable — all AI API quotas exhausted. "
+            f"Latest MF-Index score is {score}/100. Manual review recommended."
+        ),
+        "signals": [],
+        "recommendation": "Resume analysis when API quota resets (Groq resets hourly/daily; Gemini resets daily at midnight Pacific).",
+        "data_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "alert": None,
+    }
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_PATH, "w") as f:
+        json.dump(sentiment, f, indent=2, ensure_ascii=False)
+    print(f"   ⚠  Fallback sentiment written → {OUTPUT_PATH}")
+
+
+# ────────────────────────────────────────────────────────────────────
+# Main
+# ────────────────────────────────────────────────────────────────────
 def run_sentiment():
-    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        print("❌ GEMINI_API_KEY not set — skipping sentiment analysis")
-        sys.exit(0)
+    groq_key   = os.environ.get("GROQ_API_KEY", "").strip()
+    gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
 
-    print("🧠 Running Gemini sentiment analysis…")
+    if not groq_key and not gemini_key:
+        print("❌ No API keys set. Need GROQ_API_KEY or GEMINI_API_KEY.")
+        sys.exit(1)
 
-    client = genai.Client(api_key=api_key)
+    print("🧠 Running sentiment analysis…")
+    print(f"   Groq  : {'✓ key present' if groq_key else '✗ not set'}")
+    print(f"   Gemini: {'✓ key present' if gemini_key else '✗ not set'}")
 
     data = load_mf_data()
     if not data:
         print("⚠  No MF-Index data found — run fetch_apis.py first.")
         sys.exit(1)
 
-    prompt = build_prompt(data)
+    prompt   = build_prompt(data)
     raw_text = None
     used_model = None
+    source   = None
 
-    for model_name in MODELS:
-        print(f"   → Trying {model_name}…")
+    # ── 1. Try Groq first ───────────────────────────────────────────
+    if groq_key:
         try:
-            raw_text = call_with_retry(client, model_name, prompt)
-            used_model = model_name
-            print(f"   ✓ Response received from {model_name}")
-            break
-        except Exception:
-            print(f"   ✗ {model_name} unavailable — trying next model…")
-            continue
+            raw_text, used_model = call_groq(groq_key, prompt)
+            source = "groq"
+        except RuntimeError as e:
+            print(f"   ✗ Groq exhausted: {e}")
 
+    # ── 2. Fall back to Gemini ──────────────────────────────────────
+    if raw_text is None and gemini_key:
+        print("   → Falling back to Gemini…")
+        try:
+            raw_text, used_model = call_gemini(gemini_key, prompt)
+            source = "gemini-live"
+        except RuntimeError as e:
+            print(f"   ✗ Gemini exhausted: {e}")
+
+    # ── 3. Static fallback — never break the pipeline ───────────────
     if raw_text is None:
-        print("❌ All Gemini models failed. Exiting.")
-        sys.exit(1)
+        print("⚠  All providers failed — writing static fallback.")
+        write_fallback(data)
+        sys.exit(0)   # exit 0 = don't fail CI
 
-    raw_text = strip_fences(raw_text)
-
+    # ── Parse & save ────────────────────────────────────────────────
     try:
-        sentiment = json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        print(f"❌ JSON parse error: {e}")
-        print(f"   Raw snippet: {raw_text[:400]}")
-        sys.exit(1)
+        sentiment = parse_json(raw_text, used_model)
+    except ValueError as e:
+        print(f"❌ {e}")
+        write_fallback(data)
+        sys.exit(0)
 
-    # Guarantee correct metadata
     sentiment["generated_at"] = datetime.now(timezone.utc).isoformat()
-    sentiment["model"] = used_model
+    sentiment["model"]  = used_model
+    sentiment["source"] = source
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(sentiment, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Sentiment written → {OUTPUT_PATH}")
-    print(f"   Model  : {used_model}")
-    print(f"   Overall: {sentiment.get('overall_sentiment')} ({sentiment.get('overall_score')}/100)")
+    print(f"   Provider: {source} / {used_model}")
+    print(f"   Overall : {sentiment.get('overall_sentiment')} ({sentiment.get('overall_score')}/100)")
     print(f"   {sentiment.get('summary', '')[:120]}…")
 
 
