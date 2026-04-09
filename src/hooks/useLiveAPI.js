@@ -10,7 +10,13 @@ export function useLiveRidership(limit = 30) {
   useEffect(() => {
     fetch(`${API}?id=ridership_headline&limit=${limit}&sort=-date`)
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(j => { setData((j.data || j).sort((a,b) => a.date > b.date ? 1 : -1)); setLoading(false) })
+      .then(j => {
+        // API returns individual operator columns — keep raw rows, sort ascending by date
+        const rows = (j.data || j)
+        rows.sort((a, b) => (a.date > b.date ? 1 : -1))
+        setData(rows)
+        setLoading(false)
+      })
       .catch(e => { setError(String(e)); setLoading(false) })
   }, [limit])
 
@@ -38,7 +44,7 @@ export function useLiveVehicles(limit = 18) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`${API}?id=ridership_headline&limit=${limit}&sort=-date`)
+    fetch(`${API}?id=vehicles_type&limit=${limit}&sort=-date`)
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(j => { setData((j.data || j).sort((a,b) => a.date > b.date ? 1 : -1)); setLoading(false) })
       .catch(e => { setError(String(e)); setLoading(false) })
