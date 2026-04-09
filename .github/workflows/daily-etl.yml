@@ -36,7 +36,8 @@ jobs:
       - name: Step 2 — Gemini sentiment analysis
         run: python etl/sentiment_gemini.py
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # keep as fallback
 
       - name: Step 3 — Country comparison data
         run: python etl/country_compare.py
