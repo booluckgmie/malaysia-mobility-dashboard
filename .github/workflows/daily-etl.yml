@@ -2,7 +2,7 @@ name: Daily ETL + Gemini Sentiment
 
 on:
   schedule:
-    - cron: '0 22 * * *'   # 06:00 AM MYT (UTC+8 = UTC-8h → 22:00 UTC prev day)
+    - cron: '1 16 * * *'   # 06:00 AM MYT (UTC+8 = UTC-8h → 22:00 UTC prev day)
   workflow_dispatch:         # manual trigger from GitHub Actions UI
 
 permissions:
