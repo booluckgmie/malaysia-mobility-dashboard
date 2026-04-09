@@ -80,15 +80,37 @@ def main():
     print("🔄 Fetching APIs…")
     now = datetime.now(timezone.utc)
 
-    # 1. Ridership
+    # 1. Ridership — API returns individual operator columns, NOT a single 'trips' field
     print("  → ridership_headline")
     ridership_raw = fetch("ridership_headline", limit=35)
     ridership_raw.sort(key=lambda x: x.get("date", ""))
 
+    # Exact column names from data.gov.my ridership_headline schema
+    BUS_COLS  = ["bus_rkl", "bus_rkn", "bus_rpn"]
+    RAIL_COLS = [
+        "rail_lrt_ampang", "rail_lrt_kj", "rail_monorail",
+        "rail_mrt_kajang",  "rail_mrt_pjy",
+        "rail_ets", "rail_intercity", "rail_komuter",
+        "rail_komuter_utara", "rail_tebrau",
+    ]
+    ALL_COLS = BUS_COLS + RAIL_COLS
+
+    def sum_trips(row):
+        return sum(int(row.get(c) or 0) for c in ALL_COLS)
+
     ridership_30d = []
     for row in ridership_raw:
-        trips = row.get("trips") or row.get("ridership") or row.get("total") or 0
-        ridership_30d.append({"date": row.get("date", ""), "trips": int(trips)})
+        total = sum_trips(row)
+        bus   = sum(int(row.get(c) or 0) for c in BUS_COLS)
+        rail  = sum(int(row.get(c) or 0) for c in RAIL_COLS)
+        ridership_30d.append({
+            "date":  row.get("date", ""),
+            "trips": total,          # computed total for dashboard
+            "bus":   bus,
+            "rail":  rail,
+            # Keep individual columns for drill-down
+            **{c: int(row.get(c) or 0) for c in ALL_COLS},
+        })
 
     latest_ridership = ridership_30d[-1]["trips"] if ridership_30d else 1_400_000
     # 2019 peak daily baseline ≈ 522M / 365 ≈ 1,430,000
@@ -115,8 +137,8 @@ def main():
     employment_raw = fetch("employment_by_industry", limit=8)
 
     # 4. Vehicle registrations
-    print("  → ridership_headline")
-    vehicles_raw = fetch("ridership_headline", limit=18)
+    print("  → vehicles_type")
+    vehicles_raw = fetch("vehicles_type", limit=18)
     vehicles_raw.sort(key=lambda x: x.get("date", "") or x.get("month", ""))
 
     # 5. Compute MF-Index
