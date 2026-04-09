@@ -1,6 +1,6 @@
 """
 sentiment_gemini.py
-Calls Google Gemini 1.5 Pro to generate daily policy sentiment analysis
+Calls Google Gemini to generate daily policy sentiment analysis
 from consolidated mobility + fuel + WFH data.
 
 Requires: GEMINI_API_KEY env var
@@ -62,7 +62,7 @@ You are a senior transport and energy policy analyst for Malaysia. Analyse the f
 Respond ONLY with valid JSON (no markdown, no backticks) in exactly this structure:
 {{
   "generated_at": "<ISO timestamp>",
-  "model": "gemini-1.5-pro",
+  "model": "gemini-2.0-flash",
   "source": "gemini-live",
   "overall_sentiment": "<one of: very_positive|positive|cautiously_optimistic|neutral|cautiously_negative|negative|critical>",
   "overall_score": <integer 0-100>,
@@ -102,17 +102,33 @@ def run_sentiment():
 
     prompt = build_prompt(data)
 
-    model = genai.GenerativeModel(
-        model_name="models/gemini-1.5-pro",
-        generation_config=genai.GenerationConfig(
-            temperature=0.2,        # low temp = consistent, factual
-            max_output_tokens=2048,
-            response_mime_type="application/json",
-        )
-    )
+    # Try primary model first, fall back to flash if unavailable
+    primary_model   = "gemini-2.0-flash"
+    fallback_model  = "gemini-1.5-flash-latest"
+    raw_text = None
 
-    response = model.generate_content(prompt)
-    raw_text = response.text.strip()
+    for model_name in [primary_model, fallback_model]:
+        try:
+            print(f"   → Trying {model_name}…")
+            model = genai.GenerativeModel(
+                model_name=model_name,
+                generation_config=genai.GenerationConfig(
+                    temperature=0.2,
+                    max_output_tokens=2048,
+                    response_mime_type="application/json",
+                )
+            )
+            response = model.generate_content(prompt)
+            raw_text = response.text.strip()
+            print(f"   ✓ Got response from {model_name}")
+            break
+        except Exception as e:
+            print(f"   ⚠ {model_name} failed: {e}")
+            continue
+
+    if raw_text is None:
+        print("❌ All Gemini models failed. Exiting.")
+        sys.exit(1)
 
     # Strip markdown fences if present
     if raw_text.startswith("```"):
@@ -121,17 +137,11 @@ def run_sentiment():
 
     try:
         sentiment = json.loads(raw_text)
-        
-    except Exception as e:
-            print(f"❌ Gemini Error: {e}")
-            # If it's still a 404, let's try the flash model as a backup
-            print("🔄 Attempting backup with gemini-1.5-flash...")
-            model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
-            response = model.generate_content(prompt)
-            # Note: Flash might return markdown, so we handle it:
-            text = response.text.replace('```json', '').replace('```', '').strip()
-            sentiment = json.loads(text)
-        
+    except json.JSONDecodeError as e:
+        print(f"❌ Failed to parse Gemini JSON response: {e}")
+        print(f"   Raw response snippet: {raw_text[:300]}")
+        sys.exit(1)
+
     # Inject guaranteed timestamp
     sentiment["generated_at"] = datetime.now(timezone.utc).isoformat()
 
