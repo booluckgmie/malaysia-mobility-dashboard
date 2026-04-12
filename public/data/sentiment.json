@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-11T16:34:00.976939+00:00",
+  "generated_at": "2026-04-12T16:36:23.202195+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 60,
-  "summary": "The current mobility data indicates a moderate level of fuel savings and public transport ridership, with a notable impact from the work-from-home policy. However, the low fuel policy component score and high mobility scores in certain sectors raise concerns. The overall mobility score of 42 suggests a need for continued monitoring and policy adjustments.",
+  "overall_score": 58,
+  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a high ridership component and low fuel policy component. The WFH adoption rate is at 40%, and the total fuel saved per week is 35.7M litres. However, the RON95 price is at a low of RM 0.40 per litre, which may impact fuel savings efforts.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 70,
+      "score": 60,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the fuel policy component score of 0 suggests a lack of effective fuel pricing policies to support long-term fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings. This indicates a moderate impact on fuel savings, but the low RON95 price may hinder further savings. The fuel policy component score of 0/100 suggests a need for more effective fuel policy measures."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 80,
+      "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership of 873,670 trips is a positive sign, but it is still lower than pre-pandemic levels. The ridership component score of 61.1 suggests that there is room for improvement in promoting public transport usage."
+      "detail": "The latest daily PT ridership is 1,441,377 trips, which is a significant increase from the pre-pandemic levels. This suggests a strong recovery in public transport usage, which is essential for reducing congestion and emissions. The ridership component score of 100/100 indicates a high level of public transport usage."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The high mobility scores in the Retail & Services, Logistics, and Construction sectors indicate a high risk of economic disruption due to their low work-from-home adoption rates. This could lead to increased fuel consumption and decreased productivity."
+      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests a high economic risk due to the potential for increased congestion, emissions, and fuel consumption. The low WFH adoption rates in these sectors contribute to this risk."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The work-from-home policy has been active for 0 days, and the WFH adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate and the Construction sector having only a 5% adoption rate. This raises concerns about policy equity and the need for more targeted interventions."
+      "detail": "The WFH policy is active for 0 days, which may indicate a lack of support for remote work arrangements. The sector breakdown shows varying WFH adoption rates, with the Public & GLCs sector having a higher adoption rate of 60%. This suggests a need for more equitable policy measures to support remote work across all sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 30,
-      "dir": "negative",
-      "detail": "The low fuel policy component score and the lack of a comprehensive fuel pricing policy suggest that the current modal shift towards fuel-efficient modes may not be sustainable in the long term. A more comprehensive policy framework is needed to support a long-term shift towards more sustainable modes of transport."
+      "score": 70,
+      "dir": "positive",
+      "detail": "The recovery in PT ridership and the high mobility scores in certain sectors suggest a potential for long-term modal shift towards more sustainable transport modes. However, the low fuel policy component score and the high economic risk in certain sectors may hinder this shift. A more comprehensive transport policy is needed to support a long-term modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing a comprehensive fuel pricing policy to support long-term fuel savings and promote the adoption of fuel-efficient modes of transport. Additionally, targeted interventions should be implemented to support sectors with low work-from-home adoption rates, such as the Retail & Services and Construction sectors. Aiming to increase the work-from-home adoption rate to at least 50% across all sectors could help reduce fuel consumption and decrease economic risk.",
-  "data_date": "2026-04-11",
+  "recommendation": "The government should consider implementing more effective fuel policy measures, such as increasing the fuel tax or implementing a low-emission zone, to support fuel savings efforts. Additionally, the government should promote remote work arrangements across all sectors and invest in public transport infrastructure to support a long-term modal shift towards more sustainable transport modes. A target of reducing fuel consumption by 10% and increasing public transport usage by 15% within the next 6 months should be set.",
+  "data_date": "2026-04-12",
   "alert": null
 }
