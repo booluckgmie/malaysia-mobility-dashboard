@@ -139,7 +139,7 @@ export default function FuelChart() {
           <Legend wrapperStyle={{ fontSize: '10px', paddingTop: '8px' }} />
 
           {/* Area fill under RON95 */}
-          <Area dataKey="ron95" fill="url(#ron95Grad)" stroke="none" legendType="none" />
+          {/* <Area dataKey="ron95" fill="url(#ron95Grad)" stroke="none" legendType="none" /> */}
 
           {/* FIX 6: Plot all real columns from the API schema */}
           <Line dataKey="ron95"           name="RON95"          type="monotone" stroke="#D85A30" strokeWidth={2.5} dot={{ r: 2.5, fill: '#D85A30' }} connectNulls />
