@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-04-14T17:03:49.806937+00:00",
+  "updated_at": "2026-04-15T17:00:38.516722+00:00",
   "mf_index": {
-    "score": 58,
+    "score": 88,
     "components": {
       "ridership_norm": 100,
-      "fuel_norm": 0,
+      "fuel_norm": 100,
       "wfh_adoption": 40.0
     },
-    "interpretation": "Moderate — partial impact",
+    "interpretation": "Full mobility — no savings",
     "reference_points": {
       "mco_2021": 18,
       "pre_covid": 85,
@@ -655,28 +655,18 @@
     ]
   },
   "fuel": {
-    "latest_ron95": 0.39999999999999947,
-    "latest_diesel": 0.7000000000000002,
+    "latest_ron95": 4.02,
+    "latest_diesel": 5.97,
     "history": [
       {
-        "date": "2026-02-05",
-        "ron95": 2.54,
-        "diesel": 2.96
-      },
-      {
-        "date": "2026-02-05",
+        "date": "2026-02-12",
         "ron95": 2.05,
-        "diesel": 0.040000000000000036
+        "diesel": 0.03000000000000025
       },
       {
         "date": "2026-02-12",
         "ron95": 2.54,
         "diesel": 2.99
-      },
-      {
-        "date": "2026-02-12",
-        "ron95": 2.05,
-        "diesel": 0.03000000000000025
       },
       {
         "date": "2026-02-19",
@@ -720,13 +710,13 @@
       },
       {
         "date": "2026-03-19",
-        "ron95": 3.27,
-        "diesel": 4.72
+        "ron95": 2.05,
+        "diesel": 0.7999999999999998
       },
       {
         "date": "2026-03-19",
-        "ron95": 2.05,
-        "diesel": 0.7999999999999998
+        "ron95": 3.27,
+        "diesel": 4.72
       },
       {
         "date": "2026-03-26",
@@ -757,6 +747,16 @@
         "date": "2026-04-09",
         "ron95": 0.39999999999999947,
         "diesel": 0.7000000000000002
+      },
+      {
+        "date": "2026-04-16",
+        "ron95": -0.25,
+        "diesel": -0.75
+      },
+      {
+        "date": "2026-04-16",
+        "ron95": 4.02,
+        "diesel": 5.97
       }
     ],
     "historical_extended": [
