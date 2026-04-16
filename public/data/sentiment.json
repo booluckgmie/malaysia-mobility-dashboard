@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-15T17:00:49.526537+00:00",
+  "generated_at": "2026-04-16T17:12:06.331883+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of public transport ridership and fuel policy component, but the work-from-home adoption rate is lower than expected. The fuel savings are significant, but still below the peak savings during the MCO period. The sector breakdown shows varying levels of risk, with the retail and services sector being the most vulnerable.",
+  "overall_score": 72,
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel policy component, but the work-from-home adoption rate is lower than expected. The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak saving. The sector breakdown shows varying levels of work-from-home adoption and mobility scores across different sectors.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 60,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is a significant reduction, but still 42% below the peak savings during the MCO period. This suggests that there is room for improvement in fuel conservation efforts. The current RON95 price of RM 4.02 per litre may be contributing to the lower fuel savings."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is a significant reduction in fuel consumption. However, it is still 58% lower than the MCO peak saving, indicating room for improvement. The current RON95 price of RM 4.02 per litre may be a contributing factor to the lower fuel savings."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,441,377 trips, which is a high level of usage. This suggests that the public transport system is being utilized effectively, and efforts to promote its use are paying off. However, the ridership component score of 100 may indicate that there is limited room for further growth."
+      "detail": "The latest daily public transport ridership is 1,441,377 trips, which is a high level of usage. The ridership component of the MF-Index is 100, indicating full mobility with no savings, which may be a concern for overcrowding and strain on the public transport system."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown shows that the retail and services sector has a high mobility score of 85 and a high risk level. This suggests that this sector is vulnerable to economic disruptions, particularly if fuel prices continue to rise. The logistics and construction sectors also have high mobility scores, indicating potential risks to the economy."
+      "detail": "The sector breakdown shows that the Retail and Services, Logistics, and Construction sectors have high mobility scores and low work-from-home adoption rates, indicating a high risk of economic disruption due to their dependence on physical presence. This may lead to increased fuel consumption and decreased productivity."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The work-from-home adoption rate varies significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have much lower adoption rates. This suggests that there may be inequities in the implementation of work-from-home policies, which could impact the effectiveness of fuel conservation efforts."
+      "detail": "The work-from-home policy has been active for only one day, and the adoption rate varies across sectors, with the Public and GLCs sector having a higher adoption rate of 60%. This may indicate unequal access to remote work opportunities and a need for more targeted policies to support different sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 80,
       "dir": "positive",
-      "detail": "The current mobility data suggests that there is a shift towards more sustainable modes of transport, with a high level of public transport ridership and a significant reduction in fuel consumption. However, the long-term sustainability of this shift is uncertain, and efforts to promote alternative modes of transport, such as cycling and walking, may be necessary to achieve a more permanent shift."
+      "detail": "The current MF-Index of 88 indicates a high level of mobility, but the fuel policy component is also high, suggesting a potential for long-term modal shift towards more sustainable modes of transport. The high public transport ridership and relatively low fuel savings may indicate a need for more investment in public transport infrastructure and alternative modes of transport."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to promote work-from-home adoption in sectors with low adoption rates, such as logistics and construction. Additionally, efforts to promote alternative modes of transport, such as cycling and walking, should be intensified to achieve a more permanent shift towards sustainable transport. A target of reducing fuel consumption by 10% within the next 6 months should be set.",
-  "data_date": "2026-04-15",
+  "recommendation": "The government should consider implementing targeted policies to support sectors with low work-from-home adoption rates, such as the Retail and Services, Logistics, and Construction sectors. Additionally, investing in public transport infrastructure and alternative modes of transport can help reduce fuel consumption and promote a long-term modal shift towards more sustainable modes of transport. Aiming to increase the total fuel saved per week to 50 million litres by the end of 2026 can be a concrete target.",
+  "data_date": "2026-04-16",
   "alert": null
 }
