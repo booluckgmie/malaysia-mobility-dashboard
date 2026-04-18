@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-17T16:53:43.783539+00:00",
+  "generated_at": "2026-04-18T16:37:12.810772+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. The fuel savings impact is notable, but the economic risk remains a concern. The policy equity and long-term modal shift dimensions require further attention.",
+  "overall_score": 72,
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel policy component, but the work-from-home adoption rate is relatively low. The total fuel saved per week is significant, but still below the peak savings during the MCO period. The sector breakdown shows varying levels of work-from-home adoption and mobility scores, with the public and private professional sectors having lower mobility scores.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving. This indicates a significant reduction in fuel consumption, but there is still room for improvement. The current RON95 price of RM 4.02 per litre and diesel price of RM 5.97 per litre may incentivize further fuel savings."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is a significant reduction in fuel consumption. However, this is still 42% below the peak savings during the MCO period, indicating room for improvement. The current RON95 price of RM 4.02 per litre may be contributing to the relatively low fuel savings."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,441,377 trips is a positive indicator of the public's preference for public transport. The ridership component of the MF-Index is at 100, suggesting a high level of mobility and no savings in this dimension. However, the overall MF-Index of 88 indicates that there is still some room for improvement in terms of fuel policy and work-from-home adoption."
+      "detail": "The latest daily public transport ridership is 1,441,377 trips, which is a high level of usage. The ridership component of the MF-Index is also at 100, indicating full mobility with no savings. This suggests that the public transport system is being utilized efficiently, but there may be opportunities to optimize routes and schedules to further reduce fuel consumption."
     },
     {
       "dimension": "Economic Risk",
-      "score": 40,
-      "dir": "negative",
-      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. The low work-from-home adoption rates in these sectors, ranging from 5% to 15%, contribute to the economic risk. The Private Profess. sector has a moderate mobility score and risk level, but the Public & GLCs sector has a low mobility score and low risk level."
+      "score": 60,
+      "dir": "neutral",
+      "detail": "The sector breakdown shows varying levels of work-from-home adoption and mobility scores, with the retail and services, logistics, and construction sectors having high mobility scores and high risk levels. This may indicate a higher economic risk for these sectors, particularly if fuel prices continue to rise. However, the overall MF-Index score of 88 suggests that the economy is still operating at a relatively high level of mobility."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 70,
       "dir": "neutral",
-      "detail": "The work-from-home policy has been active for 2 days, with a moderate adoption rate of 40.2%. However, the sector breakdown indicates that the work-from-home adoption rates vary significantly across sectors, ranging from 5% to 60%. This suggests that the policy may not be equally effective or equitable across all sectors and populations."
+      "detail": "The work-from-home adoption rate varies significantly across sectors, with the public and private professional sectors having higher adoption rates. This may indicate a policy equity issue, where certain sectors or groups have more flexibility to adopt work-from-home arrangements. The government may need to consider policies to support sectors with lower work-from-home adoption rates, such as the retail and services sector."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "The current data indicates a high level of public transport ridership, but the long-term modal shift towards more sustainable modes of transport is uncertain. The fuel savings impact and economic risk dimensions suggest that there may be opportunities for modal shift, but the policy equity and work-from-home adoption rates indicate that more targeted interventions may be needed to achieve a significant modal shift."
+      "score": 85,
+      "dir": "positive",
+      "detail": "The high level of public transport ridership and the relatively low work-from-home adoption rate suggest that there is still a strong demand for personal vehicles. However, the total fuel saved per week is significant, and the government may be able to build on this momentum to promote a long-term modal shift towards more sustainable transportation options. The current fuel prices and the MF-Index score of 88 may provide an opportunity to incentivize the adoption of electric or hybrid vehicles."
     }
   ],
-  "recommendation": "The Ministry of Transport and Energy should consider implementing targeted interventions to promote work-from-home adoption in high-risk sectors, such as Retail & Services and Logistics. Additionally, the Ministry should explore opportunities to enhance the fuel savings impact and promote a long-term modal shift towards more sustainable modes of transport. Specific targets include increasing work-from-home adoption rates to 50% in high-risk sectors and reducing fuel consumption by 10% within the next 6 months.",
-  "data_date": "2026-04-17",
+  "recommendation": "The government should consider implementing policies to support sectors with lower work-from-home adoption rates, such as the retail and services sector, and incentivize the adoption of electric or hybrid vehicles. Additionally, the government should continue to monitor fuel prices and adjust the fuel policy component of the MF-Index accordingly. A target of reducing fuel consumption by an additional 10% within the next 6 months could be set, with regular progress updates and adjustments to policies as needed.",
+  "data_date": "2026-04-18",
   "alert": null
 }
