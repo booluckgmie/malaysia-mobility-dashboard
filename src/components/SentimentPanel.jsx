@@ -124,7 +124,7 @@ export default function SentimentPanel({ pipelineData }) {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
       {d.signals.map((s, i) => {
-        const dir = DIRECTION_ICONS[s.direction?.toLowerCase()] || DIRECTION_ICONS.unknown;
+        const dir = DIRECTION_ICONS[(s.direction || s.dir)?.toLowerCase()] || DIRECTION_ICONS.unknown;
         const Icon = dir.icon;
       
         return (
@@ -150,7 +150,7 @@ export default function SentimentPanel({ pipelineData }) {
               }}
             >
               <p className="text-xs text-gray-500 leading-relaxed mt-3">
-                {s.analysis}
+                {s.analysis || s.detail}
               </p>
             </div>
       
