@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Brain, TrendingUp, TrendingDown, Minus } from 'lucide-react'
 
 // Fallback sentiment data when Gemini is not yet run
@@ -123,39 +123,43 @@ export default function SentimentPanel({ pipelineData }) {
       </motion.div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-        {d.signals.map((s, i) => {
-          // FIX: Added '|| DIRECTION_ICONS.unknown' to handle invalid directions in the JSON
-          const dir = DIRECTION_ICONS[s.direction?.toLowerCase()] || DIRECTION_ICONS.unknown;
-          const Icon = dir.icon;
-          
-          return (
-            <motion.div key={s.dimension}
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
-              className="glass rounded-2xl p-5 cursor-pointer hover:shadow-md transition-all"
-              onClick={() => setExpanded(expanded === i ? null : i)}>
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium text-gray-700">{s.dimension}</div>
-                <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: dir.bg }}>
-                  <Icon size={13} color={dir.color} />
-                </div>
+      {d.signals.map((s, i) => {
+        const dir = DIRECTION_ICONS[s.direction?.toLowerCase()] || DIRECTION_ICONS.unknown;
+        const Icon = dir.icon;
+      
+        return (
+          <motion.div key={s.dimension}
+            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
+            className="glass rounded-2xl p-5 cursor-pointer hover:shadow-md transition-all"
+            onClick={() => setExpanded(expanded === i ? null : i)}>
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-sm font-medium text-gray-700">{s.dimension}</div>
+              <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ background: dir.bg }}>
+                <Icon size={13} color={dir.color} />
               </div>
-              <div className="text-2xl font-light mb-1" style={{ color: dir.color }}>{s.score}</div>
-              <ScoreBar score={s.score} color={dir.color} />
-
-              <AnimatePresence>
-                {expanded === i && (
-                  <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="text-xs text-gray-500 leading-relaxed mt-3 overflow-hidden">
-                    {s.analysis}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-              <div className="text-xs text-gray-300 mt-2">{expanded === i ? '▲ collapse' : '▼ expand analysis'}</div>
-            </motion.div>
-          )
-        })}
+            </div>
+            <div className="text-2xl font-light mb-1" style={{ color: dir.color }}>{s.score}</div>
+            <ScoreBar score={s.score} color={dir.color} />
+      
+            <div
+              style={{
+                maxHeight: expanded === i ? '200px' : '0px',
+                overflow: 'hidden',
+                transition: 'max-height 0.35s ease',
+              }}
+            >
+              <p className="text-xs text-gray-500 leading-relaxed mt-3">
+                {s.analysis}
+              </p>
+            </div>
+      
+            <div className="text-xs text-gray-300 mt-2">
+              {expanded === i ? '▲ collapse' : '▼ expand analysis'}
+            </div>
+          </motion.div>
+        )
+      })}
       </div>
 
       <div className="glass rounded-3xl p-6 border border-blue-100">
