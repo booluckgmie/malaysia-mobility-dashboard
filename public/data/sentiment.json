@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-20T17:01:56.286655+00:00",
+  "generated_at": "2026-04-21T16:58:08.466138+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. However, the fuel savings impact is significant, with 35.7 million litres saved per week. The economic risk is moderate, with some sectors showing high mobility scores and low work-from-home adoption.",
+  "summary": "Malaysia's daily mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The current WFH adoption rate of 40.6% has contributed to a total fuel saving of 35.7M litres per week. However, the sector breakdown shows varying levels of WFH adoption and mobility scores, highlighting the need for targeted policy interventions.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, likely due to the work-from-home policy and high fuel prices."
+      "detail": "The total fuel saved per week has reached 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant achievement, but there is still room for improvement to reach the pre-pandemic levels of fuel consumption. The current RON95 price of RM 4.02 per litre and diesel price of RM 5.97 per litre may incentivize further fuel savings."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,441,377 trips, which is a high level of usage. This suggests that the public transport system is being utilized efficiently, and the fuel policy component is having a positive impact."
+      "detail": "The latest daily PT ridership of 1,441,377 trips is a positive indicator of the public's preference for public transport. This trend is expected to continue, with the ridership component of the MF-Index scoring 100 out of 100. However, the authorities should continue to monitor and improve public transport services to maintain this momentum."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "Some sectors, such as Retail & Services, Logistics, and Construction, show high mobility scores and low work-from-home adoption, indicating a high economic risk. This could lead to increased fuel consumption and decreased productivity if not addressed."
+      "detail": "The sector breakdown reveals that certain sectors, such as Retail and Services, Logistics, and Construction, have high mobility scores and low WFH adoption rates, indicating a higher economic risk. These sectors may require targeted support and policy interventions to mitigate the risks associated with high mobility and fuel consumption."
     },
     {
       "dimension": "Policy Equity",
       "score": 60,
       "dir": "neutral",
-      "detail": "The work-from-home policy adoption varies across sectors, with Public & GLCs having a high adoption rate of 60%, while Logistics and Construction have low adoption rates of 8% and 5%, respectively. This indicates a need for more targeted policies to promote equity across sectors."
+      "detail": "The current WFH policy has been active for 6 days, with a WFH adoption rate of 40.6%. However, the sector breakdown shows varying levels of WFH adoption, with the Public and GLCs sector having a higher adoption rate of 60%. This highlights the need for a more equitable policy approach that considers the unique needs and challenges of different sectors and industries."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 50,
       "dir": "neutral",
-      "detail": "The current mobility data does not indicate a significant shift towards more sustainable modes of transport. The high fuel prices and work-from-home policy may be contributing to a temporary reduction in fuel consumption, but a more comprehensive strategy is needed to promote a long-term modal shift towards more sustainable options."
+      "detail": "The current MF-Index of 88 out of 100 indicates a high level of mobility, but the long-term modal shift towards more sustainable modes of transport is still uncertain. The authorities should continue to invest in public transport infrastructure and promote alternative modes of transport, such as cycling and walking, to achieve a more sustainable and equitable transport system in the long term."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to promote work-from-home adoption in sectors with high mobility scores and low adoption rates. Additionally, investing in public transport infrastructure and promoting sustainable modes of transport can help reduce fuel consumption and mitigate economic risk. Aiming to increase the work-from-home adoption rate to 50% across all sectors and reducing fuel consumption by 10% in the next 6 months can be a realistic target.",
-  "data_date": "2026-04-20",
+  "recommendation": "The government should consider implementing targeted policy interventions to support sectors with high economic risk and low WFH adoption rates. Additionally, the authorities should continue to promote public transport and alternative modes of transport, with a target of increasing the modal share of public transport to 30% by 2028. The government should also review and refine the WFH policy to ensure a more equitable approach that considers the unique needs and challenges of different sectors and industries.",
+  "data_date": "2026-04-21",
   "alert": null
 }
