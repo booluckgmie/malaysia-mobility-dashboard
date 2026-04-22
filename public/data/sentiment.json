@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-21T16:58:08.466138+00:00",
+  "generated_at": "2026-04-22T16:57:01.817873+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 70,
-  "summary": "Malaysia's daily mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The current WFH adoption rate of 40.6% has contributed to a total fuel saving of 35.7M litres per week. However, the sector breakdown shows varying levels of WFH adoption and mobility scores, highlighting the need for targeted policy interventions.",
+  "overall_score": 58,
+  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a high ridership component and low fuel policy component. The WFH adoption rate of 40.7% has contributed to a significant fuel saving of 35.7M litres per week. However, the sector breakdown reveals varying levels of risk, with the retail and services, logistics, and construction sectors showing high risk due to low WFH adoption rates.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 80,
+      "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week has reached 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant achievement, but there is still room for improvement to reach the pre-pandemic levels of fuel consumption. The current RON95 price of RM 4.02 per litre and diesel price of RM 5.97 per litre may incentivize further fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM -0.15 per litre may not be sustainable in the long term, and alternative fuel-saving measures should be explored."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,441,377 trips is a positive indicator of the public's preference for public transport. This trend is expected to continue, with the ridership component of the MF-Index scoring 100 out of 100. However, the authorities should continue to monitor and improve public transport services to maintain this momentum."
+      "detail": "The latest daily PT ridership of 1,441,377 trips is a positive indicator of the public's preference for public transport, with a ridership component score of 100. This suggests that the current public transport system is meeting the demand, but there is still room for improvement to increase ridership and reduce private vehicle usage."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that certain sectors, such as Retail and Services, Logistics, and Construction, have high mobility scores and low WFH adoption rates, indicating a higher economic risk. These sectors may require targeted support and policy interventions to mitigate the risks associated with high mobility and fuel consumption."
+      "detail": "The sector breakdown reveals that the retail and services, logistics, and construction sectors are showing high risk due to low WFH adoption rates, which may lead to increased mobility and fuel consumption. This could have a negative impact on the economy, particularly if fuel prices increase in the future."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 50,
       "dir": "neutral",
-      "detail": "The current WFH policy has been active for 6 days, with a WFH adoption rate of 40.6%. However, the sector breakdown shows varying levels of WFH adoption, with the Public and GLCs sector having a higher adoption rate of 60%. This highlights the need for a more equitable policy approach that considers the unique needs and challenges of different sectors and industries."
+      "detail": "The current WFH policy has been active for 7 days, with a WFH adoption rate of 40.7%, which is lower than the MCO peak of 65%. This suggests that the policy may not be equally effective across all sectors, and further analysis is needed to identify areas for improvement and ensure equitable distribution of benefits."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "The current MF-Index of 88 out of 100 indicates a high level of mobility, but the long-term modal shift towards more sustainable modes of transport is still uncertain. The authorities should continue to invest in public transport infrastructure and promote alternative modes of transport, such as cycling and walking, to achieve a more sustainable and equitable transport system in the long term."
+      "score": 60,
+      "dir": "positive",
+      "detail": "The current data suggests a moderate shift towards public transport, with a high ridership component score. However, to achieve a long-term modal shift, there is a need for sustained investment in public transport infrastructure and services, as well as policies to encourage the use of alternative modes of transport, such as cycling and walking."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policy interventions to support sectors with high economic risk and low WFH adoption rates. Additionally, the authorities should continue to promote public transport and alternative modes of transport, with a target of increasing the modal share of public transport to 30% by 2028. The government should also review and refine the WFH policy to ensure a more equitable approach that considers the unique needs and challenges of different sectors and industries.",
-  "data_date": "2026-04-21",
+  "recommendation": "The government should consider implementing targeted policies to increase WFH adoption rates in high-risk sectors, such as retail and services, logistics, and construction. Additionally, investments in public transport infrastructure and services should be prioritized to encourage a long-term modal shift. A specific target of increasing WFH adoption rates by 10% in the next 6 months and reducing fuel consumption by 15% in the next year should be set.",
+  "data_date": "2026-04-22",
   "alert": null
 }
