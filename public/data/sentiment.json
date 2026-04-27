@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-26T16:39:47.883601+00:00",
+  "generated_at": "2026-04-27T17:20:13.166969+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 58,
-  "summary": "The current mobility data indicates a moderate impact on the transportation sector, with a notable increase in public transport ridership and fuel savings. However, the fuel policy component score is 0, indicating a need for improvement. The work-from-home adoption rate is 41.1%, which is relatively high.",
+  "summary": "The current mobility data indicates a moderate impact on the transportation sector, with a notable increase in public transportation ridership and fuel savings. However, the fuel policy component score of 0/100 raises concerns. The WFH adoption rate of 41.2% is a positive sign, but sectoral disparities persist.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This is a significant reduction in fuel consumption, but there is still room for improvement to reach the pre-pandemic levels."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant reduction, but there is still room for improvement, particularly considering the current low fuel prices."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 90,
+      "score": 100,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,441,377 trips, which is a significant increase from the pre-pandemic levels. This indicates a positive shift towards the use of public transport, which can help reduce traffic congestion and decrease fuel consumption."
+      "detail": "The latest daily PT ridership of 1,441,377 trips is a promising sign, indicating a strong demand for public transportation. This trend should be encouraged and supported through investments in infrastructure and services."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the retail and services, logistics, and construction sectors have high mobility scores and risk levels. This suggests that these sectors are heavily reliant on physical mobility and may be vulnerable to disruptions in the transportation network."
+      "detail": "The sectoral breakdown reveals significant disparities in WFH adoption rates, with the retail and services, logistics, and construction sectors showing high mobility scores and risk levels. This could lead to increased economic risk and vulnerability to external shocks."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The work-from-home adoption rate varies significantly across different sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This suggests that there may be inequities in the implementation of work-from-home policies across different sectors."
+      "detail": "The WFH policy has been active for 12 days, but its impact is unevenly distributed across sectors. The public and GLCs sector has a higher WFH adoption rate, while the private professional sector and others lag behind, raising concerns about policy equity and fairness."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
-      "dir": "positive",
-      "detail": "The current data suggests that there is a shift towards the use of public transport, with a significant increase in ridership. However, the fuel policy component score is 0, indicating a need for improvement in promoting alternative modes of transport and reducing reliance on fossil fuels."
+      "score": 30,
+      "dir": "negative",
+      "detail": "The current fuel policy component score of 0/100 is a major concern, as it may hinder the transition to more sustainable and environmentally friendly transportation modes. A more comprehensive and forward-looking fuel policy is necessary to support a long-term modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing policies to promote the use of public transport and alternative modes of transport, such as investing in public transport infrastructure and implementing fuel-efficient policies. Additionally, the government should work to address the inequities in work-from-home adoption rates across different sectors and promote a more sustainable and equitable transportation system. A target of reducing fuel consumption by 20% within the next 6 months should be set.",
-  "data_date": "2026-04-26",
+  "recommendation": "The government should consider implementing targeted incentives to encourage the adoption of WFH policies across all sectors, particularly in the retail and services, logistics, and construction sectors. Additionally, a review of the fuel policy is necessary to promote a more sustainable and environmentally friendly transportation system, with a target of increasing the fuel policy component score to at least 50/100 within the next 6 months.",
+  "data_date": "2026-04-27",
   "alert": null
 }
