@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05T17:21:36.859562+00:00",
+  "updated_at": "2026-05-06T17:28:04.549341+00:00",
   "countries": [
     {
       "country": "Malaysia",
@@ -12,7 +12,11 @@
       "ridershipRecovery2025": 97,
       "mfIndex": 58,
       "fuelSubsidyGDP": 1.8,
-      "highlight": true
+      "highlight": true,
+      "gdp_usd": 422227005428.688,
+      "gdp_usd_year": "2024",
+      "population": 35557673,
+      "population_year": "2024"
     },
     {
       "country": "Singapore",
@@ -44,7 +48,9 @@
       "fuelSubsidyGDP": 2.1,
       "highlight": false,
       "gdp_usd": 526517658841.684,
-      "gdp_usd_year": "2024"
+      "gdp_usd_year": "2024",
+      "population": 71668011,
+      "population_year": "2024"
     },
     {
       "country": "South Korea",
@@ -58,6 +64,8 @@
       "mfIndex": 78,
       "fuelSubsidyGDP": 0.5,
       "highlight": false,
+      "gdp_usd": 1875388209406.8,
+      "gdp_usd_year": "2024",
       "population": 51751065,
       "population_year": "2024"
     },
@@ -90,6 +98,8 @@
       "mfIndex": 82,
       "fuelSubsidyGDP": 0.0,
       "highlight": false,
+      "gdp_usd": 4027597523550.58,
+      "gdp_usd_year": "2024",
       "population": 123975371,
       "population_year": "2024"
     }
