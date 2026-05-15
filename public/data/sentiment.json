@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-05-14T17:47:16.832208+00:00",
+  "generated_at": "2026-05-15T17:25:31.307241+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 57,
-  "summary": "The current mobility data indicates a moderate impact on the transportation sector, with a notable increase in public transportation ridership and fuel savings. However, the fuel policy component score of 0/100 raises concerns about the effectiveness of current fuel policies. The WFH adoption rate of 42.9% suggests a partial shift towards remote work.",
+  "summary": "The current mobility data shows a moderate impact with a MF-Index score of 57, driven by high public transportation ridership and significant fuel savings. However, the fuel policy component score of 0 indicates a need for improvement. The WFH adoption rate of 43% has contributed to the fuel savings, with 35.7 million liters saved per week.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 70,
+      "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM -0.15/litre may not be sustainable in the long term, and alternative fuel policies should be explored."
+      "detail": "The total fuel saved per week is 35.7 million liters, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the fuel policy component score of 0 suggests that more can be done to optimize fuel savings. The current RON95 price of -0.15 RM/litre and diesel price of -0.30 RM/litre may not be sufficient to drive further fuel savings."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,516,904 trips is a significant increase, indicating a strong demand for public transportation. This trend should be encouraged and supported through investments in public transportation infrastructure and services."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator, with a ridership component score of 100. This suggests that the public transportation system is being utilized effectively, reducing the reliance on personal vehicles and contributing to fuel savings."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, indicating a potential economic risk due to their high dependence on physical mobility. Policies to support these sectors in adopting more flexible work arrangements and reducing their mobility needs should be considered."
+      "detail": "The sector breakdown shows that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, indicating a potential economic risk. The low WFH adoption rates in these sectors, ranging from 5% to 15%, may lead to increased fuel consumption and decreased productivity."
     },
     {
       "dimension": "Policy Equity",
-      "score": 50,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The WFH adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. Policies to support more equitable adoption of WFH arrangements across sectors should be developed to ensure fairness and inclusivity."
+      "detail": "The WFH policy has been active for 30 days, with a WFH adoption rate of 43%. While this has contributed to fuel savings, the policy may not be equally effective across all sectors. The Public & GLCs sector has a higher WFH adoption rate of 60%, while the Logistics and Construction sectors have much lower rates, indicating a need for more targeted policies."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
-      "dir": "positive",
-      "detail": "The current ridership component score of 100/100 and the increasing trend in PT ridership suggest a potential long-term modal shift towards more sustainable transportation modes. However, sustained investments in public transportation infrastructure and services are necessary to support this shift and reduce dependence on private vehicles."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current data suggests that the modal shift towards public transportation is ongoing, with a high PT ridership. However, the fuel policy component score of 0 indicates that more needs to be done to support a long-term shift away from personal vehicles. The government may need to consider additional policies, such as increasing fuel prices or investing in alternative modes of transportation, to drive a more sustainable modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing policies to support the adoption of flexible work arrangements across sectors, with a target of increasing the overall WFH adoption rate to 50% within the next 6 months. Additionally, investments in public transportation infrastructure and services should be prioritized to support the growing demand for sustainable transportation modes. The fuel policy component score of 0/100 should be addressed through the development of alternative fuel policies that promote sustainable transportation options.",
-  "data_date": "2026-05-14",
+  "recommendation": "The government should consider implementing targeted policies to increase WFH adoption rates in sectors with high mobility scores and risk levels, such as Retail & Services, Logistics, and Construction. Additionally, the government should review and revise the fuel policy to optimize fuel savings and support a long-term modal shift towards more sustainable modes of transportation. A target of reducing fuel consumption by 10% within the next 6 months could be a realistic goal.",
+  "data_date": "2026-05-15",
   "alert": null
 }
