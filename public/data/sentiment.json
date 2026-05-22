@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-05-21T17:54:43.867998+00:00",
+  "generated_at": "2026-05-22T17:49:22.913322+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "The current mobility data indicates a high level of public transport ridership and fuel policy component, but the work-from-home adoption rate is lower than expected. The total fuel saved per week is significant, but still 58% of the peak savings during the MCO period. The sector breakdown shows varying levels of work-from-home adoption and mobility scores, with the retail and services sector having the highest mobility score.",
+  "summary": "Malaysia's mobility index is at 87, with a high ridership component and fuel policy component, but a moderate WFH adoption rate. The latest daily PT ridership is 1,516,904 trips, and the total fuel saved per week is 35.7M litres. However, the sector breakdown shows varying levels of WFH adoption and mobility scores, indicating potential economic risks.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is a significant reduction in fuel consumption. However, this is still 58% of the peak savings during the MCO period, indicating room for improvement. The current RON95 price of RM 4.07 per litre and diesel price of RM 4.97 per litre may be contributing to the fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current fuel prices, with RON95 at RM 4.07 per litre and diesel at RM 4.97 per litre, may offset some of the savings. Further efforts to reduce fuel consumption are necessary to achieve long-term sustainability."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,516,904 trips, which is a high level of ridership. This suggests that the public transport system is being utilized effectively, and the fuel policy component is also at 100%, indicating a well-implemented fuel policy."
+      "detail": "The latest daily PT ridership is 1,516,904 trips, which is a significant increase from the pre-pandemic level. This suggests that the public transportation system is being utilized efficiently, and efforts to promote its use are paying off. However, the ridership component score of 100 indicates that there is no room for improvement, and alternative modes of transportation should be explored."
     },
     {
       "dimension": "Economic Risk",
       "score": 60,
-      "dir": "neutral",
-      "detail": "The sector breakdown shows varying levels of work-from-home adoption and mobility scores, with the retail and services sector having the highest mobility score of 85. This may indicate a higher economic risk for this sector, as it is more reliant on physical presence and mobility. However, the overall mobility score is still relatively high, indicating a moderate level of economic risk."
+      "dir": "negative",
+      "detail": "The sector breakdown shows that the Retail & Services, Logistics, and Construction sectors have high mobility scores and low WFH adoption rates, indicating a high risk of economic disruption. The Private Profess. sector also has a moderate mobility score and WFH adoption rate, suggesting a medium risk. These sectors may require targeted support to mitigate potential economic risks."
     },
     {
       "dimension": "Policy Equity",
       "score": 70,
       "dir": "neutral",
-      "detail": "The work-from-home adoption rate varies significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This may indicate a lack of policy equity, as some sectors are more able to adopt work-from-home arrangements than others."
+      "detail": "The WFH policy has been active for 37 days, with a moderate adoption rate of 43.7%. However, the sector breakdown shows varying levels of WFH adoption, with the Public & GLCs sector having a higher adoption rate than the private sector. This suggests that the policy may not be equally effective across all sectors, and further analysis is needed to ensure equity in policy implementation."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 85,
       "dir": "positive",
-      "detail": "The high level of public transport ridership and fuel policy component suggests a positive trend towards a long-term modal shift towards more sustainable transportation options. However, the work-from-home adoption rate and mobility scores across sectors will need to be monitored to ensure that this trend continues and that the benefits of the modal shift are equitably distributed."
+      "detail": "The current mobility index and ridership component scores suggest that Malaysia is moving towards a more sustainable transportation system. The high PT ridership and moderate WFH adoption rate indicate a shift towards alternative modes of transportation. However, the fuel policy component score of 100 suggests that there is no room for improvement, and alternative fuel sources or modes of transportation should be explored to achieve long-term sustainability."
     }
   ],
-  "recommendation": "The government should consider implementing policies to increase work-from-home adoption rates in sectors with low adoption rates, such as logistics and construction. Additionally, the government should continue to invest in public transport infrastructure and promote the use of sustainable transportation options to support the long-term modal shift. A target of reducing fuel consumption by an additional 10% within the next 6 months should be set.",
-  "data_date": "2026-05-21",
+  "recommendation": "The government should consider implementing targeted support for high-risk sectors, such as the Retail & Services, Logistics, and Construction sectors, to mitigate potential economic risks. Additionally, efforts should be made to promote alternative modes of transportation and explore alternative fuel sources to achieve long-term sustainability. A review of the WFH policy is also necessary to ensure equity in policy implementation across all sectors.",
+  "data_date": "2026-05-22",
   "alert": null
 }
