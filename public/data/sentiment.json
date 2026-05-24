@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-05-23T16:57:08.191415+00:00",
+  "generated_at": "2026-05-24T16:57:44.348698+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 72,
-  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals sectoral disparities in work-from-home adoption and mobility scores. The overall mobility index is at 87, with a ridership component of 100 and a fuel policy component of 100. However, the work-from-home adoption rate is only 43.8%, indicating room for improvement.",
+  "overall_score": 70,
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals significant economic risks in certain sectors. The Work-From-Home policy has been active for 39 days, with a moderate adoption rate of 43.9%. Overall, the transport and energy sector is showing signs of recovery, but careful monitoring and targeted interventions are necessary to address emerging challenges.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This is a significant reduction in fuel consumption, but there is still room for improvement, especially considering the current RON95 price of RM 4.07 per litre."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, likely due to the Work-From-Home policy and high fuel prices. However, the savings are still below the MCO peak, suggesting room for further improvement."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 95,
+      "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,516,904 trips, which is a high level of usage. This suggests that the public transport system is being utilized effectively, and efforts to promote its use are paying off."
+      "detail": "The latest daily public transport ridership is 1,516,904 trips, with a ridership component score of 100. This suggests a high level of public transport usage, which is likely due to the convenience and affordability of public transport options. However, the ridership numbers are still below pre-pandemic levels, indicating a need for continued investment in public transport infrastructure."
     },
     {
       "dimension": "Economic Risk",
-      "score": 60,
+      "score": 40,
       "dir": "negative",
-      "detail": "The sectoral breakdown reveals that the retail and services, logistics, and construction sectors have high mobility scores and low work-from-home adoption rates, indicating a high risk of economic disruption. This could have significant impacts on the overall economy and requires attention from policymakers."
+      "detail": "The sector breakdown reveals significant economic risks in the Retail & Services, Logistics, and Construction sectors, with high mobility scores and low Work-From-Home adoption rates. These sectors are likely to be heavily impacted by high fuel prices and may require targeted support to mitigate the risks of job losses and business closures."
     },
     {
       "dimension": "Policy Equity",
-      "score": 70,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The work-from-home adoption rates vary significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of only 8% and 5%, respectively. This suggests that there may be equity issues in the implementation of work-from-home policies that need to be addressed."
+      "detail": "The Work-From-Home policy has been active for 39 days, with a moderate adoption rate of 43.9%. However, the sector breakdown reveals significant variations in Work-From-Home adoption rates, with the Public & GLCs sector having a much higher adoption rate than the private sector. This suggests a need for more nuanced policy interventions to address the diverse needs of different sectors and populations."
     },
     {
-      "dimension": "Long-term Modal Shift",
-      "score": 85,
-      "dir": "positive",
-      "detail": "The high level of public transport ridership and fuel savings suggest that there is a shift towards more sustainable modes of transport. However, the current mobility index of 87, which is close to the pre-pandemic level of 85, indicates that there is still a long way to go in achieving a significant modal shift towards more sustainable modes of transport."
+      "dimension": "Long-Term Modal Shift",
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current mobility data suggests a shift towards public transport and reduced fuel consumption, but it is unclear whether this shift is sustainable in the long term. The high fuel prices and Work-From-Home policy may be driving this shift, but it is essential to invest in public transport infrastructure and promote alternative modes of transport to ensure a lasting modal shift."
     }
   ],
-  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to increase work-from-home adoption rates in sectors with low adoption rates, such as logistics and construction. Additionally, efforts should be made to promote the use of public transport and reduce fuel consumption, with a target of reducing the mobility index to 80 within the next 6 months. The government should also consider implementing policies to address the equity issues in work-from-home adoption rates across sectors.",
-  "data_date": "2026-05-23",
+  "recommendation": "The government should consider targeted interventions to support the Retail & Services, Logistics, and Construction sectors, such as providing fuel subsidies or investing in alternative modes of transport. Additionally, the government should continue to promote the Work-From-Home policy and invest in public transport infrastructure to support a long-term modal shift. Specific targets include increasing the Work-From-Home adoption rate to 50% and reducing fuel consumption by 20% within the next 6 months.",
+  "data_date": "2026-05-24",
   "alert": null
 }
