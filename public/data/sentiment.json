@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-05-26T18:23:23.326280+00:00",
+  "generated_at": "2026-05-27T18:25:20.980908+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 72,
-  "summary": "The current mobility data indicates a high level of public transport ridership and significant fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 44.1% is contributing to these savings, but sectoral disparities are evident. Overall, the data suggests a need for continued monitoring and targeted policy interventions.",
+  "overall_score": 57,
+  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a high ridership component and low fuel policy component. The WFH adoption rate is at 44.2%, resulting in significant fuel savings. However, the economic risk remains a concern, particularly in the retail and services sector.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 80,
+      "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, this is still below the pre-pandemic levels, suggesting room for further improvement. The current RON95 price of RM 4.07 per litre may be influencing this trend."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant reduction in fuel consumption, resulting in cost savings and reduced emissions. However, the fuel price reduction of RM -0.15/litre for RON95 and RM -0.10/litre for diesel may offset some of these gains."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator, with the ridership component of the MF-Index scoring 100. This suggests a high level of public transport usage, which is contributing to reduced fuel consumption and lower emissions."
+      "detail": "The latest daily PT ridership is 1,516,904 trips, which is a significant increase from the pre-pandemic levels. This suggests that the public transport system is being utilized efficiently, reducing the reliance on personal vehicles and contributing to a more sustainable transport sector."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sectoral breakdown reveals significant disparities in WFH adoption rates, with the Retail & Services, Logistics, and Construction sectors having low adoption rates and high mobility scores. This poses an economic risk, as these sectors may be more vulnerable to fluctuations in fuel prices and mobility patterns."
+      "detail": "The sector breakdown indicates that the retail and services sector has a high mobility score of 85 and a high risk level. This suggests that the sector is heavily reliant on personal vehicles, which may lead to increased fuel consumption and emissions. The logistics and construction sectors also have high mobility scores, indicating a need for targeted interventions to reduce their environmental impact."
     },
     {
       "dimension": "Policy Equity",
-      "score": 50,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 41 days, with a 44.1% adoption rate, which is lower than the MCO peak of 65%. This suggests that the policy may not be equally effective across all sectors, with some sectors, such as Public & GLCs, having higher adoption rates than others."
+      "detail": "The WFH adoption rate varies significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This suggests that the WFH policy may not be equally effective across all sectors, and targeted interventions may be necessary to promote greater equity."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
+      "score": 80,
       "dir": "positive",
-      "detail": "The current MF-Index of 87, with a high ridership component, suggests a potential for long-term modal shift towards more sustainable transport modes. However, the fuel policy component score of 100 may indicate a reliance on fuel-based transportation, which could hinder this shift if not addressed through targeted policy interventions."
+      "detail": "The current data suggests that there is a shift towards more sustainable modes of transport, with a high PT ridership and significant fuel savings. However, the long-term sustainability of this shift is uncertain, and continued investment in public transport infrastructure and policies to promote active transport modes will be necessary to maintain this momentum."
     }
   ],
-  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to increase WFH adoption rates in sectors with low adoption rates, such as Retail & Services, Logistics, and Construction. Additionally, investments in public transport infrastructure and alternative fuel sources could further reduce fuel consumption and support a long-term modal shift. Aiming to increase the total fuel saved per week to 50M litres by the end of 2026 could be a realistic target.",
-  "data_date": "2026-05-26",
+  "recommendation": "The government should consider implementing targeted interventions to reduce the environmental impact of the logistics and construction sectors, such as promoting the use of electric or hybrid vehicles. Additionally, the government should continue to invest in public transport infrastructure and promote active transport modes to maintain the current momentum towards a more sustainable transport sector. A target of reducing fuel consumption by 10% within the next 6 months should be set.",
+  "data_date": "2026-05-27",
   "alert": null
 }

@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-05-26T18:23:11.531543+00:00",
+  "updated_at": "2026-05-27T18:25:08.117111+00:00",
   "mf_index": {
-    "score": 87,
+    "score": 57,
     "components": {
       "ridership_norm": 100,
-      "fuel_norm": 100,
-      "wfh_adoption": 44.1
+      "fuel_norm": 0,
+      "wfh_adoption": 44.2
     },
-    "interpretation": "Full mobility — no savings",
+    "interpretation": "Moderate — partial impact",
     "reference_points": {
       "mco_2021": 18,
       "pre_covid": 85,
@@ -655,18 +655,13 @@
     ]
   },
   "fuel": {
-    "latest_ron95": 4.07,
-    "latest_diesel": 4.97,
+    "latest_ron95": -0.15000000000000036,
+    "latest_diesel": -0.09999999999999964,
     "history": [
       {
-        "date": "2026-03-19",
-        "ron95": 2.05,
-        "diesel": 0.7999999999999998
-      },
-      {
-        "date": "2026-03-19",
-        "ron95": 3.27,
-        "diesel": 4.72
+        "date": "2026-03-26",
+        "ron95": 3.87,
+        "diesel": 5.52
       },
       {
         "date": "2026-03-26",
@@ -674,19 +669,14 @@
         "diesel": 0.7999999999999998
       },
       {
-        "date": "2026-03-26",
+        "date": "2026-04-02",
         "ron95": 3.87,
-        "diesel": 5.52
+        "diesel": 6.02
       },
       {
         "date": "2026-04-02",
         "ron95": 2.05,
         "diesel": 0.5
-      },
-      {
-        "date": "2026-04-02",
-        "ron95": 3.87,
-        "diesel": 6.02
       },
       {
         "date": "2026-04-09",
@@ -700,13 +690,13 @@
       },
       {
         "date": "2026-04-16",
-        "ron95": -0.25,
-        "diesel": -0.75
+        "ron95": 4.02,
+        "diesel": 5.97
       },
       {
         "date": "2026-04-16",
-        "ron95": 4.02,
-        "diesel": 5.97
+        "ron95": -0.25,
+        "diesel": -0.75
       },
       {
         "date": "2026-04-23",
@@ -720,13 +710,13 @@
       },
       {
         "date": "2026-04-30",
-        "ron95": 3.97,
-        "diesel": 5.12
+        "ron95": 0.10000000000000009,
+        "diesel": 3.35
       },
       {
         "date": "2026-04-30",
-        "ron95": 0.10000000000000009,
-        "diesel": 3.35
+        "ron95": 3.97,
+        "diesel": 5.12
       },
       {
         "date": "2026-05-07",
@@ -740,13 +730,13 @@
       },
       {
         "date": "2026-05-14",
-        "ron95": 3.87,
-        "diesel": 4.87
+        "ron95": -0.14999999999999947,
+        "diesel": -0.2999999999999998
       },
       {
         "date": "2026-05-14",
-        "ron95": -0.14999999999999947,
-        "diesel": -0.2999999999999998
+        "ron95": 3.87,
+        "diesel": 4.87
       },
       {
         "date": "2026-05-21",
@@ -757,6 +747,16 @@
         "date": "2026-05-21",
         "ron95": 4.07,
         "diesel": 4.97
+      },
+      {
+        "date": "2026-05-28",
+        "ron95": 3.92,
+        "diesel": 4.87
+      },
+      {
+        "date": "2026-05-28",
+        "ron95": -0.15000000000000036,
+        "diesel": -0.09999999999999964
       }
     ],
     "historical_extended": [
@@ -884,8 +884,8 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 41,
-    "adoption_estimate_pct": 44.1
+    "days_active": 42,
+    "adoption_estimate_pct": 44.2
   },
   "api_sources": {
     "ridership": "api.data.gov.my · ridership_headline · no auth",
