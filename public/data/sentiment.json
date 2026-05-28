@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-05-27T18:25:20.980908+00:00",
+  "generated_at": "2026-05-28T18:34:20.790372+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 57,
-  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a high ridership component and low fuel policy component. The WFH adoption rate is at 44.2%, resulting in significant fuel savings. However, the economic risk remains a concern, particularly in the retail and services sector.",
+  "summary": "The current mobility data indicates a moderate impact on the transportation sector, with a notable increase in public transportation ridership and fuel savings. However, the fuel policy component score is 0, indicating a need for improvement. The work-from-home adoption rate is 44.3%, which is a positive trend.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant reduction in fuel consumption, resulting in cost savings and reduced emissions. However, the fuel price reduction of RM -0.15/litre for RON95 and RM -0.10/litre for diesel may offset some of these gains."
+      "detail": "The total fuel saved per week is 35.7 million liters, which is 42% of the MCO peak savings. This is a significant reduction in fuel consumption, but there is still room for improvement, especially considering the current low fuel prices."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership is 1,516,904 trips, which is a significant increase from the pre-pandemic levels. This suggests that the public transport system is being utilized efficiently, reducing the reliance on personal vehicles and contributing to a more sustainable transport sector."
+      "detail": "The latest daily public transportation ridership is 1,516,904 trips, which is a significant increase from the pre-pandemic levels. This trend is expected to continue, and it is essential to ensure that the public transportation system can accommodate the growing demand."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the retail and services sector has a high mobility score of 85 and a high risk level. This suggests that the sector is heavily reliant on personal vehicles, which may lead to increased fuel consumption and emissions. The logistics and construction sectors also have high mobility scores, indicating a need for targeted interventions to reduce their environmental impact."
+      "detail": "The sector breakdown indicates that the retail and services, logistics, and construction sectors have high mobility scores and risk levels. This suggests that these sectors are heavily reliant on transportation and may be vulnerable to disruptions or changes in the transportation landscape."
     },
     {
       "dimension": "Policy Equity",
       "score": 60,
       "dir": "neutral",
-      "detail": "The WFH adoption rate varies significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This suggests that the WFH policy may not be equally effective across all sectors, and targeted interventions may be necessary to promote greater equity."
+      "detail": "The work-from-home adoption rates vary significantly across sectors, with the public and GLCs sector having a 60% adoption rate, while the logistics and construction sectors have adoption rates of 8% and 5%, respectively. This disparity may indicate a need for more targeted policies to support different sectors and industries."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 80,
-      "dir": "positive",
-      "detail": "The current data suggests that there is a shift towards more sustainable modes of transport, with a high PT ridership and significant fuel savings. However, the long-term sustainability of this shift is uncertain, and continued investment in public transport infrastructure and policies to promote active transport modes will be necessary to maintain this momentum."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current modal shift is moderate, with a moderate MF-Index score and a high public transportation ridership. However, the fuel policy component score is 0, indicating a lack of progress in promoting alternative fuel sources or reducing fuel consumption. A more comprehensive approach is needed to achieve a sustainable long-term modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing targeted interventions to reduce the environmental impact of the logistics and construction sectors, such as promoting the use of electric or hybrid vehicles. Additionally, the government should continue to invest in public transport infrastructure and promote active transport modes to maintain the current momentum towards a more sustainable transport sector. A target of reducing fuel consumption by 10% within the next 6 months should be set.",
-  "data_date": "2026-05-27",
+  "recommendation": "The government should consider implementing targeted policies to support the adoption of work-from-home arrangements in sectors with low adoption rates. Additionally, investments in public transportation infrastructure and alternative fuel sources should be prioritized to reduce the country's reliance on fossil fuels and promote a more sustainable transportation system. Aiming to increase the fuel policy component score to 50 within the next 6 months is a realistic target.",
+  "data_date": "2026-05-28",
   "alert": null
 }
