@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T18:34:21.161756+00:00",
+  "updated_at": "2026-05-29T18:30:26.297016+00:00",
   "countries": [
     {
       "country": "Malaysia",
@@ -48,9 +48,7 @@
       "fuelSubsidyGDP": 2.1,
       "highlight": false,
       "gdp_usd": 526517658841.684,
-      "gdp_usd_year": "2024",
-      "population": 71668011,
-      "population_year": "2024"
+      "gdp_usd_year": "2024"
     },
     {
       "country": "South Korea",
@@ -99,9 +97,7 @@
       "fuelSubsidyGDP": 0.0,
       "highlight": false,
       "gdp_usd": 4027597523550.58,
-      "gdp_usd_year": "2024",
-      "population": 123975371,
-      "population_year": "2024"
+      "gdp_usd_year": "2024"
     }
   ],
   "normalised": {
