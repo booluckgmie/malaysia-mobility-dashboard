@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-05T17:51:45.085812+00:00",
+  "generated_at": "2026-06-06T17:10:05.730457+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. The fuel savings impact is significant, but the economic risk remains high in certain sectors. The policy equity and long-term modal shift dimensions require further attention.",
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.2% is contributing to the fuel savings, but its impact on different sectors varies. Overall, the transport and energy policy is showing positive signs, but requires careful monitoring and adjustments to ensure long-term sustainability.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This indicates a significant reduction in fuel consumption, but there is still room for improvement to reach the pre-pandemic levels."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This is a significant reduction in fuel consumption, indicating the effectiveness of the current fuel policy and WFH adoption. However, the RON95 price of RM 3.72 per litre is relatively high, which may impact the fuel savings in the long run."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership is 1,516,904 trips, which is a high level of public transport usage. This suggests that the public transport system is being utilized effectively, but the ridership component score of 100/100 indicates that there is no room for improvement in this dimension."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive sign, indicating a high level of public transport usage. This is likely due to the effective fuel policy and the convenience of public transport. However, the ridership component score of 100 may not be sustainable in the long term, and efforts should be made to maintain and improve the public transport system."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and high risk levels. This suggests that these sectors are heavily reliant on physical mobility and are vulnerable to economic disruptions, with WFH adoption rates of 15%, 8%, and 5% respectively."
+      "detail": "The sector breakdown reveals significant variations in WFH adoption rates, with the Retail and Services sector having a low WFH adoption rate of 15%. This may indicate a higher economic risk for this sector, as well as the Logistics and Construction sectors, which have even lower WFH adoption rates. The government should consider providing support to these sectors to mitigate the economic risks."
     },
     {
       "dimension": "Policy Equity",
-      "score": 50,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The WFH adoption rate varies significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Construction sector has only a 5% adoption rate. This indicates that the WFH policy is not being adopted equally across all sectors, and further attention is needed to ensure policy equity."
+      "detail": "The WFH policy has been active for 52 days, and its impact on different sectors varies. While the Public and GLCs sector has a high WFH adoption rate of 60%, the Retail and Services sector has a much lower rate. The government should review the policy to ensure it is equitable and effective for all sectors, and consider providing incentives or support to sectors that are struggling to adopt WFH."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
-      "dir": "positive",
-      "detail": "The current MF-Index score of 86/100 indicates a high level of mobility, but the fuel policy component score of 100/100 suggests that there is no incentive to shift to alternative modes of transport. To achieve a long-term modal shift, policies that promote the use of public transport, walking, and cycling need to be implemented and incentivized."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current mobility data indicates a high level of public transport usage, but the long-term modal shift towards sustainable transport modes is unclear. The government should consider investing in alternative modes of transport, such as electric or hybrid vehicles, and promoting a culture of sustainable transport to ensure a long-term shift towards more environmentally friendly modes of transport."
     }
   ],
-  "recommendation": "To build on the current momentum, the government should consider implementing policies that promote the use of public transport, walking, and cycling, such as investing in infrastructure and providing incentives for the adoption of alternative modes of transport. Additionally, the government should review the WFH policy to ensure that it is being adopted equally across all sectors, with a target of increasing the WFH adoption rate to at least 30% across all sectors within the next 6 months.",
-  "data_date": "2026-06-05",
+  "recommendation": "The government should consider reviewing the WFH policy to ensure it is equitable and effective for all sectors, and provide support to sectors that are struggling to adopt WFH. Additionally, the government should invest in alternative modes of transport and promote a culture of sustainable transport to ensure a long-term shift towards more environmentally friendly modes of transport. A target of reducing fuel consumption by 10% per annum should be set, and regular monitoring and evaluation of the transport and energy policy should be conducted to ensure its effectiveness.",
+  "data_date": "2026-06-06",
   "alert": null
 }
