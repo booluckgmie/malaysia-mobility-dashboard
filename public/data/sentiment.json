@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-08T18:23:42.058300+00:00",
+  "generated_at": "2026-06-09T18:00:11.199804+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 72,
-  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. The fuel savings impact is notable, but the economic risk remains a concern. The policy equity and long-term modal shift dimensions require further attention to ensure sustainable mobility.",
+  "overall_score": 70,
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.5% is contributing to the fuel savings, but its impact varies across sectors. Overall, the data suggests a need for continued monitoring and targeted policy interventions to support a sustainable and equitable transport system.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This indicates a significant reduction in fuel consumption, but there is still room for improvement to reach the pre-pandemic levels."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.72 per litre may affect the fuel savings in the long run. The fuel policy component score of 100 suggests that the current fuel pricing mechanism is not hindering the fuel savings efforts."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transport ridership is 1,516,904 trips, which is a high level of usage. This suggests that the public transport system is being utilized effectively, but there may be opportunities to optimize routes and schedules to further increase ridership."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator of the public's preference for using public transport. The ridership component score of 100 suggests that the public transport system is operating at full capacity, which is a good sign for reducing private vehicle usage and promoting sustainable transport."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests that these sectors may be vulnerable to economic disruptions, and targeted policies may be needed to mitigate these risks."
+      "detail": "The sector breakdown reveals that the Retail & Services, Logistics, and Construction sectors have high mobility scores and are at high risk. This suggests that these sectors may be heavily reliant on private vehicles, which could lead to increased fuel consumption and decreased fuel savings if the WFH policy is not effective in reducing their mobility needs."
     },
     {
       "dimension": "Policy Equity",
       "score": 60,
       "dir": "neutral",
-      "detail": "The work-from-home adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. This suggests that there may be opportunities to improve policy equity by providing more flexible work arrangements for certain sectors."
+      "detail": "The WFH adoption rate varies significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. This disparity suggests that the WFH policy may not be equally effective across all sectors, and targeted interventions may be needed to support sectors with lower adoption rates."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 50,
       "dir": "neutral",
-      "detail": "The current modal shift is largely driven by the work-from-home policy, which has been active for 54 days. To achieve a long-term modal shift, there may be a need to invest in alternative modes of transport, such as cycling or walking infrastructure, and to promote a culture of sustainable mobility."
+      "detail": "The current MF-Index of 86 suggests that the transport system is operating at near full mobility, which may indicate a lack of incentives for a long-term modal shift towards more sustainable modes of transport. The recovery of the MF-Index to pre-pandemic levels may also suggest that the pandemic-induced behavioral changes may not be lasting, and additional policy efforts may be needed to promote a sustainable transport culture."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to reduce fuel consumption, such as increasing the use of electric or hybrid vehicles, and to promote sustainable mobility practices. Additionally, the government should monitor the economic risk levels in various sectors and develop strategies to mitigate these risks. The work-from-home policy should be reviewed and refined to ensure that it is effective and equitable across all sectors.",
-  "data_date": "2026-06-08",
+  "recommendation": "The government should consider implementing targeted policy interventions to support sectors with high mobility scores and low WFH adoption rates, such as the Logistics and Construction sectors. Additionally, the government should monitor the fuel price trends and adjust the fuel pricing mechanism as needed to support the fuel savings efforts. A long-term strategy to promote a sustainable transport culture should also be developed, including investments in public transport infrastructure and incentives for using sustainable modes of transport.",
+  "data_date": "2026-06-09",
   "alert": null
 }
