@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-10T18:29:15.891499+00:00",
+  "generated_at": "2026-06-11T18:45:27.633087+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of public transportation ridership and significant fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.6% is contributing to these savings, but sectoral disparities are evident. Overall, the situation is cautiously optimistic, with opportunities for improvement.",
+  "summary": "The current mobility data indicates a high level of public transportation ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.7% is contributing to the fuel savings, but its impact on different sectors varies. Overall, the data suggests a need for targeted policy interventions to address these challenges.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, this is still below the pre-pandemic levels, suggesting room for further improvement. The current RON95 price of RM 3.72 per litre and diesel price of RM 4.67 per litre are also contributing factors."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, this is still short of the pre-pandemic levels, suggesting room for further improvement. The current RON95 price of RM 3.72 per litre may be influencing this trend."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator, with the ridership component of the MF-Index scoring 100 out of 100. This suggests a high level of public transportation usage, which is beneficial for reducing congestion and emissions."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator, with the ridership component of the MF-Index scoring 100. This suggests a high level of public transportation usage, which is beneficial for reducing congestion and emissions. However, the overall MF-Index score of 86 indicates that there is still room for improvement in other areas."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sectoral breakdown reveals significant disparities in WFH adoption rates, with the retail and services sector having a low adoption rate of 15% and a high mobility score of 85. This poses an economic risk, as these sectors are critical to the country's economy and may be more vulnerable to disruptions."
+      "detail": "The sector breakdown reveals significant variations in WFH adoption rates, with the Retail and Services sector having a low adoption rate of 15% and a high mobility score of 85, indicating a high risk of economic disruption. The Logistics and Construction sectors also have high mobility scores, suggesting a need for targeted support to mitigate economic risks."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 56 days, with an adoption rate of 45.6%, but the sectoral breakdown reveals unequal adoption rates. The public and GLCs sector has a higher adoption rate of 60%, while the logistics and construction sectors have much lower adoption rates of 8% and 5%, respectively, indicating a need for more targeted policies to address these disparities."
+      "detail": "The WFH policy has been active for 57 days, with an adoption rate of 45.7%, but its impact on different sectors is uneven. The Public and GLCs sector has a higher adoption rate of 60%, while the Logistics and Construction sectors have much lower adoption rates, indicating a need for more equitable policy interventions to support all sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 60,
       "dir": "positive",
-      "detail": "The current MF-Index of 86 out of 100 suggests a high level of mobility, but the fuel policy component and ridership component are both at 100, indicating a potential for a long-term modal shift towards more sustainable transportation options. However, this will require continued investment in public transportation infrastructure and policies to support alternative modes of transport."
+      "detail": "The current data suggests a shift towards more sustainable transportation modes, with a high level of public transportation ridership and fuel savings. However, the long-term sustainability of this trend is uncertain, and targeted policy interventions are needed to support a permanent shift towards more environmentally friendly transportation modes."
     }
   ],
-  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to address sectoral disparities in WFH adoption rates and invest in public transportation infrastructure to support a long-term modal shift. Specifically, the government should aim to increase the WFH adoption rate in the retail and services sector to at least 30% within the next 6 months and allocate an additional RM 100 million to public transportation infrastructure development.",
-  "data_date": "2026-06-10",
+  "recommendation": "The government should consider implementing targeted policy interventions to support sectors with low WFH adoption rates, such as the Retail and Services sector, and to promote a long-term shift towards more sustainable transportation modes. Specific targets could include increasing the WFH adoption rate in these sectors by 20% within the next 6 months and investing in public transportation infrastructure to support a 10% increase in ridership within the next year.",
+  "data_date": "2026-06-11",
   "alert": null
 }
