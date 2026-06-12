@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-11T18:45:27.633087+00:00",
+  "generated_at": "2026-06-12T18:04:29.836108+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of public transportation ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.7% is contributing to the fuel savings, but its impact on different sectors varies. Overall, the data suggests a need for targeted policy interventions to address these challenges.",
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.8% has contributed to a total fuel saving of 35.7M litres per week. However, the sector breakdown shows varying levels of mobility scores and risk, requiring targeted policy interventions.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, this is still short of the pre-pandemic levels, suggesting room for further improvement. The current RON95 price of RM 3.72 per litre may be influencing this trend."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.72 per litre may affect the sustainability of these savings. To maintain the momentum, policies should focus on promoting fuel-efficient vehicles and alternative modes of transport."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator, with the ridership component of the MF-Index scoring 100. This suggests a high level of public transportation usage, which is beneficial for reducing congestion and emissions. However, the overall MF-Index score of 86 indicates that there is still room for improvement in other areas."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator of the public's preference for public transport. This trend should be encouraged through investments in public transport infrastructure and services, aiming to increase the ridership component of the MF-Index to 110 by the end of 2026."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals significant variations in WFH adoption rates, with the Retail and Services sector having a low adoption rate of 15% and a high mobility score of 85, indicating a high risk of economic disruption. The Logistics and Construction sectors also have high mobility scores, suggesting a need for targeted support to mitigate economic risks."
+      "detail": "The sector breakdown reveals high-risk sectors such as Retail & Services, Logistics, and Construction, with low WFH adoption rates and high mobility scores. These sectors require targeted support and policy interventions to mitigate the economic risks associated with their high mobility demands and potential disruptions."
     },
     {
       "dimension": "Policy Equity",
-      "score": 50,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 57 days, with an adoption rate of 45.7%, but its impact on different sectors is uneven. The Public and GLCs sector has a higher adoption rate of 60%, while the Logistics and Construction sectors have much lower adoption rates, indicating a need for more equitable policy interventions to support all sectors."
+      "detail": "The WFH policy has been active for 58 days, with a 45.8% adoption rate, indicating some progress in promoting flexible work arrangements. However, the sector breakdown shows unequal adoption rates, with the Public & GLCs sector having a 60% WFH rate, while the Construction sector has only a 5% adoption rate, highlighting the need for more equitable policy implementation."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
+      "score": 75,
       "dir": "positive",
-      "detail": "The current data suggests a shift towards more sustainable transportation modes, with a high level of public transportation ridership and fuel savings. However, the long-term sustainability of this trend is uncertain, and targeted policy interventions are needed to support a permanent shift towards more environmentally friendly transportation modes."
+      "detail": "The current MF-Index of 86, with a ridership component of 100, suggests a positive trend towards a modal shift towards public transport. To sustain this shift, policies should focus on promoting walking, cycling, and other alternative modes of transport, aiming to increase the share of sustainable modes to 30% of total trips by 2030."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policy interventions to support sectors with low WFH adoption rates, such as the Retail and Services sector, and to promote a long-term shift towards more sustainable transportation modes. Specific targets could include increasing the WFH adoption rate in these sectors by 20% within the next 6 months and investing in public transportation infrastructure to support a 10% increase in ridership within the next year.",
-  "data_date": "2026-06-11",
+  "recommendation": "The government should consider implementing targeted policy interventions to support high-risk sectors, promote fuel-efficient vehicles, and invest in public transport infrastructure. Additionally, policies should aim to increase the share of sustainable modes of transport and promote more equitable WFH adoption rates across sectors. Specific targets include increasing the ridership component of the MF-Index to 110 by the end of 2026 and promoting a 10% reduction in fuel consumption through fuel-efficient vehicles and alternative modes of transport.",
+  "data_date": "2026-06-12",
   "alert": null
 }
