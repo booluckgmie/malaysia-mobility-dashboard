@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-12T18:04:29.836108+00:00",
+  "generated_at": "2026-06-13T17:19:44.596100+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.8% has contributed to a total fuel saving of 35.7M litres per week. However, the sector breakdown shows varying levels of mobility scores and risk, requiring targeted policy interventions.",
+  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 45.9% is contributing to the fuel savings, but its impact on different sectors varies. Overall, the transport and energy policy is showing positive signs, but requires careful monitoring and adjustments to address emerging challenges.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.72 per litre may affect the sustainability of these savings. To maintain the momentum, policies should focus on promoting fuel-efficient vehicles and alternative modes of transport."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.72 per litre may affect the fuel savings in the long run. The fuel policy component score of 100 suggests that the current fuel pricing mechanism is not hindering the fuel savings efforts."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive indicator of the public's preference for public transport. This trend should be encouraged through investments in public transport infrastructure and services, aiming to increase the ridership component of the MF-Index to 110 by the end of 2026."
+      "detail": "The latest daily PT ridership of 1,516,904 trips is a positive sign, indicating a high level of public transport usage. The ridership component score of 100 suggests that the public transport system is operating at full capacity, which is a good indicator of the system's effectiveness."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals high-risk sectors such as Retail & Services, Logistics, and Construction, with low WFH adoption rates and high mobility scores. These sectors require targeted support and policy interventions to mitigate the economic risks associated with their high mobility demands and potential disruptions."
+      "detail": "The sector breakdown reveals that the Retail & Services, Logistics, and Construction sectors have high mobility scores and are at high risk. This suggests that these sectors may be heavily impacted by the current mobility trends, which could lead to economic risks. The WFH adoption rates in these sectors are relatively low, which may exacerbate the risks."
     },
     {
       "dimension": "Policy Equity",
       "score": 60,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 58 days, with a 45.8% adoption rate, indicating some progress in promoting flexible work arrangements. However, the sector breakdown shows unequal adoption rates, with the Public & GLCs sector having a 60% WFH rate, while the Construction sector has only a 5% adoption rate, highlighting the need for more equitable policy implementation."
+      "detail": "The WFH policy has been active for 59 days, with a WFH adoption rate of 45.9%. However, the sector breakdown reveals that the WFH adoption rates vary significantly across different sectors, with the Public & GLCs sector having a 60% adoption rate and the Construction sector having only a 5% adoption rate. This suggests that the policy may not be equally effective across all sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 75,
-      "dir": "positive",
-      "detail": "The current MF-Index of 86, with a ridership component of 100, suggests a positive trend towards a modal shift towards public transport. To sustain this shift, policies should focus on promoting walking, cycling, and other alternative modes of transport, aiming to increase the share of sustainable modes to 30% of total trips by 2030."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current mobility data does not provide clear evidence of a long-term modal shift towards more sustainable modes of transport. While the public transport ridership is high, the fuel savings are largely driven by the WFH policy, which may not be a permanent solution. The current mobility trends may not be sustainable in the long run, and more efforts are needed to promote a modal shift towards more environmentally friendly modes of transport."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policy interventions to support high-risk sectors, promote fuel-efficient vehicles, and invest in public transport infrastructure. Additionally, policies should aim to increase the share of sustainable modes of transport and promote more equitable WFH adoption rates across sectors. Specific targets include increasing the ridership component of the MF-Index to 110 by the end of 2026 and promoting a 10% reduction in fuel consumption through fuel-efficient vehicles and alternative modes of transport.",
-  "data_date": "2026-06-12",
+  "recommendation": "The Ministry of Transport and Energy should consider implementing targeted measures to support the Retail & Services, Logistics, and Construction sectors, which are at high risk due to the current mobility trends. Additionally, the Ministry should review the WFH policy to ensure that it is equally effective across all sectors and promote a long-term modal shift towards more sustainable modes of transport. A target of reducing the mobility score of the high-risk sectors by 10% within the next 6 months should be set.",
+  "data_date": "2026-06-13",
   "alert": null
 }
