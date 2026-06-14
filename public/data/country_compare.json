@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T17:19:44.872955+00:00",
+  "updated_at": "2026-06-14T17:18:10.013648+00:00",
   "countries": [
     {
       "country": "Malaysia",
@@ -14,7 +14,9 @@
       "fuelSubsidyGDP": 1.8,
       "highlight": true,
       "gdp_usd": 422227005428.688,
-      "gdp_usd_year": "2024"
+      "gdp_usd_year": "2024",
+      "population": 35557673,
+      "population_year": "2024"
     },
     {
       "country": "Singapore",
