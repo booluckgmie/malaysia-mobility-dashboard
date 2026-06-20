@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-19T17:54:00.998949+00:00",
+  "generated_at": "2026-06-20T17:23:38.735768+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 65,
-  "summary": "The current mobility index indicates near-normal mobility levels, with a notable increase in fuel savings and a moderate public transportation ridership. However, the WFH adoption rate and sectoral mobility scores suggest areas for improvement. The overall sentiment is cautiously optimistic, with a need for targeted policy interventions to address sectoral disparities and promote sustainable transportation modes.",
+  "overall_score": 72,
+  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 71, driven by a high fuel policy component score of 96.4. However, the ridership component score of 65.4 and WFH adoption rate of 46.6% suggest room for improvement. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. This is likely due to the active WFH policy and moderate fuel prices. However, there is still room for improvement to reach pre-pandemic levels of fuel efficiency."
+      "detail": "The total fuel saved per week is 35.7M litres, which is a significant reduction in fuel consumption. However, it is still 58.0% lower than the MCO peak saving, indicating potential for further improvement. The current RON95 price of RM 2.05 per litre and diesel price of RM -0.30 per litre may influence fuel consumption patterns."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 60,
       "dir": "neutral",
-      "detail": "The latest daily PT ridership is 935,585 trips, which is still lower than pre-pandemic levels. The ridership component of the MF-Index is 65.4, indicating a moderate level of public transportation usage. To promote sustainable transportation modes, targeted interventions are needed to increase PT ridership and reduce private vehicle usage."
+      "detail": "The latest daily PT ridership of 935,585 trips is a moderate level of public transport usage. The ridership component score of 65.4 suggests that there is still room for improvement in encouraging the use of public transport. The current WFH adoption rate of 46.6% may be influencing PT ridership levels."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sectoral breakdown reveals significant disparities in WFH adoption rates and mobility scores, with the Retail & Services, Logistics, and Construction sectors showing high mobility scores and low WFH adoption rates. This poses an economic risk, as these sectors are more vulnerable to disruptions and may require targeted support to mitigate the impact of future mobility restrictions."
+      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and are at high risk. This may lead to increased fuel consumption and decreased fuel savings. The Private Profess. sector has a medium risk level, while the Public & GLCs sector has a low risk level."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 65 days, with a moderate adoption rate of 46.5%. However, the sectoral breakdown reveals unequal adoption rates, with the Public & GLCs sector showing a higher adoption rate than the Private Profess. sector. To promote policy equity, targeted interventions are needed to support sectors with lower WFH adoption rates and ensure equal access to remote work opportunities."
+      "detail": "The WFH adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate and the Construction sector having only a 5% adoption rate. This may indicate unequal access to remote work opportunities and potential disparities in mobility patterns. Policy interventions may be needed to address these inequities."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 70,
       "dir": "positive",
-      "detail": "The current mobility index and sectoral breakdown suggest a gradual shift towards more sustainable transportation modes. The fuel policy component of the MF-Index is 96.4, indicating a favorable fuel price environment for alternative modes of transportation. To promote a long-term modal shift, targeted investments in public transportation infrastructure and alternative fuel sources are needed to support the growth of sustainable transportation modes."
+      "detail": "The current MF-Index of 71 and ridership component score of 65.4 suggest that Malaysia is moving towards a more sustainable transportation system. The high fuel policy component score of 96.4 indicates a strong policy framework for promoting fuel efficiency. However, continued efforts are needed to encourage a long-term shift towards more sustainable modes of transport."
     }
   ],
-  "recommendation": "To build on the current momentum, the government should consider implementing targeted policy interventions to support sectors with low WFH adoption rates and promote sustainable transportation modes. Specifically, the government should aim to increase the WFH adoption rate to 60% across all sectors and invest in public transportation infrastructure to support a 20% increase in PT ridership over the next 12 months.",
-  "data_date": "2026-06-19",
+  "recommendation": "The Ministry of Transport and Energy should consider implementing targeted policies to address the disparities in WFH adoption rates across sectors and to encourage the use of public transport. Specifically, the Ministry should aim to increase the PT ridership by 10% within the next 6 months and to reduce the fuel consumption by 15% within the next year. Additionally, the Ministry should continue to monitor the fuel prices and adjust the fuel policy component as needed to promote fuel efficiency.",
+  "data_date": "2026-06-20",
   "alert": null
 }
