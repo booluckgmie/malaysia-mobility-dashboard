@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-22T19:23:39.893361+00:00",
+  "generated_at": "2026-06-23T17:50:31.440895+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 65,
-  "summary": "The current mobility index of 71 indicates near-normal mobility, with a notable 46.8% WFH adoption rate and 35.7M litres of fuel saved per week. However, the sector breakdown reveals varying levels of risk, with the retail and services sector showing a high risk due to low WFH adoption. The fuel price of RM 2.05 per litre for RON95 is also a concern.",
+  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index score of 71, driven by a high fuel policy component score of 96.4. However, the ridership component score of 65.4 and WFH adoption rate of 46.9% suggest room for improvement. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 70,
+      "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current fuel price of RM 2.05 per litre for RON95 may offset some of these savings. Further efforts are needed to maintain and increase fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is a significant reduction in fuel consumption. However, it is still 58.0% lower than the MCO peak saving, indicating potential for further improvement. The current RON95 price of RM 2.05 per litre and diesel price of RM -0.30 per litre may influence fuel consumption patterns."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 60,
       "dir": "neutral",
-      "detail": "The latest daily PT ridership of 935,585 trips is still below pre-pandemic levels, with a ridership component score of 65.4. This suggests that there is still room for improvement in encouraging the use of public transport, particularly in sectors with low WFH adoption rates."
+      "detail": "The latest daily PT ridership of 935,585 trips is a moderate increase, but still lower than pre-pandemic levels. The ridership component score of 65.4 suggests that there is room for improvement in encouraging the use of public transport. The current WFH adoption rate of 46.9% may be influencing PT ridership numbers."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the retail and services sector, as well as the logistics and construction sectors, are showing high risk due to low WFH adoption rates. This may lead to increased mobility and fuel consumption, potentially offsetting the current fuel savings and posing an economic risk."
+      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, which may pose economic risks. The low WFH adoption rates in these sectors, such as 15% in Retail & Services and 8% in Logistics, may contribute to increased mobility and fuel consumption."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 68 days, with a 46.8% adoption rate. However, the sector breakdown reveals varying levels of WFH adoption, with some sectors showing much lower rates. This raises concerns about policy equity and the need for more targeted interventions to support sectors with low WFH adoption rates."
+      "detail": "The WFH policy has been active for 69 days, with varying adoption rates across sectors. The Public & GLCs sector has a higher WFH adoption rate of 60%, while the Private Profess. sector has a rate of 40%. This may indicate some level of policy equity, but further analysis is needed to determine the effectiveness of the policy in reducing mobility and fuel consumption."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 80,
+      "score": 70,
       "dir": "positive",
-      "detail": "The current mobility index of 71 and the fuel policy component score of 96.4 suggest a positive trend towards a long-term modal shift. The significant reduction in fuel consumption and the increased adoption of WFH policies are steps in the right direction, but sustained efforts are needed to maintain and accelerate this shift."
+      "detail": "The current MF-Index score of 71 and fuel policy component score of 96.4 suggest a potential long-term modal shift towards more sustainable transportation options. However, the ridership component score of 65.4 and WFH adoption rate of 46.9% indicate that more efforts are needed to encourage a shift away from private vehicle use and towards public transport and other sustainable modes."
     }
   ],
-  "recommendation": "The government should consider implementing targeted interventions to support sectors with low WFH adoption rates, such as the retail and services sector, and provide incentives for the adoption of fuel-efficient vehicles and alternative modes of transport. Additionally, efforts should be made to maintain and increase fuel savings, such as through the promotion of public transport and non-motorized transport options. A target of reducing fuel consumption by an additional 10% within the next 6 months should be set.",
-  "data_date": "2026-06-22",
+  "recommendation": "The government should consider implementing targeted policies to increase WFH adoption rates in high-risk sectors, such as Retail & Services and Logistics, and invest in public transport infrastructure to encourage a shift towards more sustainable transportation options. Aiming to increase the total fuel saved per week to 50M litres and reducing the MF-Index score to 60 by the end of 2026 could be a realistic target.",
+  "data_date": "2026-06-23",
   "alert": null
 }
