@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-06-25T18:07:39.232409+00:00",
+  "generated_at": "2026-06-26T17:44:43.309547+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "The current mobility index indicates near-normal mobility levels, with a score of 72 out of 100. The fuel policy component is at 100, reflecting stable fuel prices, while the ridership component is at 65.4, indicating a moderate recovery in public transport usage. However, the WFH adoption rate remains relatively high at 47.1%, which may impact the overall mobility landscape.",
+  "summary": "The current mobility index indicates near-normal mobility levels, with a score of 72 out of 100. The fuel policy component is at 100%, and the WFH adoption rate is at 47.2%. However, the ridership component is at 65.4, indicating room for improvement.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, likely due to the continued adoption of WFH policies and stable fuel prices. However, there is still room for improvement to reach pre-pandemic levels of fuel efficiency."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, resulting in cost savings and reduced emissions. However, there is still room for improvement to reach the MCO peak savings levels."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 60,
       "dir": "neutral",
-      "detail": "The latest daily PT ridership is 935,585 trips, which is still below pre-pandemic levels. The ridership component score of 65.4 suggests a moderate recovery, but there is a need to incentivize more people to use public transport to reduce congestion and emissions. The current fuel prices, with RON95 at RM 3.47 per litre, may not be a significant deterrent to private vehicle usage."
+      "detail": "The latest daily PT ridership is 935,585 trips, which is still below pre-pandemic levels. The ridership component score of 65.4 indicates that there is still a need to encourage more people to use public transport. However, the current ridership levels are stable, and with the right policies, it can be increased further."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the Retail and Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests that these sectors may be more vulnerable to economic disruptions due to their high dependence on physical mobility. The current WFH adoption rates in these sectors, ranging from 5% to 15%, may not be sufficient to mitigate these risks."
+      "detail": "The sector breakdown shows that the retail and services, logistics, and construction sectors have high mobility scores and risk levels. This indicates that these sectors are heavily reliant on physical presence and are vulnerable to disruptions. The government should consider providing support to these sectors to mitigate the risks and encourage them to adopt more flexible work arrangements."
     },
     {
       "dimension": "Policy Equity",
       "score": 70,
       "dir": "positive",
-      "detail": "The WFH policy has been active for 71 days, with a relatively high adoption rate of 47.1%. However, the sector breakdown reveals significant variations in WFH adoption rates, with the Public and GLCs sector having a 60% adoption rate, while the Construction sector has only a 5% adoption rate. This disparity may indicate a need to review and adjust the WFH policy to ensure greater equity and fairness across different sectors."
+      "detail": "The WFH adoption rate is at 47.2%, with the public and GLCs sector having the highest adoption rate of 60%. This indicates that the WFH policy is being implemented effectively, and it is reducing the mobility levels. However, there is still a need to ensure that the policy is equitable and accessible to all sectors and employees."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 50,
       "dir": "neutral",
-      "detail": "The current mobility index and sector breakdown suggest that there is still a strong reliance on private vehicles, particularly in the Logistics and Construction sectors. The moderate recovery in PT ridership and the stable fuel prices may not be sufficient to drive a significant modal shift towards more sustainable modes of transport. A more comprehensive and long-term strategy may be needed to promote a shift towards public transport, walking, and cycling."
+      "detail": "The current fuel prices, with RON95 at RM 3.47 per litre and diesel at RM 4.07 per litre, may not be high enough to encourage a significant shift to alternative modes of transport. The government should consider implementing policies to encourage the use of electric or hybrid vehicles, and to improve the public transport infrastructure to promote a long-term modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing targeted incentives to encourage the use of public transport, particularly in sectors with high mobility scores and risk levels. Additionally, a review of the WFH policy is necessary to ensure greater equity and fairness across different sectors. The government should also develop a comprehensive long-term strategy to promote a modal shift towards more sustainable modes of transport, with specific targets to increase PT ridership and reduce private vehicle usage.",
-  "data_date": "2026-06-25",
+  "recommendation": "The government should consider implementing policies to encourage the use of public transport, such as improving the frequency and reliability of public transport services, and providing incentives for people to use public transport. Additionally, the government should provide support to the retail and services, logistics, and construction sectors to mitigate the risks associated with their high mobility levels. The government should also consider implementing policies to promote the use of electric or hybrid vehicles, and to improve the public transport infrastructure to promote a long-term modal shift.",
+  "data_date": "2026-06-26",
   "alert": null
 }
