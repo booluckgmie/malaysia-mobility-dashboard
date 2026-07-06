@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-05T17:06:02.860823+00:00",
+  "generated_at": "2026-07-06T18:09:12.204040+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index score of 72, driven by a high fuel policy component score of 100 and a moderate ridership component score of 65.4. The WFH adoption rate of 48.1% has contributed to fuel savings of 35.7 million litres per week. However, the sector breakdown reveals varying levels of mobility and risk, with the retail and services, logistics, and construction sectors showing high mobility scores and risk levels.",
+  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 72, driven by a high fuel policy component score of 100 and a moderate ridership component score of 65.4. The WFH adoption rate of 48.2% has contributed to fuel savings of 35.7M litres per week. However, the sector breakdown reveals varying levels of mobility and risk, with the retail and services, logistics, and construction sectors showing high mobility scores and risk levels.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. This is largely due to the active WFH policy, which has been in place for 81 days. However, the fuel savings are still lower than the MCO peak, suggesting room for improvement."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving of ~85M litres per week. This indicates a significant reduction in fuel consumption, likely due to the WFH policy and moderate ridership levels. However, there is room for improvement to reach the pre-pandemic levels of fuel consumption."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 65,
       "dir": "neutral",
-      "detail": "The latest daily PT ridership is 935,585 trips, which is still lower than the pre-pandemic levels. The ridership component score of 65.4 indicates a moderate level of public transport usage, suggesting that there is still a need to encourage more people to use public transport to reduce private vehicle usage and decrease congestion."
+      "detail": "The latest daily PT ridership is 935,585 trips, which is still lower than the pre-pandemic levels. The ridership component score of 65.4 indicates a moderate level of public transport usage, suggesting that there is potential for growth and improvement in this area. Encouraging more people to use public transport could help reduce fuel consumption and alleviate traffic congestion."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the retail and services, logistics, and construction sectors have high mobility scores and risk levels, indicating a potential economic risk due to their high dependence on physical presence and mobility. This could lead to increased congestion, air pollution, and decreased productivity if not addressed."
+      "detail": "The sector breakdown reveals that the retail and services, logistics, and construction sectors have high mobility scores and risk levels, indicating a potential economic risk due to their high dependence on fuel and transportation. The WFH adoption rate of 48.2% may not be sufficient to mitigate this risk, and alternative strategies may be needed to support these sectors."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH adoption rate varies across sectors, with the public and GLCs sector having a higher adoption rate of 60% compared to the private professional sector at 40%. This suggests that there may be inequities in the implementation of WFH policies across different sectors and industries, which could lead to uneven economic and social outcomes."
+      "detail": "The WFH policy has been active for 82 days, with a varying adoption rate across sectors. The public and GLCs sector has a higher WFH adoption rate of 60%, while the retail and services sector has a lower rate of 15%. This disparity may indicate a need for more targeted policies to support different sectors and ensure equitable access to remote work opportunities."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 70,
       "dir": "positive",
-      "detail": "The high fuel policy component score of 100 and the moderate ridership component score of 65.4 suggest that there is a potential for a long-term modal shift towards more sustainable and environmentally friendly transportation options. However, this will require continued investment in public transport infrastructure and policies that encourage the use of alternative modes of transportation."
+      "detail": "The high fuel policy component score of 100 and the moderate ridership component score of 65.4 suggest a potential for a long-term modal shift towards more sustainable transportation options. The WFH policy and fuel savings may also contribute to a reduction in fuel consumption and greenhouse gas emissions, aligning with Malaysia's climate goals. However, sustained efforts are needed to maintain and build on these gains."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to encourage the use of public transport, such as improving the frequency and reliability of public transport services, and providing incentives for people to use alternative modes of transportation. Additionally, the government should monitor the implementation of WFH policies across different sectors and industries to ensure equity and fairness. The government should also consider setting specific targets for fuel savings and emissions reduction, such as a 10% reduction in fuel consumption and a 15% reduction in emissions over the next 6 months.",
-  "data_date": "2026-07-05",
+  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to support the retail and services, logistics, and construction sectors, such as investing in alternative fuel sources or promoting the use of electric vehicles. Additionally, the WFH policy should be reviewed and refined to ensure equitable access to remote work opportunities across all sectors. Aiming to increase the WFH adoption rate to 60% across all sectors could help reduce fuel consumption and alleviate traffic congestion.",
+  "data_date": "2026-07-06",
   "alert": null
 }
