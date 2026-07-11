@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-10T17:45:16.992809+00:00",
+  "generated_at": "2026-07-11T16:54:13.208274+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 72, driven by a high fuel policy component score of 100 and a moderate ridership component score of 65.4. The WFH adoption rate of 48.6% has contributed to fuel savings of 35.7M litres per week. However, the sector breakdown reveals varying levels of mobility and risk, with the retail and services, logistics, and construction sectors showing high mobility scores and risk levels.",
+  "summary": "The current mobility index indicates near-normal mobility levels, with a score of 72 out of 100. The fuel policy component is at 100%, and the WFH adoption rate is at 48.7%. However, the ridership component is at 65.4, indicating room for improvement.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving of 85M litres per week. This indicates a significant reduction in fuel consumption, likely due to the WFH policy and high fuel prices. However, there is room for improvement to reach the pre-pandemic levels of fuel consumption."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, resulting in cost savings and reduced emissions."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 60,
       "dir": "neutral",
-      "detail": "The latest daily PT ridership is 935,585 trips, which is still lower than the pre-pandemic levels. The ridership component score of 65.4 indicates a moderate level of public transport usage, suggesting that there is potential for growth and improvement in this area. Encouraging more people to use public transport could help reduce traffic congestion and decrease fuel consumption."
+      "detail": "The latest daily PT ridership is 935,585 trips, which is still below pre-pandemic levels. However, the ridership component score of 65.4 indicates a steady recovery, and efforts should be made to further increase ridership and reduce reliance on personal vehicles."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the retail and services, logistics, and construction sectors have high mobility scores and risk levels, indicating a potential economic risk due to their high dependence on fuel and transportation. The high RON95 price of RM 3.37 per litre and diesel price of RM 3.97 per litre may also contribute to increased costs for these sectors, potentially affecting their economic viability."
+      "detail": "The sector breakdown shows that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, indicating a potential economic risk due to their high dependence on physical presence and mobility. Targeted support and incentives may be needed to mitigate this risk."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The WFH adoption rate varies across sectors, with the public and GLCs sector having a higher adoption rate of 60% compared to the private professional sector at 40%. The retail and services, logistics, and construction sectors have lower WFH adoption rates, ranging from 5% to 15%, indicating a potential policy equity issue. Ensuring that all sectors have equal access to WFH opportunities could help promote a more equitable distribution of benefits and risks."
+      "detail": "The WFH adoption rate varies significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Construction sector has only a 5% adoption rate. This disparity may indicate unequal access to remote work opportunities and highlights the need for more inclusive policies to support all sectors and workers."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 70,
       "dir": "positive",
-      "detail": "The high fuel policy component score of 100 indicates a strong policy framework for promoting fuel efficiency and reducing fuel consumption. The moderate ridership component score of 65.4 suggests that there is potential for a long-term modal shift towards more sustainable transportation modes, such as public transport, walking, and cycling. Encouraging investments in these modes could help reduce Malaysia's dependence on fossil fuels and promote a more sustainable transportation system."
+      "detail": "The current fuel policy component score of 100 indicates a favourable environment for alternative modes of transport. The near-normal mobility levels and steady recovery in PT ridership also suggest a potential for long-term modal shift towards more sustainable and efficient transport modes, which should be encouraged and supported through targeted policies and investments."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to promote fuel efficiency and reduce fuel consumption, such as investing in public transport infrastructure and promoting WFH adoption across all sectors. Additionally, the government should monitor the economic risk associated with high fuel prices and consider implementing measures to mitigate its impact on vulnerable sectors. Aiming to increase the WFH adoption rate to 60% across all sectors and reducing fuel consumption by 10% per year could be specific targets for the next 12 months.",
-  "data_date": "2026-07-10",
+  "recommendation": "The government should consider implementing targeted incentives and support measures to encourage the adoption of alternative modes of transport, particularly in sectors with high mobility scores and risk levels. Additionally, efforts should be made to increase WFH adoption rates in sectors with low adoption rates, and to promote more inclusive and equitable policies to support all workers and sectors. A specific target of increasing PT ridership by 10% within the next 6 months should be set, with corresponding investments in public transport infrastructure and services.",
+  "data_date": "2026-07-11",
   "alert": null
 }
