@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-15T17:14:27.154690+00:00",
+  "generated_at": "2026-07-16T17:12:41.476274+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 55,
-  "summary": "The current mobility data indicates a moderate impact on the transportation sector, with a high ridership component and low fuel policy component. The WFH adoption rate of 49.1% has contributed to a significant reduction in fuel consumption. However, the sector breakdown reveals varying levels of risk, with the retail and services, logistics, and construction sectors showing high mobility scores and risk.",
+  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a notable increase in public transport ridership and significant fuel savings. However, the low fuel policy component score and high mobility scores in certain sectors raise concerns. The overall sentiment is cautiously optimistic, with a need for continued monitoring and policy adjustments.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving. This indicates a significant reduction in fuel consumption, primarily due to the WFH policy. However, the current fuel prices are extremely low, which may not be sustainable in the long term."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 0.05/litre may not be sustainable in the long term, and alternative fuel sources should be explored."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership is 1,436,874 trips, which is a significant increase from the pre-pandemic levels. This suggests that the public transportation system is being utilized efficiently, and the ridership component of the MF-Index is at 100. However, the fuel policy component is at 0, indicating a need for improvement in fuel-related policies."
+      "detail": "The latest daily PT ridership of 1,436,874 trips is a significant increase, indicating a shift towards more sustainable modes of transport. The ridership component score of 100/100 suggests that the public transport system is being utilized efficiently, and efforts should be made to maintain and improve this trend."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the retail and services, logistics, and construction sectors have high mobility scores and risk. This indicates a potential economic risk, as these sectors are critical to the country's economy. The low WFH adoption rates in these sectors contribute to the high mobility scores and risk."
+      "detail": "The sector breakdown indicates that certain sectors, such as Retail & Services, Logistics, and Construction, have high mobility scores and low WFH adoption rates, posing a high risk to the economy. These sectors should be closely monitored, and policies should be implemented to mitigate potential disruptions."
     },
     {
       "dimension": "Policy Equity",
-      "score": 50,
+      "score": 60,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 91 days, with a WFH adoption rate of 49.1%. While this has contributed to a reduction in fuel consumption, the sector breakdown reveals varying levels of WFH adoption. The public and GLCs sector has a higher WFH adoption rate, while the retail and services, logistics, and construction sectors have lower adoption rates, indicating a need for more equitable policy implementation."
+      "detail": "The WFH policy has been active for 92 days, with a WFH adoption rate of 49.2%, indicating a moderate level of policy equity. However, the sector breakdown reveals disparities in WFH adoption rates across different sectors, and policies should be tailored to address these inequities and promote more inclusive and flexible work arrangements."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 60,
-      "dir": "positive",
-      "detail": "The current data suggests a shift towards public transportation, with a high ridership component and low fuel policy component. However, the extremely low fuel prices may not be sustainable in the long term, and the country needs to focus on developing a comprehensive and sustainable transportation policy that promotes a long-term modal shift towards more environmentally friendly modes of transportation."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "The current data suggests a moderate shift towards more sustainable modes of transport, with a significant increase in PT ridership. However, the low fuel policy component score and high mobility scores in certain sectors indicate that a more comprehensive approach is needed to achieve a long-term modal shift towards more sustainable and environmentally friendly modes of transport."
     }
   ],
-  "recommendation": "The government should consider implementing policies to promote a long-term modal shift towards more environmentally friendly modes of transportation, such as investing in public transportation infrastructure and promoting the use of electric or hybrid vehicles. Additionally, the government should review the WFH policy to ensure it is equitable and effective across all sectors, with a target of increasing the WFH adoption rate to at least 60% in the next 6 months.",
-  "data_date": "2026-07-15",
+  "recommendation": "The government should consider implementing policies to promote alternative fuel sources, improve public transport efficiency, and encourage more inclusive and flexible work arrangements. Specific targets include increasing the use of electric vehicles, improving PT ridership by 10% within the next 6 months, and promoting WFH adoption rates of at least 60% across all sectors.",
+  "data_date": "2026-07-16",
   "alert": null
 }
