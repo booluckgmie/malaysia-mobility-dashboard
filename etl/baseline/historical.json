@@ -62,6 +62,13 @@
       "prasarana": 451.0,
       "ktmb": 54.8,
       "phase": "recover"
+    },
+    {
+      "year": 2026,
+      "total": 445.2,
+      "prasarana": 395.0,
+      "ktmb": 50.2,
+      "phase": "crisis"
     }
   ],
   "google_mobility_my": [
@@ -172,6 +179,15 @@
       "residential": -2,
       "driving": 103,
       "phase": "recover"
+    },
+    {
+      "period": "Apr 2026",
+      "workplace": -30,
+      "transit": -15,
+      "retail": 5,
+      "residential": 12,
+      "driving": 80,
+      "phase": "crisis"
     }
   ],
   "fuel_history": [
@@ -234,12 +250,18 @@
       "ron95": 2.05,
       "diesel": 3.35,
       "phase": "recover"
+    },
+    {
+      "period": "Apr 2026",
+      "ron95": 2.05,
+      "diesel": 3.35,
+      "phase": "crisis"
     }
   ],
   "sources": {
     "ridership": "Prasarana Annual Reports 2017-2025, KTMB Annual Reports 2017-2025",
     "google_mobility": "Google Community Mobility Reports Malaysia 2020-Q1 2024",
     "fuel": "KPDNHEP weekly gazette 2019-2025",
-    "note": "2026 figures are projections from WFH policy model"
+    "note": "2026 figures mirror src/data/baseline.js (WFH policy model projections), kept in sync for etl/causal_analysis.py"
   }
 }

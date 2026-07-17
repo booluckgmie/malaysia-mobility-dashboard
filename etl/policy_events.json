@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mco_2020",
+    "date": "2020-03-18",
+    "label": "MCO 1.0 — First Lockdown",
+    "type": "lockdown",
+    "outcome": "ridership_annual"
+  },
+  {
+    "id": "fmco_2021",
+    "date": "2021-06-01",
+    "label": "FMCO — Full MCO",
+    "type": "lockdown",
+    "outcome": "transit_mobility"
+  },
+  {
+    "id": "reopening_2023",
+    "date": "2023-04-01",
+    "label": "Endemic Phase — Full Reopening",
+    "type": "reopening",
+    "outcome": "transit_mobility"
+  },
+  {
+    "id": "diesel_float_2023",
+    "date": "2023-06-10",
+    "label": "Diesel Subsidy Rationalisation",
+    "type": "fuel_policy",
+    "outcome": "fuel_diesel"
+  },
+  {
+    "id": "ron95_targeted_subsidy_2024",
+    "date": "2024-06-01",
+    "label": "RON95 Targeted Subsidy Launch",
+    "type": "fuel_policy",
+    "outcome": "ridership_annual"
+  },
+  {
+    "id": "wfh_mandate_2026",
+    "date": "2026-04-15",
+    "label": "WFH Mandate — Public Sector & GLCs",
+    "type": "wfh_policy",
+    "outcome": "workplace_mobility"
+  }
+]

@@ -6,6 +6,7 @@ import RidershipChart from './components/RidershipChart.jsx'
 import FuelChart from './components/FuelChart.jsx'
 import SectorBreakdown from './components/SectorBreakdown.jsx'
 import CountryComparison from './components/CountryComparison.jsx'
+import PolicyImpactPanel from './components/PolicyImpactPanel.jsx'
 import SentimentPanel from './components/SentimentPanel.jsx'
 import MFIndexGauge from './components/MFIndexGauge.jsx'
 import PipelineStatus from './components/PipelineStatus.jsx'
@@ -19,6 +20,7 @@ const SECTIONS = [
   { id: 'live-data',  label: 'Live Data' },
   { id: 'sectors',    label: 'Sectors' },
   { id: 'countries',  label: 'Countries' },
+  { id: 'policy-impact', label: 'Policy Impact' },
   { id: 'sentiment',  label: 'AI Insights' },
   { id: 'pipeline',   label: 'Pipeline' },
 ]
@@ -89,6 +91,7 @@ export default function App() {
 
       {activeSection === 'sectors' && <SectorBreakdown />}
       {activeSection === 'countries' && <CountryComparison />}
+      {activeSection === 'policy-impact' && <PolicyImpactPanel />}
 
       {activeSection === 'sentiment' && (
         <SentimentPanel pipelineData={pipeline.sentiment} />

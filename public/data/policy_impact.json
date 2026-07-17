@@ -1,0 +1,316 @@
+{
+  "generated_at": "2026-07-17T03:26:16.347848Z",
+  "events": [
+    {
+      "id": "mco_2020",
+      "label": "MCO 1.0 \u2014 First Lockdown",
+      "date": "2020-03-18",
+      "type": "lockdown",
+      "outcome": "ridership_annual",
+      "event_study": {
+        "available": true,
+        "unit": "pct_change_vs_pre_mean",
+        "series": [
+          {
+            "rel_day": -807,
+            "outcome_norm": 21.729
+          },
+          {
+            "rel_day": -442,
+            "outcome_norm": 25.01
+          },
+          {
+            "rel_day": -77,
+            "outcome_norm": -46.739
+          },
+          {
+            "rel_day": 289,
+            "outcome_norm": -58.067
+          },
+          {
+            "rel_day": 654,
+            "outcome_norm": -15.942
+          }
+        ],
+        "pre_mean": 417.57,
+        "post_mean": 263.05,
+        "pct_change": -37.0,
+        "t_stat": 1.176,
+        "p_value": 0.329,
+        "n_pre": 3,
+        "n_post": 2
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    },
+    {
+      "id": "fmco_2021",
+      "label": "FMCO \u2014 Full MCO",
+      "date": "2021-06-01",
+      "type": "lockdown",
+      "outcome": "transit_mobility",
+      "event_study": {
+        "available": true,
+        "unit": "pct_points_vs_pre_mean",
+        "series": [
+          {
+            "rel_day": -517,
+            "outcome_norm": 35.6
+          },
+          {
+            "rel_day": -426,
+            "outcome_norm": -42.4
+          },
+          {
+            "rel_day": -365,
+            "outcome_norm": 5.6
+          },
+          {
+            "rel_day": -273,
+            "outcome_norm": 17.6
+          },
+          {
+            "rel_day": -151,
+            "outcome_norm": -16.4
+          },
+          {
+            "rel_day": 0,
+            "outcome_norm": -34.4
+          },
+          {
+            "rel_day": 122,
+            "outcome_norm": 7.6
+          },
+          {
+            "rel_day": 304,
+            "outcome_norm": 23.6
+          },
+          {
+            "rel_day": 487,
+            "outcome_norm": 30.6
+          },
+          {
+            "rel_day": 669,
+            "outcome_norm": 32.6
+          }
+        ],
+        "pre_mean": -35.6,
+        "post_mean": -23.6,
+        "pct_change": 12.0,
+        "t_stat": -0.653,
+        "p_value": 0.5322,
+        "n_pre": 5,
+        "n_post": 5
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    },
+    {
+      "id": "reopening_2023",
+      "label": "Endemic Phase \u2014 Full Reopening",
+      "date": "2023-04-01",
+      "type": "reopening",
+      "outcome": "transit_mobility",
+      "event_study": {
+        "available": true,
+        "unit": "pct_points_vs_pre_mean",
+        "series": [
+          {
+            "rel_day": -1095,
+            "outcome_norm": -41.375
+          },
+          {
+            "rel_day": -1034,
+            "outcome_norm": 6.625
+          },
+          {
+            "rel_day": -942,
+            "outcome_norm": 18.625
+          },
+          {
+            "rel_day": -820,
+            "outcome_norm": -15.375
+          },
+          {
+            "rel_day": -669,
+            "outcome_norm": -33.375
+          },
+          {
+            "rel_day": -547,
+            "outcome_norm": 8.625
+          },
+          {
+            "rel_day": -365,
+            "outcome_norm": 24.625
+          },
+          {
+            "rel_day": -182,
+            "outcome_norm": 31.625
+          },
+          {
+            "rel_day": 0,
+            "outcome_norm": 33.625
+          },
+          {
+            "rel_day": 275,
+            "outcome_norm": 36.625
+          },
+          {
+            "rel_day": 641,
+            "outcome_norm": 38.625
+          }
+        ],
+        "pre_mean": -36.62,
+        "post_mean": -0.33,
+        "pct_change": 36.29,
+        "t_stat": -3.747,
+        "p_value": 0.0066,
+        "n_pre": 8,
+        "n_post": 3
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    },
+    {
+      "id": "diesel_float_2023",
+      "label": "Diesel Subsidy Rationalisation",
+      "date": "2023-06-10",
+      "type": "fuel_policy",
+      "outcome": "fuel_diesel",
+      "event_study": {
+        "available": true,
+        "unit": "pct_change_vs_pre_mean",
+        "series": [
+          {
+            "rel_day": -921,
+            "outcome_norm": -24.242
+          },
+          {
+            "rel_day": -831,
+            "outcome_norm": -6.926
+          },
+          {
+            "rel_day": -739,
+            "outcome_norm": -6.926
+          },
+          {
+            "rel_day": -525,
+            "outcome_norm": -6.926
+          },
+          {
+            "rel_day": -9,
+            "outcome_norm": 45.022
+          },
+          {
+            "rel_day": 357,
+            "outcome_norm": 45.022
+          },
+          {
+            "rel_day": 571,
+            "outcome_norm": 45.022
+          }
+        ],
+        "pre_mean": 2.31,
+        "post_mean": 3.35,
+        "pct_change": 45.02,
+        "t_stat": -3.833,
+        "p_value": 0.0186,
+        "n_pre": 5,
+        "n_post": 2
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    },
+    {
+      "id": "ron95_targeted_subsidy_2024",
+      "label": "RON95 Targeted Subsidy Launch",
+      "date": "2024-06-01",
+      "type": "fuel_policy",
+      "outcome": "ridership_annual",
+      "event_study": {
+        "available": true,
+        "unit": "pct_change_vs_pre_mean",
+        "series": [
+          {
+            "rel_day": -882,
+            "outcome_norm": -17.25
+          },
+          {
+            "rel_day": -517,
+            "outcome_norm": 3.049
+          },
+          {
+            "rel_day": -152,
+            "outcome_norm": 14.2
+          },
+          {
+            "rel_day": 214,
+            "outcome_norm": 19.246
+          },
+          {
+            "rel_day": 579,
+            "outcome_norm": 4.959
+          }
+        ],
+        "pre_mean": 424.17,
+        "post_mean": 475.5,
+        "pct_change": 12.1,
+        "t_stat": -1.039,
+        "p_value": 0.3759,
+        "n_pre": 3,
+        "n_post": 2
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    },
+    {
+      "id": "wfh_mandate_2026",
+      "label": "WFH Mandate \u2014 Public Sector & GLCs",
+      "date": "2026-04-15",
+      "type": "wfh_policy",
+      "outcome": "workplace_mobility",
+      "event_study": {
+        "available": false,
+        "reason": "insufficient real observations near this date (3 pre / 0 post, need >= 2 each) \u2014 historical.json is annual/monthly frequency and this repo does not yet archive a running daily history, so very recent events may not have enough post-period data yet."
+      },
+      "diff_in_diff": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      },
+      "synthetic_control": {
+        "available": false,
+        "reason": "No historical comparator-country time series is collected by this repo \u2014 country_compare.json and the World Bank fetch in etl/country_compare.py only retain the latest value per indicator (mrv=1), not a date x country panel. This method needs one and will stay unavailable until that data is collected."
+      }
+    }
+  ]
+}

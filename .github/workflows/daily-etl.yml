@@ -42,6 +42,9 @@ jobs:
       - name: Step 3 — Country comparison data
         run: python etl/country_compare.py
 
+      - name: Step 4 — Policy impact (causal analysis)
+        run: python etl/causal_analysis.py
+
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
@@ -60,4 +63,4 @@ jobs:
             MF=$(python3 -c "import json; d=json.load(open('public/data/last_updated.json')); print(d.get('mf_index','?'))")
             echo "- MF-Index: $MF" >> $GITHUB_STEP_SUMMARY
           fi
-          echo "- Outputs: public/data/mf_index_daily.json, sentiment.json, country_compare.json" >> $GITHUB_STEP_SUMMARY
+          echo "- Outputs: public/data/mf_index_daily.json, sentiment.json, country_compare.json, policy_impact.json" >> $GITHUB_STEP_SUMMARY
