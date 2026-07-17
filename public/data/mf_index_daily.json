@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-16T17:12:31.501493+00:00",
+  "updated_at": "2026-07-17T17:08:31.239408+00:00",
   "mf_index": {
     "score": 55,
     "components": {
       "ridership_norm": 100,
       "fuel_norm": 0,
-      "wfh_adoption": 49.2
+      "wfh_adoption": 49.3
     },
     "interpretation": "Moderate — partial impact",
     "reference_points": {
@@ -651,6 +651,13 @@
         "prasarana": 451.0,
         "ktmb": 54.8,
         "phase": "recover"
+      },
+      {
+        "year": 2026,
+        "total": 445.2,
+        "prasarana": 395.0,
+        "ktmb": 50.2,
+        "phase": "crisis"
       }
     ]
   },
@@ -819,6 +826,12 @@
         "ron95": 2.05,
         "diesel": 3.35,
         "phase": "recover"
+      },
+      {
+        "period": "Apr 2026",
+        "ron95": 2.05,
+        "diesel": 3.35,
+        "phase": "crisis"
       }
     ]
   },
@@ -884,8 +897,8 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 92,
-    "adoption_estimate_pct": 49.2
+    "days_active": 93,
+    "adoption_estimate_pct": 49.3
   },
   "api_sources": {
     "ridership": "api.data.gov.my · ridership_headline · no auth",

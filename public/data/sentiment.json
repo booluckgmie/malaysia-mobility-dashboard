@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-16T17:12:41.476274+00:00",
+  "generated_at": "2026-07-17T17:08:44.748665+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 55,
-  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a notable increase in public transport ridership and significant fuel savings. However, the low fuel policy component score and high mobility scores in certain sectors raise concerns. The overall sentiment is cautiously optimistic, with a need for continued monitoring and policy adjustments.",
+  "summary": "The current mobility data indicates a moderate impact on the transport sector, with a notable increase in public transport ridership and significant fuel savings. However, the low fuel policy component score and high mobility scores in certain sectors raise concerns. The WFH adoption rate has been steady, but its impact on fuel savings is substantial, with 35.7 million litres saved per week.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 0.05/litre may not be sustainable in the long term, and alternative fuel sources should be explored."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 0.05 per litre may not be sustainable, and its impact on fuel savings should be closely monitored."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips is a significant increase, indicating a shift towards more sustainable modes of transport. The ridership component score of 100/100 suggests that the public transport system is being utilized efficiently, and efforts should be made to maintain and improve this trend."
+      "detail": "The latest daily public transport ridership is 1,436,874 trips, which is a significant increase, and the ridership component score is 100, indicating a high level of adoption. This trend should be encouraged and supported through investments in public transport infrastructure."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that certain sectors, such as Retail & Services, Logistics, and Construction, have high mobility scores and low WFH adoption rates, posing a high risk to the economy. These sectors should be closely monitored, and policies should be implemented to mitigate potential disruptions."
+      "detail": "The sector breakdown indicates high mobility scores and risk levels in the retail, logistics, and construction sectors, which may be vulnerable to economic disruptions. The low WFH adoption rates in these sectors also raise concerns about their ability to adapt to changing circumstances."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 50,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 92 days, with a WFH adoption rate of 49.2%, indicating a moderate level of policy equity. However, the sector breakdown reveals disparities in WFH adoption rates across different sectors, and policies should be tailored to address these inequities and promote more inclusive and flexible work arrangements."
+      "detail": "The WFH policy has been active for 93 days, with varying adoption rates across sectors. While the public and GLCs sector has a high WFH adoption rate, the private professional sector has a moderate rate, and the retail and services sector has a low rate, indicating potential inequities in policy implementation."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "The current data suggests a moderate shift towards more sustainable modes of transport, with a significant increase in PT ridership. However, the low fuel policy component score and high mobility scores in certain sectors indicate that a more comprehensive approach is needed to achieve a long-term modal shift towards more sustainable and environmentally friendly modes of transport."
+      "score": 60,
+      "dir": "positive",
+      "detail": "The current data indicates a shift towards public transport, with a high ridership component score and significant fuel savings. However, the long-term sustainability of this trend depends on continued investments in public transport infrastructure and policies that support modal shift, such as congestion pricing and low-emission zones."
     }
   ],
-  "recommendation": "The government should consider implementing policies to promote alternative fuel sources, improve public transport efficiency, and encourage more inclusive and flexible work arrangements. Specific targets include increasing the use of electric vehicles, improving PT ridership by 10% within the next 6 months, and promoting WFH adoption rates of at least 60% across all sectors.",
-  "data_date": "2026-07-16",
+  "recommendation": "The government should consider implementing policies to support the growth of public transport, such as investing in infrastructure and promoting the use of low-emission vehicles. Additionally, sector-specific policies should be developed to address the unique challenges and opportunities in each sector, with a focus on promoting equity and sustainability. The target should be to increase the public transport modal share by 10% within the next two years.",
+  "data_date": "2026-07-17",
   "alert": null
 }
