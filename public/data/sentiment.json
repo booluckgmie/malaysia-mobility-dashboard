@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-19T16:55:07.590875+00:00",
+  "generated_at": "2026-07-20T17:58:32.424477+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 55,
-  "summary": "The current mobility data indicates a moderate impact with a MF-Index score of 55, driven by high public transportation ridership and significant fuel savings. However, the low fuel policy component score and varying work-from-home adoption rates across sectors warrant careful consideration. The overall trend suggests a need for continued monitoring and strategic policy adjustments to support sustainable mobility and economic growth.",
+  "summary": "The current mobility data indicates a moderate impact with a score of 55, driven by high public transportation ridership and significant fuel savings. However, the low fuel policy component score and varying work-from-home adoption rates across sectors require attention. The overall sentiment is cautiously optimistic, considering the need for continued policy adjustments to achieve a balanced and sustainable transportation system.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. This is a positive signal, but the score is not higher due to the relatively low fuel prices, which may not be sustainable in the long term. Continued monitoring of fuel prices and their impact on fuel savings is necessary."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. This is a positive signal, but there is room for improvement, especially considering the low fuel policy component score of 0."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily public transportation ridership is 1,436,874 trips, which is a significant increase from pre-pandemic levels, indicating a strong demand for public transportation. This is a positive signal, as it suggests a shift towards more sustainable modes of transportation and reduced reliance on personal vehicles."
+      "detail": "The latest daily public transportation ridership is 1,436,874 trips, which is a positive signal, indicating a high level of adoption and usage of public transportation. This is likely driven by the active work-from-home policy and low fuel prices."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown indicates varying work-from-home adoption rates, with some sectors such as retail and services, logistics, and construction having low adoption rates and high mobility scores, indicating a higher risk of economic disruption. This is a negative signal, as it suggests that some sectors may be more vulnerable to economic shocks, such as fuel price increases or transportation disruptions."
+      "detail": "The sector breakdown shows varying work-from-home adoption rates, with some sectors like logistics and construction having very low adoption rates, indicating a high risk of economic disruption. This is a negative signal, requiring attention to mitigate potential economic risks."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
       "dir": "neutral",
-      "detail": "The work-from-home policy has been active for 95 days, with varying adoption rates across sectors, ranging from 60% in the public and GLCs sector to 5% in the construction sector. This suggests that the policy may not be equally effective or equitable across all sectors, and further analysis is needed to understand the impact of the policy on different sectors and populations."
+      "detail": "The work-from-home policy has been active for 96 days, but the adoption rates vary significantly across sectors, ranging from 60% in the public and GLCs sector to 5% in the construction sector. This indicates a need for more targeted and equitable policy interventions to ensure fairness and effectiveness."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 60,
       "dir": "positive",
-      "detail": "The current data suggests a shift towards more sustainable modes of transportation, with high public transportation ridership and significant fuel savings. However, the long-term sustainability of this trend is uncertain, and continued investment in public transportation infrastructure and policies supporting sustainable mobility will be necessary to support a long-term modal shift."
+      "detail": "The high public transportation ridership and significant fuel savings are positive signals for a long-term modal shift towards more sustainable transportation options. However, the low fuel policy component score and varying work-from-home adoption rates require continued policy adjustments to achieve a balanced and sustainable transportation system."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to support sectors with low work-from-home adoption rates, such as retail and services, logistics, and construction, to reduce their reliance on personal vehicles and promote more sustainable modes of transportation. Additionally, continued investment in public transportation infrastructure and policies supporting sustainable mobility will be necessary to support a long-term modal shift. A specific target could be to increase the work-from-home adoption rate in these sectors by 20% within the next 6 months.",
-  "data_date": "2026-07-19",
+  "recommendation": "To build on the current momentum, the government should consider introducing targeted incentives to encourage higher work-from-home adoption rates in sectors with low adoption, such as logistics and construction. Additionally, the government should review and adjust the fuel policy component to better support the long-term modal shift towards more sustainable transportation options, aiming to increase the fuel policy component score to at least 50 within the next 6 months.",
+  "data_date": "2026-07-20",
   "alert": null
 }
