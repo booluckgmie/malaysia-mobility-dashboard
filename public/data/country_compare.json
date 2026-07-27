@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T16:55:34.294338+00:00",
+  "updated_at": "2026-07-27T17:39:46.106207+00:00",
   "countries": [
     {
       "country": "Malaysia",
@@ -13,8 +13,6 @@
       "mfIndex": 58,
       "fuelSubsidyGDP": 1.8,
       "highlight": true,
-      "gdp_usd": 472193128644.597,
-      "gdp_usd_year": "2025",
       "population": 35977838,
       "population_year": "2025"
     },
@@ -81,8 +79,6 @@
       "mfIndex": 72,
       "fuelSubsidyGDP": 0.0,
       "highlight": false,
-      "gdp_usd": 1798518933689.21,
-      "gdp_usd_year": "2025",
       "population": 27614411,
       "population_year": "2025"
     },
