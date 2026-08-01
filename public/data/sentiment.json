@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-07-31T17:26:14.089982+00:00",
+  "generated_at": "2026-08-01T16:56:19.944291+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "The current mobility data indicates a high level of public transport ridership and significant fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 50.7% is contributing to these savings, but sectoral disparities are evident. Overall, the transport and energy policy is showing positive signs, but requires careful monitoring and adjustments to ensure long-term sustainability.",
+  "summary": "Malaysia's current mobility index indicates a return to pre-pandemic levels, with a high ridership component and significant fuel savings. However, the WFH adoption rate and fuel prices require continued monitoring. The sector breakdown reveals varying levels of risk, with the public and private sectors showing lower mobility scores.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, this is still below the pre-pandemic levels, suggesting room for further improvement. The current RON95 price of RM 3.82 per litre is also a contributing factor to the fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.82 per litre may affect future savings. Continued monitoring of fuel prices and savings is necessary to maintain this positive trend."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transport, with a ridership component score of 100. This suggests that the public transport system is efficient and effective in meeting the demands of the commuters."
+      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transportation. This high ridership component contributes to the overall mobility index, suggesting that the current public transportation system is effective in meeting the population's needs."
     },
     {
       "dimension": "Economic Risk",
-      "score": 40,
-      "dir": "negative",
-      "detail": "The sectoral breakdown reveals significant disparities in WFH adoption rates, with the Retail and Services sector having a low adoption rate of 15% and a high mobility score of 85, indicating a high risk of economic disruption. The Logistics and Construction sectors also have low WFH adoption rates, contributing to the overall economic risk."
+      "score": 60,
+      "dir": "neutral",
+      "detail": "The sector breakdown reveals varying levels of risk, with the retail and services, logistics, and construction sectors showing high mobility scores and high risk. This may indicate potential economic risks if these sectors are heavily impacted by changes in mobility patterns or fuel prices. Close monitoring of these sectors is necessary to mitigate potential risks."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 70,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 107 days, with a WFH adoption rate of 50.7%, indicating a moderate level of policy equity. However, the sectoral breakdown reveals disparities in WFH adoption rates, suggesting that the policy may not be equally effective across all sectors."
+      "detail": "The WFH adoption rate varies significantly across sectors, with the public and private sectors showing higher adoption rates. This may indicate inequities in policy implementation, with some sectors being more affected by the WFH policy than others. Further analysis is necessary to ensure that the WFH policy is equitable and effective across all sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 70,
+      "score": 85,
       "dir": "positive",
-      "detail": "The current mobility data suggests a positive trend towards a long-term modal shift towards public transport, with a high PT ridership and significant fuel savings. However, the sustainability of this shift depends on the continued effectiveness of the WFH policy and the development of a comprehensive transport strategy."
+      "detail": "The current mobility index and high PT ridership suggest a positive trend towards a long-term modal shift towards more sustainable transportation options. However, continued investment in public transportation infrastructure and policies supporting alternative modes of transportation are necessary to maintain this trend and achieve a more sustainable transportation system."
     }
   ],
-  "recommendation": "The Ministry of Transport and Energy should consider implementing targeted initiatives to increase WFH adoption rates in the Retail and Services, Logistics, and Construction sectors, with a goal of achieving a 30% adoption rate within the next 6 months. Additionally, the Ministry should develop a comprehensive transport strategy to support the long-term modal shift towards public transport, with specific targets for reducing fuel consumption and increasing PT ridership.",
-  "data_date": "2026-07-31",
+  "recommendation": "The government should continue to monitor fuel prices and adjust the WFH policy as necessary to maintain fuel savings and reduce economic risks. Additionally, investing in public transportation infrastructure and promoting alternative modes of transportation can help achieve a long-term modal shift towards more sustainable options. A target of increasing PT ridership by 10% annually and reducing fuel consumption by 15% annually should be set.",
+  "data_date": "2026-08-01",
   "alert": null
 }
