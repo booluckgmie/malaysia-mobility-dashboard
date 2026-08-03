@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-02T16:55:04.255565+00:00",
+  "generated_at": "2026-08-03T17:48:14.779043+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "Malaysia's current mobility index indicates a return to pre-pandemic levels, with a high ridership component and fuel policy component, but the WFH adoption rate remains moderate at 50.9%. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving. The sector breakdown shows varying levels of WFH adoption and mobility scores, with the public and GLCs sector having the highest WFH adoption rate and the lowest mobility score.",
+  "summary": "Malaysia's current mobility index indicates a return to pre-pandemic levels, with high public transport ridership and significant fuel savings. However, the WFH adoption rate and fuel prices require continued monitoring. The sector breakdown reveals varying levels of mobility and risk, with the retail and services sector showing high mobility scores and risk.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 60,
+      "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is a significant reduction in fuel consumption. However, this is still 58.0% lower than the MCO peak saving, indicating room for improvement. The current RON95 price of RM 3.82 per litre and diesel price of RM 4.62 per litre may incentivize further fuel savings."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current fuel prices, with RON95 at RM 3.82 per litre and diesel at RM 4.62 per litre, may impact the sustainability of these savings."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 80,
+      "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips indicates a strong recovery in public transportation usage. This is a positive sign for reducing private vehicle usage and promoting sustainable transportation. However, the ridership component of the MF-Index is already at 100, suggesting limited room for further growth."
+      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator, with the ridership component of the MF-Index at 100. This suggests a high level of public transport usage, which can help reduce traffic congestion and promote a more sustainable transportation system."
     },
     {
       "dimension": "Economic Risk",
-      "score": 40,
-      "dir": "negative",
-      "detail": "The sector breakdown shows that the retail and services, logistics, and construction sectors have high mobility scores and low WFH adoption rates, indicating a high risk of economic disruption due to their dependence on physical presence. This may lead to increased fuel consumption and decreased productivity if not addressed."
+      "score": 60,
+      "dir": "neutral",
+      "detail": "The sector breakdown reveals varying levels of mobility and risk, with the retail and services sector showing high mobility scores and risk. This may indicate potential economic risks, particularly if the sector's high mobility scores are not managed effectively, potentially leading to increased fuel consumption and decreased fuel savings."
     },
     {
       "dimension": "Policy Equity",
       "score": 50,
-      "dir": "neutral",
-      "detail": "The WFH policy has been active for 109 days, with a moderate adoption rate of 50.9%. However, the sector breakdown shows significant variations in WFH adoption rates, with the public and GLCs sector having the highest adoption rate and the logistics and construction sectors having the lowest. This may indicate unequal access to remote work opportunities and require targeted policy interventions."
+      "dir": "negative",
+      "detail": "The WFH adoption rate of 51.0% and the varying WFH rates across sectors, with the public and GLCs sector at 60% and the logistics sector at 8%, may indicate policy equity issues. This disparity in WFH adoption rates may lead to unequal distribution of benefits and burdens across different sectors and populations."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 70,
       "dir": "positive",
-      "detail": "The current mobility index and PT ridership data suggest a shift towards more sustainable transportation modes. However, the long-term sustainability of this shift is uncertain, and continued investment in public transportation infrastructure and incentives for fuel-efficient vehicles will be necessary to maintain this momentum."
+      "detail": "The current mobility index and PT ridership data suggest a potential long-term modal shift towards more sustainable transportation modes. However, the high mobility scores in certain sectors, such as logistics and construction, may indicate a need for targeted policies to promote a more significant shift towards sustainable transportation modes in these sectors."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to promote WFH adoption in sectors with low adoption rates, such as logistics and construction, and invest in public transportation infrastructure to support the growing demand for sustainable transportation. Additionally, incentives for fuel-efficient vehicles and alternative modes of transportation should be introduced to promote a long-term modal shift.",
-  "data_date": "2026-08-02",
+  "recommendation": "The government should consider implementing targeted policies to promote sustainable transportation modes, particularly in sectors with high mobility scores and risk, such as logistics and construction. Additionally, the government should monitor the WFH adoption rates and fuel prices to ensure that the current fuel savings are sustained. A target of increasing the WFH adoption rate to 60% across all sectors and reducing fuel consumption by 10% within the next 6 months could be considered.",
+  "data_date": "2026-08-03",
   "alert": null
 }
