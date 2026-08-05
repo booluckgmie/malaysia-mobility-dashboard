@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-04T17:44:32.285232+00:00",
+  "generated_at": "2026-08-05T17:26:19.814847+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. The fuel savings impact is notable, but the economic risk remains a concern. The policy equity and long-term modal shift require further attention to achieve a sustainable transport system.",
+  "summary": "The current mobility data indicates a high level of public transport ridership and significant fuel savings, but also reveals disparities in work-from-home adoption across sectors. The overall mobility score is 85, with a ridership component of 100 and a fuel policy component of 100. However, the WFH adoption rate of 51.2% suggests room for improvement in reducing mobility demand.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This indicates a significant reduction in fuel consumption, but there is still room for improvement to achieve the pre-pandemic levels."
+      "detail": "The total fuel saved per week is 35.7 million litres, which is 42% of the MCO peak savings. This indicates a significant reduction in fuel consumption, but there is still potential to increase savings by promoting more sustainable transportation options and encouraging higher WFH adoption rates."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership is 1,436,874 trips, which is a high level of public transport usage. This suggests that the public transport system is being utilized effectively, but the ridership component score of 100/100 indicates that there is no room for improvement in this aspect."
+      "detail": "The latest daily public transport ridership is 1,436,874 trips, which is a positive indicator of the effectiveness of the current transportation system. However, the ridership component score of 100 suggests that there is little room for improvement in this area, and efforts should focus on maintaining and enhancing the current level of service."
     },
     {
       "dimension": "Economic Risk",
-      "score": 40,
+      "score": 60,
       "dir": "negative",
-      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests that these sectors are heavily reliant on physical mobility and are vulnerable to economic disruptions, which could have a negative impact on the overall economy."
+      "detail": "The sector breakdown reveals that certain industries, such as retail and services, logistics, and construction, have high mobility scores and are at high risk. This suggests that these sectors may be more vulnerable to economic disruptions and may require targeted support to mitigate potential risks."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 50,
       "dir": "neutral",
-      "detail": "The WFH adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. This indicates that the WFH policy is not being adopted equally across all sectors, which could lead to unequal benefits and disadvantages."
+      "detail": "The WFH adoption rates vary significantly across sectors, with public and GLCs having a 60% adoption rate, while logistics and construction have adoption rates of 8% and 5%, respectively. This disparity highlights the need for more nuanced and targeted policies to promote equitable adoption of WFH arrangements across all sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "The current MF-Index score of 85/100 indicates that the transport system is still heavily reliant on private vehicles, with a low level of modal shift towards more sustainable modes of transport. The recovery of the public transport ridership to pre-pandemic levels is a positive sign, but more needs to be done to promote a long-term shift towards sustainable transport modes."
+      "score": 70,
+      "dir": "positive",
+      "detail": "The current mobility data suggests a shift towards more sustainable transportation options, with a high public transport ridership and significant fuel savings. However, to achieve a long-term modal shift, there is a need for continued investment in public transportation infrastructure and the promotion of alternative modes of transportation, such as walking and cycling."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to promote fuel-efficient vehicles and alternative modes of transport, such as electric or hybrid vehicles, and improving the public transport system to reduce reliance on private vehicles. Additionally, the government should monitor the WFH adoption rates across sectors and implement measures to promote equal adoption rates. The target is to reduce the MF-Index score to 70/100 within the next 6 months and to increase the fuel savings per week to 50M litres.",
-  "data_date": "2026-08-04",
+  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to promote WFH adoption in sectors with low adoption rates, such as logistics and construction. Additionally, investments in public transportation infrastructure and the promotion of alternative modes of transportation should be continued to achieve a long-term modal shift. A specific target could be to increase the WFH adoption rate in the logistics sector to 20% within the next 6 months.",
+  "data_date": "2026-08-05",
   "alert": null
 }
