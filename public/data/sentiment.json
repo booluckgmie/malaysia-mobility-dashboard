@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-08T16:29:12.624258+00:00",
+  "generated_at": "2026-08-09T16:30:28.558331+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 70,
-  "summary": "The current mobility data indicates a high level of public transport ridership and fuel savings, but also reveals concerns regarding economic risk and policy equity. The WFH adoption rate of 51.5% is contributing to the fuel savings, but its impact on different sectors varies. Overall, the data suggests a need for continued monitoring and adjustments to transport and energy policies.",
+  "overall_score": 65,
+  "summary": "The current mobility data indicates a high level of fuel consumption and public transport ridership, with a moderate level of work-from-home adoption. The fuel savings impact is notable, but the economic risk remains a concern. The policy equity and long-term modal shift dimensions require further attention to ensure sustainable and inclusive mobility solutions.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
-      "score": 80,
+      "score": 70,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, the current RON95 price of RM 3.77 per litre may affect the fuel savings in the long run. The fuel policy component score of 100 suggests that the current fuel pricing mechanism is not hindering mobility."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak savings. This indicates a moderate level of fuel savings, but there is room for improvement. The current RON95 price of RM 3.77 per litre and diesel price of RM 4.57 per litre may incentivize further fuel savings measures."
     },
     {
       "dimension": "PT Ridership Effects",
-      "score": 90,
+      "score": 80,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transport, contributing to the high ridership component score of 100. This suggests that the public transport system is efficient and effective in meeting the mobility needs of the population."
+      "detail": "The latest daily PT ridership of 1,436,874 trips is a significant increase from the pre-pandemic level, indicating a strong demand for public transport. However, the ridership component of the MF-Index is already at 100, suggesting that there may be limited room for further growth in this area."
     },
     {
       "dimension": "Economic Risk",
       "score": 40,
       "dir": "negative",
-      "detail": "The sector breakdown reveals that the Retail & Services, Logistics, and Construction sectors have high mobility scores and are at high risk, indicating potential economic vulnerabilities. The low WFH adoption rates in these sectors may exacerbate the risks, highlighting the need for targeted support and policy interventions."
+      "detail": "The sector breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, which may pose economic risks. The low work-from-home adoption rates in these sectors, ranging from 5% to 15%, may exacerbate these risks and require targeted policy interventions."
     },
     {
       "dimension": "Policy Equity",
-      "score": 60,
+      "score": 50,
       "dir": "neutral",
-      "detail": "The WFH adoption rates vary significantly across sectors, with the Public & GLCs sector having a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. This disparity raises concerns about policy equity and the need for more nuanced and sector-specific policies to support different industries."
+      "detail": "The work-from-home policy has been active for 116 days, but the adoption rates vary significantly across sectors. The Public & GLCs sector has a 60% adoption rate, while the Logistics and Construction sectors have adoption rates of 8% and 5%, respectively. This disparity may indicate a need for more targeted and inclusive policy measures to promote equitable mobility solutions."
     },
     {
       "dimension": "Long-term Modal Shift",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "The current MF-Index of 85, which is close to the pre-pandemic level, suggests that the modal shift towards public transport and reduced fuel consumption may not be sustainable in the long term. The recovery of the MF-Index to pre-pandemic levels may indicate a return to previous mobility patterns, highlighting the need for continued policy support and investments in public transport infrastructure to promote a long-term modal shift."
+      "score": 60,
+      "dir": "positive",
+      "detail": "The current MF-Index of 85 indicates a high level of mobility, but the long-term modal shift towards more sustainable modes of transport remains a challenge. The recovery in 2025 saw an MF-Index of 82, which is close to the pre-pandemic level, but the fuel savings impact and work-from-home adoption rates suggest that there are opportunities for further modal shift and sustainable mobility solutions."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to support the Retail & Services, Logistics, and Construction sectors, such as providing incentives for WFH adoption or investing in public transport infrastructure. Additionally, the government should continue to monitor the fuel savings and adjust the fuel pricing mechanism as needed to promote sustainable mobility. Aiming to increase the WFH adoption rate in the Logistics and Construction sectors to at least 20% within the next 6 months could help mitigate economic risks.",
-  "data_date": "2026-08-08",
+  "recommendation": "The government should consider implementing targeted policy measures to promote fuel savings, increase work-from-home adoption rates in high-risk sectors, and invest in sustainable and inclusive mobility solutions. Specific targets include reducing fuel consumption by 10% within the next 6 months and increasing work-from-home adoption rates in the Logistics and Construction sectors to at least 20% within the next 12 months.",
+  "data_date": "2026-08-09",
   "alert": null
 }
