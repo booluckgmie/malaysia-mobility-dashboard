@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-11T16:55:02.160181+00:00",
+  "generated_at": "2026-08-12T16:54:23.148740+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 84, driven by high ridership and fuel policy components. However, the WFH adoption rate of 51.8% and sectoral breakdown suggest areas for improvement. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving.",
+  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 84, driven by high ridership and fuel policy components. However, the WFH adoption rate of 51.9% and sectoral breakdown suggest areas for improvement. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
@@ -16,28 +16,28 @@
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transport. This trend is likely driven by the high ridership component of the MF-Index, which is at 100. The government should continue to invest in public transport infrastructure to support this trend."
+      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transport. This trend is expected to continue, driven by the high ridership component of the MF-Index. However, the ridership is still lower than the pre-pandemic levels, suggesting a need for continued investment in public transport infrastructure."
     },
     {
       "dimension": "Economic Risk",
       "score": 60,
       "dir": "negative",
-      "detail": "The sectoral breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and are at high risk. This may be due to the low WFH adoption rates in these sectors, which could lead to increased fuel consumption and decreased productivity. The government should consider implementing targeted policies to support these sectors."
+      "detail": "The sectoral breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests that these sectors may be more vulnerable to economic disruptions, particularly if the WFH policy is not effectively implemented. The low WFH adoption rates in these sectors, ranging from 5% to 15%, exacerbate this risk."
     },
     {
       "dimension": "Policy Equity",
       "score": 70,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 118 days, with a WFH adoption rate of 51.8%. While this is a positive trend, the sectoral breakdown suggests that some sectors have lower WFH adoption rates, which may indicate unequal access to remote work opportunities. The government should consider implementing policies to support equal access to remote work opportunities across all sectors."
+      "detail": "The WFH policy has been active for 119 days, with a WFH adoption rate of 51.9%. While this is a positive trend, the sectoral breakdown reveals disparities in WFH adoption rates, ranging from 5% in Construction to 60% in Public & GLCs. This suggests a need for more targeted policies to promote equity in WFH adoption across sectors."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 85,
       "dir": "positive",
-      "detail": "The high ridership component of the MF-Index and the positive trend in PT ridership suggest a long-term modal shift towards public transport. The government should continue to invest in public transport infrastructure and implement policies to support this trend, such as improving the frequency and reliability of public transport services."
+      "detail": "The high ridership component of the MF-Index and the significant reduction in fuel consumption suggest a long-term modal shift towards more sustainable transport modes. The current trends in PT ridership and fuel savings are expected to continue, driven by the government's policies and investments in public transport infrastructure. However, continued monitoring and evaluation of these trends are necessary to ensure a sustained modal shift."
     }
   ],
-  "recommendation": "The government should consider implementing targeted policies to support the Retail & Services, Logistics, and Construction sectors, such as providing incentives for WFH adoption and investing in public transport infrastructure. Additionally, the government should continue to invest in public transport infrastructure and implement policies to support equal access to remote work opportunities across all sectors. The target is to increase the WFH adoption rate to 60% and reduce fuel consumption by 10% within the next 6 months.",
-  "data_date": "2026-08-11",
+  "recommendation": "The government should continue to promote the WFH policy, targeting sectors with low adoption rates, and invest in public transport infrastructure to support the growing demand for sustainable transport modes. Additionally, the government should monitor fuel prices and adjust fuel policies as necessary to minimize the impact of price fluctuations on fuel consumption patterns. The target is to increase the WFH adoption rate to 60% across all sectors and reduce fuel consumption by 20% within the next 6 months.",
+  "data_date": "2026-08-12",
   "alert": null
 }
