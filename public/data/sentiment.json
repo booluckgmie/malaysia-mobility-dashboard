@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-12T16:54:23.148740+00:00",
+  "generated_at": "2026-08-13T16:53:34.441365+00:00",
   "model": "llama-3.3-70b-versatile",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 72,
-  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 84, driven by high ridership and fuel policy components. However, the WFH adoption rate of 51.9% and sectoral breakdown suggest areas for improvement. The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving.",
+  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 84, driven by high ridership and fuel policy components. However, the WFH adoption rate of 52% and fuel savings of 35.7M litres/week suggest room for improvement. The sector breakdown reveals varying levels of mobility and risk across different industries.",
   "signals": [
     {
       "dimension": "Fuel Savings Impact",
       "score": 80,
       "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is a significant reduction in fuel consumption. However, it is still 58.0% lower than the MCO peak saving, indicating room for improvement. The current RON95 price of RM 3.77 per litre and diesel price of RM 4.57 per litre may influence fuel consumption patterns."
+      "detail": "The total fuel saved per week is 35.7M litres, which is 42% of the MCO peak savings, indicating a significant reduction in fuel consumption. However, there is still potential to increase fuel savings by promoting more efficient transportation modes and encouraging higher WFH adoption rates."
     },
     {
       "dimension": "PT Ridership Effects",
       "score": 90,
       "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,436,874 trips is a positive indicator of the public's preference for public transport. This trend is expected to continue, driven by the high ridership component of the MF-Index. However, the ridership is still lower than the pre-pandemic levels, suggesting a need for continued investment in public transport infrastructure."
+      "detail": "The latest daily PT ridership of 1,494,224 trips is a positive indicator of the public's preference for public transportation. This trend should be encouraged and supported through investments in public transportation infrastructure and services to reduce reliance on personal vehicles."
     },
     {
       "dimension": "Economic Risk",
       "score": 60,
       "dir": "negative",
-      "detail": "The sectoral breakdown indicates that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels. This suggests that these sectors may be more vulnerable to economic disruptions, particularly if the WFH policy is not effectively implemented. The low WFH adoption rates in these sectors, ranging from 5% to 15%, exacerbate this risk."
+      "detail": "The sector breakdown reveals that certain industries, such as Retail & Services, Logistics, and Construction, have high mobility scores and risk levels, indicating potential economic vulnerabilities. These sectors may require targeted support and incentives to adopt more sustainable and resilient transportation practices."
     },
     {
       "dimension": "Policy Equity",
       "score": 70,
       "dir": "neutral",
-      "detail": "The WFH policy has been active for 119 days, with a WFH adoption rate of 51.9%. While this is a positive trend, the sectoral breakdown reveals disparities in WFH adoption rates, ranging from 5% in Construction to 60% in Public & GLCs. This suggests a need for more targeted policies to promote equity in WFH adoption across sectors."
+      "detail": "The WFH policy has been active for 120 days, with a 52% adoption rate, which is a moderate level of success. However, the varying WFH adoption rates across different sectors suggest that the policy may not be equally effective for all industries, and further analysis is needed to identify and address any equity gaps."
     },
     {
       "dimension": "Long-term Modal Shift",
       "score": 85,
       "dir": "positive",
-      "detail": "The high ridership component of the MF-Index and the significant reduction in fuel consumption suggest a long-term modal shift towards more sustainable transport modes. The current trends in PT ridership and fuel savings are expected to continue, driven by the government's policies and investments in public transport infrastructure. However, continued monitoring and evaluation of these trends are necessary to ensure a sustained modal shift."
+      "detail": "The high ridership component and fuel policy component scores indicate a positive trend towards a more sustainable transportation system. To build on this momentum, the government should consider investing in alternative modes of transportation, such as electric or hybrid vehicles, and promoting a culture of sustainable mobility among the public."
     }
   ],
-  "recommendation": "The government should continue to promote the WFH policy, targeting sectors with low adoption rates, and invest in public transport infrastructure to support the growing demand for sustainable transport modes. Additionally, the government should monitor fuel prices and adjust fuel policies as necessary to minimize the impact of price fluctuations on fuel consumption patterns. The target is to increase the WFH adoption rate to 60% across all sectors and reduce fuel consumption by 20% within the next 6 months.",
-  "data_date": "2026-08-12",
+  "recommendation": "The government should aim to increase the WFH adoption rate to 60% across all sectors, promote the use of public transportation, and invest in alternative modes of transportation to reduce reliance on personal vehicles. Additionally, targeted support and incentives should be provided to high-risk industries to adopt more sustainable and resilient transportation practices, with a goal of reducing fuel consumption by 15% within the next 6 months.",
+  "data_date": "2026-08-13",
   "alert": null
 }
