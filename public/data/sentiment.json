@@ -1,43 +1,12 @@
 {
-  "generated_at": "2026-08-16T16:20:07.186992+00:00",
-  "model": "llama-3.3-70b-versatile",
-  "source": "groq",
-  "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 72,
-  "summary": "Malaysia's daily mobility data indicates a near-normal mobility level with an MF-Index of 84, driven by high ridership and fuel policy components. However, the WFH adoption rate of 52.3% and fuel savings of 35.7M litres per week suggest room for improvement. The sector breakdown reveals varying levels of mobility and risk across different industries.",
-  "signals": [
-    {
-      "dimension": "Fuel Savings Impact",
-      "score": 80,
-      "dir": "positive",
-      "detail": "The total fuel saved per week is 35.7M litres, which is 42.0% of the MCO peak saving, indicating a significant reduction in fuel consumption. However, there is still potential to increase fuel savings by promoting more efficient transportation modes and encouraging higher WFH adoption rates."
-    },
-    {
-      "dimension": "PT Ridership Effects",
-      "score": 90,
-      "dir": "positive",
-      "detail": "The latest daily PT ridership of 1,494,224 trips is a positive indicator of the public's preference for public transportation, which can help reduce traffic congestion and decrease fuel consumption. The ridership component of the MF-Index is at 100, suggesting a high level of public transportation usage."
-    },
-    {
-      "dimension": "Economic Risk",
-      "score": 60,
-      "dir": "neutral",
-      "detail": "The sector breakdown reveals that the Retail & Services, Logistics, and Construction sectors have high mobility scores and risk levels, indicating potential economic risks due to their high dependence on transportation and fuel. However, the Public & GLCs and Private Profess. sectors have lower mobility scores and risk levels, suggesting a more stable economic outlook."
-    },
-    {
-      "dimension": "Policy Equity",
-      "score": 70,
-      "dir": "neutral",
-      "detail": "The WFH adoption rate varies significantly across different sectors, with the Public & GLCs sector having a 60% adoption rate and the Construction sector having only a 5% adoption rate. This disparity suggests that policy interventions may be needed to promote more equitable WFH adoption rates across different industries and sectors."
-    },
-    {
-      "dimension": "Long-term Modal Shift",
-      "score": 85,
-      "dir": "positive",
-      "detail": "The high PT ridership and fuel savings indicate a positive trend towards a more sustainable transportation system. The long-term modal shift towards public transportation and more fuel-efficient modes can help reduce Malaysia's dependence on fossil fuels and decrease greenhouse gas emissions, aligning with the country's climate change mitigation goals."
-    }
-  ],
-  "recommendation": "To build on the current momentum, the government should consider implementing targeted policies to increase WFH adoption rates in sectors with low adoption rates, such as Construction and Logistics. Additionally, investing in public transportation infrastructure and promoting fuel-efficient modes can help reduce fuel consumption and decrease traffic congestion. Aiming to increase the total fuel saved per week to 50M litres by the end of 2026 can be a concrete target.",
-  "data_date": "2026-08-16",
+  "generated_at": "2026-08-17T16:22:55.306278+00:00",
+  "model": "fallback-static",
+  "source": "fallback",
+  "overall_sentiment": "neutral",
+  "overall_score": 84,
+  "summary": "Sentiment analysis unavailable — all AI API quotas exhausted. Latest MF-Index score is 84/100. Manual review recommended.",
+  "signals": [],
+  "recommendation": "Resume analysis when API quota resets (Groq resets hourly/daily; Gemini resets daily at midnight Pacific).",
+  "data_date": "2026-08-17",
   "alert": null
 }
