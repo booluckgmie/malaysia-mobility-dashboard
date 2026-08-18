@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T16:22:55.306278+00:00",
+  "generated_at": "2026-08-18T16:27:06.864468+00:00",
   "model": "fallback-static",
   "source": "fallback",
   "overall_sentiment": "neutral",
@@ -7,6 +7,6 @@
   "summary": "Sentiment analysis unavailable — all AI API quotas exhausted. Latest MF-Index score is 84/100. Manual review recommended.",
   "signals": [],
   "recommendation": "Resume analysis when API quota resets (Groq resets hourly/daily; Gemini resets daily at midnight Pacific).",
-  "data_date": "2026-08-17",
+  "data_date": "2026-08-18",
   "alert": null
 }
