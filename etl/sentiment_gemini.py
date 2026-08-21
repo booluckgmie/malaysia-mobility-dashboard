@@ -43,24 +43,32 @@ MF_JSON     = OUTPUT_DIR / "mf_index_daily.json"
 OUTPUT_PATH = OUTPUT_DIR / "sentiment.json"
 
 # ── Groq model priority (free tier, ordered best → most available) ───
+# NOTE: Groq deprecates/renames models fairly often (llama-3.3-70b-versatile,
+# llama-3.1-8b-instant, gemma2-9b-it, and mixtral-8x7b-32768 have all been
+# retired as of Aug 2026). If these start 404ing again, check
+# console.groq.com/docs/models for the current production list.
 GROQ_MODELS = [
-    "llama-3.3-70b-versatile",   # best quality, generous limits
-    "llama-3.1-8b-instant",      # fast, very high RPM
-    "gemma2-9b-it",              # Google Gemma via Groq
-    "mixtral-8x7b-32768",        # wide context fallback
+    "openai/gpt-oss-120b",                      # current flagship, recommended replacement for retired Llama chat models
+    "openai/gpt-oss-20b",                        # smaller/faster
+    "meta-llama/llama-4-scout-17b-16e-instruct",  # wide-context fallback
 ]
 
 # ── Cerebras model priority (free tier, OpenAI-compatible REST API) ───
+# NOTE: same churn risk as Groq — check inference-docs.cerebras.ai/models/overview
+# if these start 404ing (llama-3.3-70b was retired Feb 2026).
 CEREBRAS_API_URL = "https://api.cerebras.ai/v1/chat/completions"
 CEREBRAS_MODELS = [
-    "llama-3.3-70b",
+    "gpt-oss-120b",
     "llama3.1-8b",
+    "qwen-3-235b-a22b-instruct-2507",
 ]
 
 # ── Gemini model priority ─────────────────────────────────────────────
+# NOTE: gemini-2.0-flash / -flash-lite were retired as of Aug 2026 (Google's
+# own 404 error names the exact replacements below).
 GEMINI_MODELS = [
-    "gemini-2.0-flash",
-    "gemini-2.0-flash-lite",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash-lite",
 ]
 
 MAX_RETRIES    = 3
