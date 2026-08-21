@@ -1,6 +1,6 @@
 # MY Mobility Index — Malaysia Fuel & WFH Dashboard
 
-Real-time tracking of Malaysia's fuel crisis, public transport ridership, and WFH policy effectiveness. Combines live open APIs with 7 years of embedded historical data and daily Gemini AI sentiment analysis.
+Real-time tracking of Malaysia's fuel crisis, public transport ridership, and WFH policy effectiveness. Combines live open APIs with 7 years of embedded historical data and daily AI sentiment analysis (Groq, with Gemini as fallback).
 
 ## 🚀 Quick Deploy (5 steps)
 
@@ -29,12 +29,12 @@ npm run build
 ```
 malaysia-mobility-dashboard/
 ├── .github/workflows/
-│   ├── daily-etl.yml          ← Runs 6 AM MYT daily: fetch APIs → Gemini → commit
+│   ├── daily-etl.yml          ← Runs 6 AM MYT daily: fetch APIs → sentiment → commit
 │   └── deploy.yml             ← Auto-deploys to Netlify on every push
 │
 ├── etl/                       ← Python data pipeline
 │   ├── fetch_apis.py          ← Pulls data.gov.my APIs, computes MF-Index
-│   ├── sentiment_gemini.py    ← Gemini 1.5 Pro policy sentiment analysis
+│   ├── sentiment_gemini.py    ← Groq (primary) / Gemini (fallback) policy sentiment analysis
 │   ├── country_compare.py     ← World Bank API + country comparisons
 │   ├── requirements.txt       ← Python dependencies
 │   └── baseline/
@@ -42,7 +42,7 @@ malaysia-mobility-dashboard/
 │
 ├── public/data/               ← Pipeline writes here daily; dashboard reads here
 │   ├── mf_index_daily.json    ← MF-Index + ridership + fuel + sector model
-│   ├── sentiment.json         ← Gemini analysis output
+│   ├── sentiment.json         ← AI sentiment analysis output (Groq/Gemini)
 │   ├── country_compare.json   ← Country comparison with World Bank enrichment
 │   └── last_updated.json      ← Timestamp + latest MF-Index score
 │
@@ -68,11 +68,10 @@ Go to: **GitHub repo → Settings → Secrets and variables → Actions → New 
 
 | Secret | Required | Description |
 |---|---|---|
-| `GEMINI_API_KEY` | ✅ Yes | Google AI Studio → Create API Key → [aistudio.google.com](https://aistudio.google.com) |
+| `GROQ_API_KEY` | ✅ Yes | Primary sentiment provider → [console.groq.com](https://console.groq.com) |
+| `GEMINI_API_KEY` | Optional | Sentiment fallback if Groq is rate-limited → Google AI Studio → [aistudio.google.com](https://aistudio.google.com) |
 | `NETLIFY_AUTH_TOKEN` | ✅ Yes | Netlify → User Settings → Applications → Personal access tokens |
 | `NETLIFY_SITE_ID` | ✅ Yes | Netlify → Site → Site configuration → Site ID |
-| `PETRONAS_KEY` | Optional | developer.petronas.com |
-| `WAZE_KEY` | Optional | waze.com/api/partners |
 
 ## 📡 Data Sources
 
@@ -120,7 +119,7 @@ Reference points:
 ```
 06:00 AM MYT  → GitHub Actions triggers
                → fetch_apis.py      (data.gov.my pull → mf_index_daily.json)
-06:05 AM       → sentiment_gemini.py (Gemini analysis → sentiment.json)
+06:05 AM       → sentiment_gemini.py (Groq → Gemini fallback → sentiment.json)
 06:10 AM       → country_compare.py  (World Bank → country_compare.json)
 06:15 AM       → git commit + push to main
 06:20 AM       → Netlify auto-deploys updated build

@@ -34,10 +34,10 @@ const PIPELINE_STEPS = [
     status: 'computed', method: 'α·Ridership + β·Fuel + γ·WFH',
   },
   {
-    step: 6, icon: Cpu, label: 'Gemini sentiment analysis',
-    api: 'generativelanguage.googleapis.com',
+    step: 6, icon: Cpu, label: 'AI sentiment analysis',
+    api: 'Groq (primary) → Gemini (fallback)',
     schedule: 'Daily 6:10 AM MYT',
-    status: 'key-required', method: 'GEMINI_API_KEY → secret',
+    status: 'key-required', method: 'GROQ_API_KEY → secret, GEMINI_API_KEY optional',
   },
   {
     step: 7, icon: Database, label: 'Write JSON outputs',
@@ -55,10 +55,9 @@ const STATUS_CONFIG = {
 }
 
 const SECRETS = [
-  { name: 'GEMINI_API_KEY', desc: 'Google AI Studio → Create API Key', required: true },
+  { name: 'GROQ_API_KEY',   desc: 'console.groq.com → API Keys (primary sentiment provider)', required: true },
+  { name: 'GEMINI_API_KEY', desc: 'Google AI Studio → Create API Key (sentiment fallback)', required: false },
   { name: 'GITHUB_TOKEN',   desc: 'Auto-provided by GitHub Actions (write:contents)', required: true },
-  { name: 'PETRONAS_KEY',   desc: 'developer.petronas.com (optional)', required: false },
-  { name: 'WAZE_KEY',       desc: 'waze.com/api/partners (optional)', required: false },
 ]
 
 export default function PipelineStatus() {
@@ -92,6 +91,7 @@ jobs:
       - name: Run sentiment analysis
         run: python etl/sentiment_gemini.py
         env:
+          GROQ_API_KEY: \${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
 
       - name: Run country comparison
@@ -110,7 +110,7 @@ jobs:
       <div className="text-center mb-10">
         <div className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-3">Daily update pipeline</div>
         <h2 className="text-3xl font-light text-gray-800">How the data stays fresh</h2>
-        <p className="text-sm text-gray-500 mt-3 max-w-lg mx-auto">GitHub Actions runs daily at 6 AM MYT — pulls APIs, computes index, runs Gemini analysis, commits JSON outputs</p>
+        <p className="text-sm text-gray-500 mt-3 max-w-lg mx-auto">GitHub Actions runs daily at 6 AM MYT — pulls APIs, computes index, runs AI sentiment analysis, commits JSON outputs</p>
       </div>
 
       {/* Pipeline steps */}
