@@ -1,12 +1,43 @@
 {
-  "generated_at": "2026-08-21T04:57:14.147512+00:00",
-  "model": "fallback-static",
-  "source": "fallback",
-  "overall_sentiment": "neutral",
-  "overall_score": 84,
-  "summary": "Sentiment analysis unavailable — Groq, Cerebras, and Gemini API quotas were all exhausted. Latest MF-Index score is 84/100. Manual review recommended.",
-  "signals": [],
-  "recommendation": "Resume analysis when a provider's quota resets (Groq and Cerebras reset hourly/daily; Gemini resets daily at midnight Pacific).",
+  "generated_at": "2026-08-21T05:02:44.172194+00:00",
+  "model": "openai/gpt-oss-120b",
+  "source": "groq",
+  "overall_sentiment": "cautiously_optimistic",
+  "overall_score": 78,
+  "summary": "Mobility is back to near‑pre‑pandemic levels with the MF‑Index at 84 and PT ridership exceeding historic daily averages. Fuel savings remain substantial despite high fuel prices, but uneven WFH adoption creates sectoral risk. Continued policy focus is needed to lock in modal shift gains and address equity gaps.",
+  "signals": [
+    {
+      "dimension": "fuel_savings_impact",
+      "score": 85,
+      "dir": "positive",
+      "detail": "Weekly fuel savings of 35.7 million litres represent 42% of the MCO peak saving, showing that behavioural and policy measures are still delivering significant energy efficiency despite RM3.77/litre RON95."
+    },
+    {
+      "dimension": "pt_ridership_effects",
+      "score": 90,
+      "dir": "positive",
+      "detail": "Daily public‑transport trips reached 1.49 million, slightly above the pre‑pandemic daily average of ~1.43 million, indicating strong recovery and a durable shift toward mass transit."
+    },
+    {
+      "dimension": "economic_risk",
+      "score": 55,
+      "dir": "negative",
+      "detail": "High mobility scores in Logistics (92), Construction (95) and Retail (85) combined with low WFH rates (<10%) expose these sectors to congestion, fuel cost volatility and productivity risk."
+    },
+    {
+      "dimension": "policy_equity",
+      "score": 70,
+      "dir": "neutral",
+      "detail": "WFH adoption varies widely—60% in Public & GLCs versus 5–8% in high‑risk sectors—creating unequal exposure to fuel price shocks and congestion, highlighting a need for targeted support."
+    },
+    {
+      "dimension": "long_term_modal_shift",
+      "score": 80,
+      "dir": "positive",
+      "detail": "Sustained PT usage and sizable fuel savings suggest a lasting modal shift away from private cars, but high fuel prices may be temporary; reinforcing transit incentives will cement the trend."
+    }
+  ],
+  "recommendation": "Maintain fuel‑price mitigation measures to keep savings above 40 million litres/week, expand PT capacity and fare subsidies to accommodate growing demand, and introduce sector‑specific WFH incentives for Logistics, Construction and Retail to reduce risk and improve equity.",
   "data_date": "2026-08-21",
   "alert": null
 }
