@@ -35,9 +35,9 @@ const PIPELINE_STEPS = [
   },
   {
     step: 6, icon: Cpu, label: 'AI sentiment analysis',
-    api: 'Groq (primary) → Gemini (fallback)',
+    api: 'Groq → Cerebras → Gemini (in order, first success wins)',
     schedule: 'Daily 6:10 AM MYT',
-    status: 'key-required', method: 'GROQ_API_KEY → secret, GEMINI_API_KEY optional',
+    status: 'key-required', method: 'GROQ_API_KEY → secret, CEREBRAS_API_KEY/GEMINI_API_KEY optional',
   },
   {
     step: 7, icon: Database, label: 'Write JSON outputs',
@@ -55,9 +55,10 @@ const STATUS_CONFIG = {
 }
 
 const SECRETS = [
-  { name: 'GROQ_API_KEY',   desc: 'console.groq.com → API Keys (primary sentiment provider)', required: true },
-  { name: 'GEMINI_API_KEY', desc: 'Google AI Studio → Create API Key (sentiment fallback)', required: false },
-  { name: 'GITHUB_TOKEN',   desc: 'Auto-provided by GitHub Actions (write:contents)', required: true },
+  { name: 'GROQ_API_KEY',     desc: 'console.groq.com → API Keys (primary sentiment provider)', required: true },
+  { name: 'CEREBRAS_API_KEY', desc: 'cloud.cerebras.ai → API Keys (sentiment fallback #1)', required: false },
+  { name: 'GEMINI_API_KEY',   desc: 'Google AI Studio → Create API Key (sentiment fallback #2)', required: false },
+  { name: 'GITHUB_TOKEN',     desc: 'Auto-provided by GitHub Actions (write:contents)', required: true },
 ]
 
 export default function PipelineStatus() {
@@ -92,6 +93,7 @@ jobs:
         run: python etl/sentiment_gemini.py
         env:
           GROQ_API_KEY: \${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: \${{ secrets.CEREBRAS_API_KEY }}
           GEMINI_API_KEY: \${{ secrets.GEMINI_API_KEY }}
 
       - name: Run country comparison
