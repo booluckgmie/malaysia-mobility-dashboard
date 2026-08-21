@@ -1,15 +1,17 @@
 """
 sentiment_gemini.py
-Generates daily policy sentiment analysis using Groq (primary) with
-Gemini as optional fallback.
+Generates daily policy sentiment analysis using Groq (primary), Cerebras
+(second fallback), and Gemini (last-resort fallback) — in that order,
+fastest-resetting free-tier quota first.
 
 Env vars:
-  GROQ_API_KEY    — required (get free key at console.groq.com)
-  GEMINI_API_KEY  — optional fallback
+  GROQ_API_KEY     — required (get free key at console.groq.com)
+  CEREBRAS_API_KEY — optional fallback (cloud.cerebras.ai)
+  GEMINI_API_KEY   — optional last-resort fallback
 
 Output: public/data/sentiment.json
 
-Install: pip install groq google-genai
+Install: pip install groq google-genai requests
 """
 import json
 import os
@@ -17,6 +19,8 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+
+import requests
 
 # ── Groq ────────────────────────────────────────────────────────────
 try:
@@ -44,6 +48,13 @@ GROQ_MODELS = [
     "llama-3.1-8b-instant",      # fast, very high RPM
     "gemma2-9b-it",              # Google Gemma via Groq
     "mixtral-8x7b-32768",        # wide context fallback
+]
+
+# ── Cerebras model priority (free tier, OpenAI-compatible REST API) ───
+CEREBRAS_API_URL = "https://api.cerebras.ai/v1/chat/completions"
+CEREBRAS_MODELS = [
+    "llama-3.3-70b",
+    "llama3.1-8b",
 ]
 
 # ── Gemini model priority ─────────────────────────────────────────────
@@ -221,7 +232,76 @@ def call_groq(api_key: str, prompt: str) -> tuple[str, str]:
 
 
 # ────────────────────────────────────────────────────────────────────
-# Gemini caller (fallback)
+# Cerebras caller (second fallback — free tier, resets fast like Groq)
+# ────────────────────────────────────────────────────────────────────
+def call_cerebras(api_key: str, prompt: str) -> tuple[str, str]:
+    """
+    Try each Cerebras model in order with retry on 429.
+    Returns (raw_text, model_name) on success.
+    Raises RuntimeError if all models fail.
+    """
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    system_msg = (
+        "You are a JSON-only API. You must respond with valid JSON and absolutely "
+        "nothing else — no markdown, no backticks, no explanation."
+    )
+
+    for model_name in CEREBRAS_MODELS:
+        print(f"   → [Cerebras] Trying {model_name}…")
+        wait = RETRY_BASE_SEC
+
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                resp = requests.post(
+                    CEREBRAS_API_URL,
+                    headers=headers,
+                    json={
+                        "model": model_name,
+                        "messages": [
+                            {"role": "system", "content": system_msg},
+                            {"role": "user", "content": prompt},
+                        ],
+                        "temperature": 0.2,
+                        "max_tokens": 2048,
+                    },
+                    timeout=30,
+                )
+
+                if resp.status_code == 429:
+                    if attempt < MAX_RETRIES:
+                        retry_after = resp.headers.get("retry-after")
+                        delay = float(retry_after) + 2 if retry_after else wait
+                        print(f"     ⏳ 429 — waiting {delay:.0f}s (attempt {attempt}/{MAX_RETRIES - 1})…")
+                        time.sleep(delay)
+                        wait = min(wait * 2, 120)
+                        continue
+                    else:
+                        print(f"     ✗ Quota exhausted on {model_name}")
+                        break
+
+                resp.raise_for_status()
+                raw = resp.json()["choices"][0]["message"]["content"]
+                print(f"   ✓ Response from {model_name}")
+                return raw, model_name
+
+            except requests.HTTPError as e:
+                print(f"     ✗ HTTPError on {model_name}: {e}")
+                break  # non-retryable, try next model
+
+            except Exception as e:
+                print(f"     ✗ Unexpected error on {model_name}: {type(e).__name__}: {e}")
+                break
+
+        print(f"   ✗ {model_name} failed — trying next…")
+
+    raise RuntimeError("All Cerebras models exhausted.")
+
+
+# ────────────────────────────────────────────────────────────────────
+# Gemini caller (last-resort fallback)
 # ────────────────────────────────────────────────────────────────────
 def call_gemini(api_key: str, prompt: str) -> tuple[str, str]:
     """
@@ -291,11 +371,11 @@ def write_fallback(data: dict):
         "overall_sentiment": "neutral",
         "overall_score": score,
         "summary": (
-            "Sentiment analysis unavailable — all AI API quotas exhausted. "
+            "Sentiment analysis unavailable — Groq, Cerebras, and Gemini API quotas were all exhausted. "
             f"Latest MF-Index score is {score}/100. Manual review recommended."
         ),
         "signals": [],
-        "recommendation": "Resume analysis when API quota resets (Groq resets hourly/daily; Gemini resets daily at midnight Pacific).",
+        "recommendation": "Resume analysis when a provider's quota resets (Groq and Cerebras reset hourly/daily; Gemini resets daily at midnight Pacific).",
         "data_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "alert": None,
     }
@@ -309,16 +389,18 @@ def write_fallback(data: dict):
 # Main
 # ────────────────────────────────────────────────────────────────────
 def run_sentiment():
-    groq_key   = os.environ.get("GROQ_API_KEY", "").strip()
-    gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    groq_key     = os.environ.get("GROQ_API_KEY", "").strip()
+    cerebras_key = os.environ.get("CEREBRAS_API_KEY", "").strip()
+    gemini_key   = os.environ.get("GEMINI_API_KEY", "").strip()
 
-    if not groq_key and not gemini_key:
-        print("❌ No API keys set. Need GROQ_API_KEY or GEMINI_API_KEY.")
+    if not groq_key and not cerebras_key and not gemini_key:
+        print("❌ No API keys set. Need GROQ_API_KEY, CEREBRAS_API_KEY, or GEMINI_API_KEY.")
         sys.exit(1)
 
     print("🧠 Running sentiment analysis…")
-    print(f"   Groq  : {'✓ key present' if groq_key else '✗ not set'}")
-    print(f"   Gemini: {'✓ key present' if gemini_key else '✗ not set'}")
+    print(f"   Groq    : {'✓ key present' if groq_key else '✗ not set'}")
+    print(f"   Cerebras: {'✓ key present' if cerebras_key else '✗ not set'}")
+    print(f"   Gemini  : {'✓ key present' if gemini_key else '✗ not set'}")
 
     data = load_mf_data()
     if not data:
@@ -338,7 +420,16 @@ def run_sentiment():
         except RuntimeError as e:
             print(f"   ✗ Groq exhausted: {e}")
 
-    # ── 2. Fall back to Gemini ──────────────────────────────────────
+    # ── 2. Fall back to Cerebras ─────────────────────────────────────
+    if raw_text is None and cerebras_key:
+        print("   → Falling back to Cerebras…")
+        try:
+            raw_text, used_model = call_cerebras(cerebras_key, prompt)
+            source = "cerebras"
+        except RuntimeError as e:
+            print(f"   ✗ Cerebras exhausted: {e}")
+
+    # ── 3. Fall back to Gemini (last resort — slowest quota reset) ───
     if raw_text is None and gemini_key:
         print("   → Falling back to Gemini…")
         try:
@@ -347,7 +438,7 @@ def run_sentiment():
         except RuntimeError as e:
             print(f"   ✗ Gemini exhausted: {e}")
 
-    # ── 3. Static fallback — never break the pipeline ───────────────
+    # ── 4. Static fallback — never break the pipeline ───────────────
     if raw_text is None:
         print("⚠  All providers failed — writing static fallback.")
         write_fallback(data)
