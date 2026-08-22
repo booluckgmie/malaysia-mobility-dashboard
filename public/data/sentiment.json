@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-21T16:28:57.506578+00:00",
+  "generated_at": "2026-08-22T16:19:10.975247+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 78,
-  "summary": "Mobility is returning to near‑pre‑pandemic levels with the MF‑Index at 84 and PT ridership exceeding historic annual totals. Fuel savings remain substantial, but high fuel prices and uneven WFH adoption across sectors pose emerging risks. Targeted policy tweaks can lock in the gains while mitigating sectoral imbalances.",
+  "summary": "Malaysia's mobility is back to near‑pre‑pandemic levels with the MF‑Index at 84 and PT ridership exceeding historic daily averages. Fuel savings remain strong at 35.7 M L/week, but high fuel prices and uneven WFH adoption pose risks for high‑mobility sectors.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 85,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 million litres represent 42 % of the MCO peak, confirming that the extended WFH regime continues to curb consumption. The savings are amplified by high fuel prices (RON95 RM 3.77/L), which discourage discretionary travel. Maintaining these savings will require complementary demand‑management measures as prices stabilise."
+      "detail": "Weekly fuel savings of 35.7 M L represent 42% of the MCO peak, confirming that WFH and higher fuel prices are still curbing consumption despite a return to normal mobility."
     },
     {
-      "dimension": "pt_ridership_effects",
-      "score": 80,
+      "dimension": "public_transport_ridership_effects",
+      "score": 90,
       "dir": "positive",
-      "detail": "Daily public‑transport trips reached 1,494,224, projecting an annual volume of roughly 545 million trips—above the 2019 baseline of 522 million. This indicates a robust modal shift back to PT, likely driven by congestion concerns and fuel cost pressures. Continued service reliability and fare stability will be critical to sustain this upward trend."
+      "detail": "Daily PT trips reached 1.49 M, slightly above the pre‑pandemic daily average, indicating a robust modal recovery reinforced by elevated fuel costs."
     },
     {
       "dimension": "economic_risk",
       "score": 60,
       "dir": "neutral",
-      "detail": "Retail & Services, Logistics, and Construction sectors show mobility scores of 85‑95 with WFH rates below 15 %, exposing them to higher congestion and emissions risk. Their high mobility could erode the fuel‑saving gains if not managed. Monitoring sector‑specific travel patterns will help pre‑empt economic disruptions linked to transport bottlenecks."
+      "detail": "Retail, logistics and construction sectors show mobility scores above 85 and high risk, suggesting potential congestion and productivity pressures if not managed."
     },
     {
       "dimension": "policy_equity",
-      "score": 55,
-      "dir": "neutral",
-      "detail": "WFH adoption varies sharply—from 60 % in Public & GLCs to just 5 % in Construction—creating unequal exposure to fuel price shocks and traffic externalities. The disparity suggests that current policies favour certain employment groups. Introducing flexible‑hour incentives for low‑WFH sectors can improve equity and overall system resilience."
+      "score": 70,
+      "dir": "positive",
+      "detail": "WFH adoption is uneven—60% in public/GLC versus 5% in construction—highlighting the need for sector‑specific incentives to broaden remote‑work benefits."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 70,
+      "score": 78,
       "dir": "positive",
-      "detail": "Sustained PT usage and significant fuel savings point to a durable shift away from private car dependence. However, persistently high fuel prices could trigger a rebound to private vehicles if PT affordability declines. Embedding long‑term fare subsidies and expanding feeder services will reinforce the modal transition."
+      "detail": "Sustained high fuel prices and strong PT usage point to a gradual shift away from private car trips, but high mobility in logistics may limit the overall shift without targeted interventions."
     }
   ],
-  "recommendation": "Introduce sector‑targeted flexible‑working incentives for Retail, Logistics and Construction to lift WFH adoption to at least 20 % by Q4 2027, while expanding PT capacity and capping fare hikes to keep ridership growth above 5 % annually. Simultaneously, maintain a modest fuel price differential to preserve weekly savings of 35 million litres and set a national target of a 5 % reduction in weekly fuel consumption by end‑2027.",
-  "data_date": "2026-08-21",
+  "recommendation": "Maintain the current fuel price structure to preserve demand‑side savings, expand PT capacity to accommodate growing ridership, and introduce targeted WFH subsidies for high‑mobility sectors aiming to cut weekly fuel consumption by an additional 10% and raise PT share of trips to 65% by 2028.",
+  "data_date": "2026-08-22",
   "alert": null
 }
