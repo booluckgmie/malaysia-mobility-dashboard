@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-22T16:19:10.975247+00:00",
+  "generated_at": "2026-08-23T16:20:42.858930+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 78,
-  "summary": "Malaysia's mobility is back to near‑pre‑pandemic levels with the MF‑Index at 84 and PT ridership exceeding historic daily averages. Fuel savings remain strong at 35.7 M L/week, but high fuel prices and uneven WFH adoption pose risks for high‑mobility sectors.",
+  "summary": "Mobility is back to near‑pre‑pandemic levels with the MF‑Index at 84 and PT ridership slightly above 2019 daily volumes. Fuel savings remain substantial at 35.7 M L per week, but high fuel prices and uneven WFH adoption create sectoral risk and equity concerns.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 85,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 M L represent 42% of the MCO peak, confirming that WFH and higher fuel prices are still curbing consumption despite a return to normal mobility."
+      "detail": "Weekly fuel savings of 35.7 M L represent 42% of the MCO peak, confirming that the current fuel policy and WFH measures continue to curb consumption despite a rebound in mobility."
     },
     {
-      "dimension": "public_transport_ridership_effects",
+      "dimension": "public_transport_ridership",
       "score": 90,
       "dir": "positive",
-      "detail": "Daily PT trips reached 1.49 M, slightly above the pre‑pandemic daily average, indicating a robust modal recovery reinforced by elevated fuel costs."
+      "detail": "Daily PT trips reached 1,494,224, marginally exceeding the pre‑pandemic daily average of ~1.43 M, indicating a strong recovery and effective PT incentives."
     },
     {
       "dimension": "economic_risk",
       "score": 60,
-      "dir": "neutral",
-      "detail": "Retail, logistics and construction sectors show mobility scores above 85 and high risk, suggesting potential congestion and productivity pressures if not managed."
+      "dir": "negative",
+      "detail": "Retail & Services, Logistics and Construction show mobility scores above 85 with low WFH rates, signalling heightened exposure to congestion, fuel cost volatility and potential productivity losses."
     },
     {
       "dimension": "policy_equity",
-      "score": 70,
-      "dir": "positive",
-      "detail": "WFH adoption is uneven—60% in public/GLC versus 5% in construction—highlighting the need for sector‑specific incentives to broaden remote‑work benefits."
+      "score": 55,
+      "dir": "negative",
+      "detail": "WFH adoption ranges from 60% in Public & GLCs to just 5% in Construction, highlighting a disparity that may exacerbate income and regional inequities if not addressed."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 78,
+      "score": 70,
       "dir": "positive",
-      "detail": "Sustained high fuel prices and strong PT usage point to a gradual shift away from private car trips, but high mobility in logistics may limit the overall shift without targeted interventions."
+      "detail": "Elevated RON95 price (RM3.77/L) combined with robust PT usage suggests a gradual shift away from private car travel, though sustained incentives are needed to lock in this trend."
     }
   ],
-  "recommendation": "Maintain the current fuel price structure to preserve demand‑side savings, expand PT capacity to accommodate growing ridership, and introduce targeted WFH subsidies for high‑mobility sectors aiming to cut weekly fuel consumption by an additional 10% and raise PT share of trips to 65% by 2028.",
-  "data_date": "2026-08-22",
+  "recommendation": "Maintain the current fuel price signal while introducing targeted subsidies for PT in high‑mobility sectors, and expand flexible WFH arrangements for Retail, Logistics and Construction to lower their mobility scores by at least 10 points within six months. Aim for a 5% weekly reduction in fuel consumption and a 3% increase in PT ridership by Q4 2026.",
+  "data_date": "2026-08-23",
   "alert": null
 }
