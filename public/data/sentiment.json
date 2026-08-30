@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-29T19:09:38.050294+00:00",
+  "generated_at": "2026-08-30T19:01:30.424475+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 55,
-  "summary": "Public transport usage has rebounded to pre‑pandemic levels, delivering a full score on the ridership component. Fuel savings remain strong despite near‑zero fuel prices, but high‑mobility sectors continue to pose congestion and emission risks.",
+  "overall_score": 58,
+  "summary": "Daily public transport ridership has rebounded to slightly above pre‑pandemic levels, while fuel savings remain substantial at 42% of the MCO peak. However, ultra‑low fuel prices and high mobility scores in logistics and construction keep emissions risk elevated.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 70,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 million litres represent 42 % of the MCO peak, showing that WFH and modal shift are still delivering substantial energy reductions even with RON95 priced at RM0.05/L."
+      "detail": "Weekly fuel savings of 35.7 million litres represent 42% of the MCO peak, showing that WFH and modal shift are still delivering tangible energy reductions despite near‑zero fuel prices."
     },
     {
       "dimension": "pt_ridership_effects",
-      "score": 90,
+      "score": 85,
       "dir": "positive",
-      "detail": "Daily PT trips of 1.49 million match the pre‑COVID daily average (~1.43 million), earning a perfect ridership component and confirming that public transport is once again the backbone of urban mobility."
+      "detail": "Today's PT trips total 1.49 million, marginally higher than the pre‑COVID daily average, indicating a strong recovery and a durable preference for mass transit among commuters."
     },
     {
       "dimension": "economic_risk",
       "score": 45,
       "dir": "negative",
-      "detail": "Retail & Services, Logistics and Construction retain mobility scores above 85 and WFH adoption below 15 %, exposing these sectors to congestion, higher operating costs and potential productivity losses if traffic worsens."
+      "detail": "High mobility scores in Retail & Services (85), Logistics (92) and Construction (95) signal elevated congestion and emissions risk, which could undermine productivity if not managed."
     },
     {
       "dimension": "policy_equity",
       "score": 55,
       "dir": "neutral",
-      "detail": "Public & GLC employees enjoy 60 % WFH and low mobility scores, while private professionals and high‑risk sectors have limited remote work options, highlighting an equity gap in access to flexible work arrangements."
+      "detail": "WFH adoption is uneven: public/GLC employees at 60% versus logistics at 8%, creating disparate exposure to the current fuel subsidy and limiting equitable benefits across sectors."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 60,
-      "dir": "neutral",
-      "detail": "Although PT ridership is strong, the ultra‑low fuel price (RM0.05/L) could erode incentives for a sustained shift away from private cars, risking a reversal of recent modal gains."
+      "score": 65,
+      "dir": "positive",
+      "detail": "Sustained PT usage and moderate WFH levels suggest a gradual shift away from private car dependence, but the high mobility scores in key high‑risk sectors could reverse this trend without targeted interventions."
     }
   ],
-  "recommendation": "Introduce a modest fuel levy to raise RON95 to at least RM0.20/L, earmarked for PT subsidies and active‑travel infrastructure. Set a target of an additional 5 % weekly fuel savings and a 10 % increase in PT ridership by end‑2027, while expanding WFH incentives for high‑mobility sectors to lower congestion risk.",
-  "data_date": "2026-08-29",
+  "recommendation": "Normalize RON95 and diesel prices to around RM0.50 per litre over the next 12 months to restore price signals, while expanding electric bus procurement and offering WFH incentives for logistics and construction firms. Aim for PT to capture 70% of daily trips by 2028 and reduce weekly fuel consumption by an additional 10% relative to current levels.",
+  "data_date": "2026-08-30",
   "alert": null
 }
