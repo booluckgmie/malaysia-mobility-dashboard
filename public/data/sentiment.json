@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-08-30T19:01:30.424475+00:00",
+  "generated_at": "2026-08-31T21:17:35.060996+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 58,
-  "summary": "Daily public transport ridership has rebounded to slightly above pre‑pandemic levels, while fuel savings remain substantial at 42% of the MCO peak. However, ultra‑low fuel prices and high mobility scores in logistics and construction keep emissions risk elevated.",
+  "summary": "Daily public transport usage has rebounded to pre‑pandemic levels, while fuel savings remain substantial at 35.7 million litres per week. However, low fuel prices and uneven work‑from‑home adoption keep overall mobility high, posing economic and equity challenges.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
-      "score": 70,
+      "score": 55,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 million litres represent 42% of the MCO peak, showing that WFH and modal shift are still delivering tangible energy reductions despite near‑zero fuel prices."
+      "detail": "Weekly fuel savings of 35.7 M litres represent 42 % of the MCO peak, indicating continued environmental benefit. The magnitude has slipped from the peak, suggesting a gradual return to higher fuel consumption as mobility recovers."
     },
     {
       "dimension": "pt_ridership_effects",
-      "score": 85,
+      "score": 90,
       "dir": "positive",
-      "detail": "Today's PT trips total 1.49 million, marginally higher than the pre‑COVID daily average, indicating a strong recovery and a durable preference for mass transit among commuters."
+      "detail": "Daily PT trips reached 1.49 million, slightly above the pre‑pandemic daily average (~1.43 million). The ridership component of the MF‑Index is at full score, confirming a strong modal shift back to public transport."
     },
     {
       "dimension": "economic_risk",
       "score": 45,
       "dir": "negative",
-      "detail": "High mobility scores in Retail & Services (85), Logistics (92) and Construction (95) signal elevated congestion and emissions risk, which could undermine productivity if not managed."
+      "detail": "High mobility scores in Retail & Services, Logistics and Construction (85‑95) signal elevated travel‑related costs and congestion risk. These sectors contribute disproportionately to economic exposure as WFH adoption remains low."
     },
     {
       "dimension": "policy_equity",
-      "score": 55,
-      "dir": "neutral",
-      "detail": "WFH adoption is uneven: public/GLC employees at 60% versus logistics at 8%, creating disparate exposure to the current fuel subsidy and limiting equitable benefits across sectors."
+      "score": 40,
+      "dir": "negative",
+      "detail": "WFH adoption is uneven: 60 % in Public & GLCs versus only 15 % in Retail & Services, creating a disparity in exposure to fuel price shocks and congestion. Equity‑focused policies are needed to balance benefits across sectors."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 65,
-      "dir": "positive",
-      "detail": "Sustained PT usage and moderate WFH levels suggest a gradual shift away from private car dependence, but the high mobility scores in key high‑risk sectors could reverse this trend without targeted interventions."
+      "score": 35,
+      "dir": "negative",
+      "detail": "The MF‑Index sits at 54, reflecting only moderate progress toward a sustainable mobility mix. Ultra‑low fuel prices (RM0.05/L) undermine incentives for a lasting shift to low‑carbon modes."
     }
   ],
-  "recommendation": "Normalize RON95 and diesel prices to around RM0.50 per litre over the next 12 months to restore price signals, while expanding electric bus procurement and offering WFH incentives for logistics and construction firms. Aim for PT to capture 70% of daily trips by 2028 and reduce weekly fuel consumption by an additional 10% relative to current levels.",
-  "data_date": "2026-08-30",
+  "recommendation": "Introduce a modest fuel excise (e.g., RM0.10 per litre) to restore price signals, while expanding EV charging infrastructure and subsidising PT fare discounts for high‑mobility sectors. Set a target to raise the overall MF‑Index to 65 by end‑2027 through sector‑specific WFH incentives and a 10 % increase in PT ridership capacity.",
+  "data_date": "2026-08-31",
   "alert": null
 }
