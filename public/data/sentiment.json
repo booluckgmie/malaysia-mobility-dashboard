@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-09-02T19:12:13.624731+00:00",
+  "generated_at": "2026-09-03T19:04:34.430865+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 78,
-  "summary": "Malaysia's mobility is near pre‑pandemic levels with a strong PT ridership and substantial weekly fuel savings, but high fuel prices and uneven WFH adoption across sectors pose emerging risks. Targeted policies are needed to sustain the modal shift and address sectoral inequities.",
+  "summary": "Malaysia's mobility is back to near‑pre‑pandemic levels (MF‑Index 84) and public transport usage has surpassed historic daily averages, while fuel savings remain substantial at 42% of the MCO peak. However, high mobility scores in logistics, construction and retail pose congestion and emission risks, and WFH adoption is uneven across sectors.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 85,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 million litres represent 42 % of the MCO peak, confirming that current WFH and modal‑shift measures are still delivering significant energy reductions despite higher fuel prices."
+      "detail": "Weekly fuel savings of 35.7 million litres represent 42% of the MCO peak saving, showing that the current fuel‑price policy continues to curb consumption despite higher prices. This contributes to lower emissions and preserves fuel imports."
     },
     {
-      "dimension": "public_transport_ridership",
-      "score": 80,
+      "dimension": "pt_ridership_effects",
+      "score": 90,
       "dir": "positive",
-      "detail": "Daily PT trips have reached 1.49 million, virtually matching pre‑COVID levels and driving the ridership component of the MF‑Index to 100 / 100, indicating successful recovery and potential for further growth as fuel costs stay high."
+      "detail": "Daily PT trips reached 1,494,224, slightly above the pre‑pandemic daily average of ~1.43 million, indicating a strong rebound and effective demand‑management measures. Ridership component scores 100, confirming robust public‑transport utilisation."
     },
     {
       "dimension": "economic_risk",
-      "score": 65,
-      "dir": "neutral",
-      "detail": "High mobility scores in Retail & Services (85), Logistics (92) and Construction (95) signal elevated congestion and emissions risk, especially as these sectors have low WFH adoption (≤15 %)."
+      "score": 60,
+      "dir": "cautiously_negative",
+      "detail": "Mobility scores above 85 in logistics (92), construction (95) and retail (85) signal high on‑road activity, raising the risk of congestion, productivity losses and fuel‑price exposure for these sectors."
     },
     {
       "dimension": "policy_equity",
-      "score": 70,
-      "dir": "neutral",
-      "detail": "WFH adoption is uneven—60 % in Public & GLCs versus 8 % in Logistics—suggesting that current policies benefit some sectors more than others and warrant differentiated incentives."
+      "score": 55,
+      "dir": "negative",
+      "detail": "WFH adoption is highly uneven: 60% in public/GLCs versus under 10% in logistics, construction and retail. This disparity limits the benefits of remote‑work policies for workers in high‑mobility, high‑risk sectors."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 78,
+      "score": 75,
       "dir": "positive",
-      "detail": "Sustained PT usage and continued fuel savings point to a durable shift away from private car travel, but the trajectory depends on maintaining high fuel prices or reinforcing alternative‑mode incentives."
+      "detail": "With the MF‑Index at 84 and fuel prices at RM3.77/ litre (RON95) and RM4.67 (diesel), price signals are nudging commuters toward PT and non‑motorised modes, supporting a gradual modal shift despite overall mobility returning to normal."
     }
   ],
-  "recommendation": "Stabilise RON95 pricing to keep private car use costly, expand PT capacity to achieve 1.6 million daily trips by 2027, and introduce sector‑specific WFH subsidies for Logistics, Retail and Construction to lower their mobility scores by at least 10 points.",
-  "data_date": "2026-09-02",
+  "recommendation": "Maintain the current fuel‑price structure to preserve savings, while expanding PT capacity to handle the 1.5 million daily trips. Set a target of 70% WFH adoption in logistics, construction and retail by end‑2027, and accelerate EV‑fleet incentives for last‑mile logistics to mitigate congestion and emissions.",
+  "data_date": "2026-09-03",
   "alert": null
 }
