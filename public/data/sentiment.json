@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-09-13T18:31:15.899635+00:00",
+  "generated_at": "2026-09-14T20:08:46.450514+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
-  "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 58,
-  "summary": "Daily public transport usage remains robust at 1.49 million trips, and fuel savings of 35.7 million litres per week show continued demand management despite ultra‑low fuel prices. However, high mobility risk in Retail, Logistics and Construction sectors and uneven WFH adoption signal exposure to future congestion and price shocks.",
+  "overall_sentiment": "cautiously_negative",
+  "overall_score": 45,
+  "summary": "Today's MF-Index of 53 reflects a moderate but concerning dip from the 2025 recovery level, driven by ultra‑low fuel prices that blunt the impact of strong public‑transport usage. While PT ridership is robust, high mobility scores in Retail, Logistics, and Construction pose economic risk and highlight equity gaps in work‑from‑home adoption.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 70,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 M litres represent 42% of the MCO peak, indicating that behavioural changes and lower travel intensity persist. The extremely low RON95 price (RM0.25) may dampen further conservation incentives, so the impact could plateau without policy support."
+      "detail": "Weekly fuel savings of 35.7 million litres (42% of the MCO peak) demonstrate that WFH and PT usage continue to curb fuel consumption despite the RM0.25/litre price, providing short‑term environmental benefits."
     },
     {
       "dimension": "pt_ridership_effects",
       "score": 85,
       "dir": "positive",
-      "detail": "Public transport ridership component scores a perfect 100, with 1.49 M daily trips, confirming strong modal preference and contributing to emissions reductions. Maintaining this level will be critical as fuel prices remain low and private car use could rebound."
+      "detail": "Daily PT trips have reached 1.49 million, matching pre‑pandemic levels and delivering a perfect ridership component score, indicating that public‑transport demand remains strong under current conditions."
     },
     {
       "dimension": "economic_risk",
-      "score": 45,
+      "score": 40,
       "dir": "negative",
-      "detail": "Retail & Services, Logistics and Construction report mobility scores of 85‑95, exposing these sectors to congestion, fuel‑price volatility and productivity losses. Their low WFH adoption (<15%) limits flexibility, raising short‑term economic vulnerability."
+      "detail": "Retail & Services, Logistics, and Construction show mobility scores above 85 and high risk classifications, suggesting that any resurgence of private‑vehicle travel could strain these sectors and impede economic recovery."
     },
     {
       "dimension": "policy_equity",
-      "score": 50,
+      "score": 55,
       "dir": "neutral",
-      "detail": "WFH adoption is highly uneven: 60% in Public & GLCs versus 5% in Construction, creating disparate mobility burdens across the workforce. Equity‑focused measures are needed to balance emissions responsibilities and access to flexible work arrangements."
+      "detail": "WFH adoption varies widely—from 60% in Public & GLCs to only 5% in Construction—creating uneven mobility pressures and highlighting the need for sector‑specific flexible‑work incentives."
     },
     {
       "dimension": "long_term_modal_shift",
       "score": 60,
       "dir": "positive",
-      "detail": "Sustained PT usage and significant fuel savings suggest a gradual shift away from private cars, but the near‑zero fuel price could reverse this trend. Targeted incentives for low‑emission vehicles and continued PT investment are required to lock‑in the shift."
+      "detail": "Strong PT usage points to a potential modal shift, but the persistently low fuel price risks reversing this trend by making private‑car travel financially attractive in the medium term."
     }
   ],
-  "recommendation": "Introduce a modest fuel excise (e.g., RM0.10 per litre) to create a price floor, expand PT subsidies to raise daily ridership by 10% by end‑2027, and launch sector‑specific WFH incentives for Retail, Logistics and Construction aiming for at least 30% adoption. These steps will reinforce the modal shift, mitigate economic risk, and improve policy equity.",
-  "data_date": "2026-09-13",
+  "recommendation": "Raise the RON95 price to at least RM0.50 per litre to restore price signals that favour public transport, while coupling the increase with a targeted PT subsidy that keeps fares affordable. Expand flexible‑work incentives for high‑mobility sectors to lift WFH rates above 30%, and invest in last‑mile connectivity to lock in the current PT ridership gains.",
+  "data_date": "2026-09-14",
   "alert": null
 }
