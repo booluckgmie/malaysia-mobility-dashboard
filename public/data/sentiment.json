@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-09-14T20:08:46.450514+00:00",
+  "generated_at": "2026-09-15T19:31:00.006807+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
-  "overall_sentiment": "cautiously_negative",
-  "overall_score": 45,
-  "summary": "Today's MF-Index of 53 reflects a moderate but concerning dip from the 2025 recovery level, driven by ultra‑low fuel prices that blunt the impact of strong public‑transport usage. While PT ridership is robust, high mobility scores in Retail, Logistics, and Construction pose economic risk and highlight equity gaps in work‑from‑home adoption.",
+  "overall_sentiment": "cautiously_optimistic",
+  "overall_score": 58,
+  "summary": "Public transport ridership has rebounded to slightly above pre‑pandemic levels, while fuel savings remain substantial at 35.7 million litres per week. However, ultra‑low fuel prices and uneven work‑from‑home adoption keep the MF‑Index at a moderate 53, signalling limited long‑term modal shift.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
       "score": 70,
       "dir": "positive",
-      "detail": "Weekly fuel savings of 35.7 million litres (42% of the MCO peak) demonstrate that WFH and PT usage continue to curb fuel consumption despite the RM0.25/litre price, providing short‑term environmental benefits."
+      "detail": "Weekly fuel savings of 35.7 M litres represent 42% of the MCO peak, delivering a tangible environmental benefit, but the RM0.25/litre price erodes fiscal returns and may dampen future conservation incentives."
     },
     {
       "dimension": "pt_ridership_effects",
       "score": 85,
       "dir": "positive",
-      "detail": "Daily PT trips have reached 1.49 million, matching pre‑pandemic levels and delivering a perfect ridership component score, indicating that public‑transport demand remains strong under current conditions."
+      "detail": "Daily PT trips reached 1.49 M, marginally exceeding the pre‑COVID daily average of ~1.43 M, indicating a strong recovery and potential for sustained public‑transport reliance if supported by policy."
     },
     {
       "dimension": "economic_risk",
-      "score": 40,
+      "score": 45,
       "dir": "negative",
-      "detail": "Retail & Services, Logistics, and Construction show mobility scores above 85 and high risk classifications, suggesting that any resurgence of private‑vehicle travel could strain these sectors and impede economic recovery."
+      "detail": "Retail, logistics and construction sectors show mobility scores of 85‑95 and are classified as high risk, exposing the economy to congestion, emissions and productivity losses despite overall moderate MF‑Index."
     },
     {
       "dimension": "policy_equity",
       "score": 55,
       "dir": "neutral",
-      "detail": "WFH adoption varies widely—from 60% in Public & GLCs to only 5% in Construction—creating uneven mobility pressures and highlighting the need for sector‑specific flexible‑work incentives."
+      "detail": "WFH adoption is uneven—60% in public/GLC versus 5‑15% in high‑mobility sectors—creating an equity gap where workers in logistics, construction and retail bear disproportionate travel burdens."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 60,
-      "dir": "positive",
-      "detail": "Strong PT usage points to a potential modal shift, but the persistently low fuel price risks reversing this trend by making private‑car travel financially attractive in the medium term."
+      "score": 50,
+      "dir": "neutral",
+      "detail": "While PT usage is rebounding, the persistently low fuel price (RM0.25/litre) weakens price‑based incentives for a durable shift away from private motorised travel, risking a plateau in modal change."
     }
   ],
-  "recommendation": "Raise the RON95 price to at least RM0.50 per litre to restore price signals that favour public transport, while coupling the increase with a targeted PT subsidy that keeps fares affordable. Expand flexible‑work incentives for high‑mobility sectors to lift WFH rates above 30%, and invest in last‑mile connectivity to lock in the current PT ridership gains.",
-  "data_date": "2026-09-14",
+  "recommendation": "Introduce a calibrated fuel price adjustment to raise RON95 to at least RM0.80/litre while earmarking the additional revenue for PT subsidies and low‑emission fleet upgrades. Expand mandatory WFH pilots in logistics, construction and retail to at least 30% of eligible roles, and set a target to maintain weekly fuel savings above 30 M litres through demand‑side measures.",
+  "data_date": "2026-09-15",
   "alert": null
 }
