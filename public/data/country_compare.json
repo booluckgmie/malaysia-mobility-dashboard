@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T20:25:58.409434+00:00",
+  "updated_at": "2026-09-30T20:30:50.062554+00:00",
   "countries": [
     {
       "country": "Malaysia",
@@ -64,8 +64,6 @@
       "mfIndex": 78,
       "fuelSubsidyGDP": 0.5,
       "highlight": false,
-      "gdp_usd": 1872374961553.15,
-      "gdp_usd_year": "2025",
       "population": 51684564,
       "population_year": "2025"
     },
@@ -80,11 +78,7 @@
       "ridershipRecovery2025": 88,
       "mfIndex": 72,
       "fuelSubsidyGDP": 0.0,
-      "highlight": false,
-      "gdp_usd": 1798518933689.21,
-      "gdp_usd_year": "2025",
-      "population": 27614411,
-      "population_year": "2025"
+      "highlight": false
     },
     {
       "country": "Japan",
