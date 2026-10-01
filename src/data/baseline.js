@@ -31,18 +31,21 @@ export const GOOGLE_MOBILITY_MY = [
 ]
 
 export const FUEL_HISTORY = [
-  { period: 'Jan 2019', ron95: 2.08, diesel: 2.18, phase: 'pre' },
+  { period: 'Jan 2019', ron95: 2.20, diesel: 2.18, phase: 'pre' },
   { period: 'Jan 2020', ron95: 2.08, diesel: 2.18, phase: 'pre' },
-  { period: 'Apr 2020', ron95: 1.25, diesel: 1.38, phase: 'mco' },
-  { period: 'Dec 2020', ron95: 1.62, diesel: 1.75, phase: 'mco' },
+  { period: 'Apr 2020', ron95: 1.25, diesel: 1.46, phase: 'mco' },
+  { period: 'Dec 2020', ron95: 1.70, diesel: 1.90, phase: 'mco' },
   { period: 'Mar 2021', ron95: 2.05, diesel: 2.15, phase: 'mco' },
   { period: 'Jun 2021', ron95: 2.05, diesel: 2.15, phase: 'mco' },
   { period: 'Jan 2022', ron95: 2.05, diesel: 2.15, phase: 'recover' },
   { period: 'Jun 2022', ron95: 2.05, diesel: 2.15, phase: 'recover' },
-  { period: 'Jun 2023', ron95: 2.05, diesel: 3.35, phase: 'recover' },
-  { period: 'Jun 2024', ron95: 2.05, diesel: 3.35, phase: 'recover' },
-  { period: 'Jan 2025', ron95: 2.05, diesel: 3.35, phase: 'recover' },
-  { period: 'Apr 2026', ron95: 2.05, diesel: 3.35, phase: 'crisis' },
+  { period: 'Jun 2023', ron95: 2.05, diesel: 2.15, phase: 'recover' },
+  { period: 'Jun 2024', ron95: 2.05, diesel: 3.35, phase: 'recover' }, // diesel float, 2024-06-10
+  { period: 'Jan 2025', ron95: 2.05, diesel: 2.98, phase: 'recover' },
+  { period: 'Sep 2025', ron95: 2.05, diesel: 2.88, phase: 'recover' }, // last blanket-subsidy reading
+  { period: '30 Sep 2025', ron95: 2.60, ron95_budi95: 1.99, diesel: 2.88, phase: 'recover' }, // BUDI95 targeted subsidy launch
+  { period: 'Apr 2026', ron95: 4.27, ron95_budi95: 1.99, diesel: 6.72, phase: 'crisis' }, // fuel price spike that precipitated the WFH mandate
+  { period: 'Oct 2026', ron95: 4.52, ron95_budi95: 1.99, diesel: 5.27, phase: 'crisis' },
 ]
 
 export const SECTORS = [
@@ -115,10 +118,10 @@ export const MF_INDEX_THRESHOLDS = [
 ]
 
 export const POLICY_EVENTS = [
-  { date: '15 Apr 2026', era: 'crisis',  title: 'WFH Mandate — Public Sector & GLCs', detail: 'Oil crisis response · ~1.6M civil servants · 50–70% compliance target · Fuel subsidy review running parallel' },
-  { date: 'Jun 2024',    era: 'recover', title: 'RON95 Targeted Subsidy Launch',       detail: 'Non-citizen + high-income exclusion · Pump price held RM2.05 for eligible · Diesel already floated RM3.35' },
+  { date: '15 Apr 2026', era: 'crisis',  title: 'WFH Mandate — Public Sector & GLCs', detail: 'Fuel price spike to RM4.27 response · ~1.6M civil servants · 50–70% compliance target · Fuel subsidy review running parallel' },
+  { date: '30 Sep 2025', era: 'recover', title: 'BUDI95 Targeted Subsidy Launch',      detail: 'Non-citizen + high-income exclusion · Eligible citizens pay RM1.99 (BUDI95) · Everyone else pays market rate (RM2.60 at launch) · Diesel already floated RM3.35' },
   { date: 'Apr 2023',    era: 'recover', title: 'Endemic Phase — Full Reopening',       detail: 'PT ridership back to ~80% 2019 levels · WFH dropped to 15% voluntary · RON95 blanket subsidy still in place' },
   { date: 'Jun 2021',    era: 'mco',    title: 'FMCO — Full MCO',                       detail: 'Workplace mobility −65% · PT ridership historic low 175M/yr · WFH ~65% · RON95 at RM1.25' },
   { date: 'Mar 2020',    era: 'mco',    title: 'MCO 1.0 — First Lockdown',              detail: 'Workplace mobility −73% · Transit −78% · RON95 crashed to RM1.25 · PT trips collapsed to 198M/yr 2020' },
-  { date: 'Jan 2019',    era: 'pre',    title: 'Pre-Pandemic Baseline',                  detail: '522M annual PT trips · Car modal share ~80% · RON95 RM2.08 · WFH ~5% (tech sector only)' },
+  { date: 'Jan 2019',    era: 'pre',    title: 'Pre-Pandemic Baseline',                  detail: '522M annual PT trips (Prasarana + KTMB annual reports) · Car modal share ~80% · RON95 RM2.20 · WFH ~5% (tech sector only)' },
 ]

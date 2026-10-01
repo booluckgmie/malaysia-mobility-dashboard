@@ -11,7 +11,7 @@ const ERAS = [
     kpis: [
       { label: 'Prasarana (LRT/MRT/Bus)', value: '465M trips/yr' },
       { label: 'KTMB (rail)', value: '57M trips/yr' },
-      { label: 'RON95 price', value: 'RM 2.08/L' },
+      { label: 'RON95 price', value: 'RM 2.20/L' },
       { label: 'WFH rate', value: '~5% (tech only)' },
     ],
     insight: 'Even with MRT3 under development, modal share for PT was stuck at ~20–25%. The car was king.',
@@ -30,27 +30,27 @@ const ERAS = [
   },
   {
     id: 'recover', label: 'Recovery', years: '2022–2025',
-    headline: '+97%', headlineSub: 'ridership rebound · 2021→2025',
-    story: 'Malaysia\'s endemic declaration (2022) unlocked rapid mobility rebound. By 2025, PT ridership reached 506M trips — 97% of 2019\'s peak. But a structural split emerged: diesel was de-subsidised (RM 3.35/L) while RON95 stayed at RM 2.05, creating two-tier fuel pressure.',
+    headline: '+97%', headlineSub: 'ridership rebound · 2021→2025 (annual-report basis)',
+    story: 'Malaysia\'s endemic declaration (2022) unlocked rapid mobility rebound. By 2025, PT ridership reached 506M trips — 97% of 2019\'s peak, per Prasarana/KTMB annual reports (a different, broader count than the live daily API feed used elsewhere on this dashboard). A structural split emerged: diesel was floated to market pricing in June 2024 (peaking at RM 3.35/L, drifting to ~RM 2.98 by 2025) while RON95 stayed flat at RM 2.05, creating two-tier fuel pressure.',
     kpis: [
-      { label: 'PT trips 2025', value: '506M (97% of 2019)' },
+      { label: 'PT trips 2025', value: '506M (97% of 2019, annual reports)' },
       { label: 'Workplace mobility', value: '+5% vs 2020 baseline' },
       { label: 'RON95 (held)', value: 'RM 2.05/L' },
-      { label: 'Diesel (floated Jun 23)', value: 'RM 3.35/L' },
+      { label: 'Diesel (floated Jun 2024)', value: 'RM 3.35/L' },
     ],
-    insight: 'The diesel de-subsidisation in June 2023 was the tipping point. Logistics costs rose. The RON95 subsidy bill ballooned. This unresolved tension is what triggered the 2026 crisis policy.',
+    insight: 'The diesel de-subsidisation on 10 June 2024 was the tipping point. Logistics costs rose. The RON95 subsidy bill ballooned. This unresolved tension is what triggered the 2026 crisis policy.',
   },
   {
     id: 'crisis', label: 'WFH Crisis', years: 'Apr 2026',
-    headline: '2.9M L', headlineSub: 'fuel saved per week (projection)',
-    story: 'On 15 April 2026, ~1.6 million civil servants and GLC employees were mandated to work from home. This is a deliberate policy-driven mobility reduction — not a health lockdown. Ridership falls, but only for commuting. Retail, logistics, and construction remain near-full mobility.',
+    headline: '35.7M L', headlineSub: 'fuel saved per week (modelled ceiling, full target compliance)',
+    story: 'On 15 April 2026, ~1.6 million civil servants and GLC employees were mandated to work from home — a response to RON95 spiking to RM 4.27/L (BUDI95-eligible citizens kept paying RM 1.99 under the targeted subsidy launched 30 Sept 2025). This is a deliberate policy-driven mobility reduction, not a health lockdown. The 35.7M litres/week figure is a sector-assumption model assuming every sector hits its full target WFH rate — the government\'s own first-week report showed just 334,000 litres actually saved, underscoring how far real compliance lagged the target early on.',
     kpis: [
       { label: 'Civil servants affected', value: '~1.6M' },
       { label: 'Projected workplace drop', value: '−30%' },
-      { label: 'Projected PT trips 2026', value: '445M (−12%)' },
+      { label: 'Week 1 (official, actual)', value: '334,000 L saved' },
       { label: 'MF-Index', value: '58 / 100' },
     ],
-    insight: 'WFH 2026 delivers ~34% of MCO\'s fuel savings at ~10% of the economic cost. Every additional 10% extension to private sector adds ~8M litres/week savings.',
+    insight: 'The 35.7M L/week figure is this model\'s ceiling if every sector reached its assumed target WFH rate (~42% of MCO\'s ~85M L/week) — not a measured result. Real adoption ramps far more slowly, per the government\'s own 334,000 L week-1 report.',
   },
 ]
 

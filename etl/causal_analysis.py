@@ -123,6 +123,12 @@ def load_malaysia_panel():
     frames = []
 
     ridership = pd.DataFrame(hist["annual_ridership"])
+    # Exclude any year that hasn't finished yet — its annual total (e.g. 2026's
+    # "WFH impact (proj)" row) is a model projection, not a real Prasarana/KTMB
+    # annual report, and using it as "post" evidence of an event's effect is
+    # circular (the model's assumed output standing in for a measured result).
+    current_year = datetime.now().year
+    ridership = ridership[ridership["year"] < current_year]
     ridership["date"] = pd.to_datetime(ridership["year"].astype(str) + "-01-01")
     frames.append(ridership[["date", "total"]].rename(columns={"total": "ridership_annual"}))
 
@@ -158,12 +164,21 @@ def load_malaysia_panel():
 # ---------------------------------------------------------------------------
 # 3. EVENT-STUDY
 # ---------------------------------------------------------------------------
-def event_study(panel, event_date, outcome, pre_days=PRE_WINDOW_DAYS, post_days=POST_WINDOW_DAYS):
+def event_study(panel, event_date, outcome, pre_days=PRE_WINDOW_DAYS, post_days=POST_WINDOW_DAYS,
+                 exclude_days=0):
     """
     Normalizes `outcome` relative to its pre-event mean, returns a
     day-relative-to-event series plus a simple pre/post trend break test.
     Returns {"available": False, "reason": ...} if there aren't enough
     real observations on either side of the event to say anything.
+
+    `exclude_days` drops any observation within that many days of the event
+    date from BOTH pre and post groups, instead of assigning it to whichever
+    side it's nominally on. This matters for annual-frequency outcomes dated
+    at Jan-1: an event partway through year Y (e.g. MCO, March 2020) would
+    otherwise pull year Y's own already-affected annual total into "pre"
+    (since Jan-1 of year Y is before the event), diluting the measured
+    effect. Use a dead zone wide enough to span the event's own year.
     """
     if outcome not in panel.columns:
         return {"available": False, "reason": f"column '{outcome}' not in panel"}
@@ -176,6 +191,8 @@ def event_study(panel, event_date, outcome, pre_days=PRE_WINDOW_DAYS, post_days=
         return {"available": False, "reason": "no observations in window"}
 
     window["rel_day"] = (window["date"] - event_date).dt.days
+    if exclude_days > 0:
+        window = window[window["rel_day"].abs() >= exclude_days]
     pre = window[window["rel_day"] < 0]
     post = window[window["rel_day"] >= 0]
 
@@ -299,13 +316,18 @@ def main():
             print(f"  [skip] outcome '{outcome}' not in panel columns {list(my_panel.columns)}")
             continue
 
+        # Annual data points are dated Jan-1, which misclassifies the event's
+        # own year (see event_study()'s exclude_days docstring) — give it a
+        # dead zone wide enough to span a full year either side of Jan-1.
+        exclude_days = 185 if outcome == "ridership_annual" else 0
+
         entry = {
             "id": ev["id"],
             "label": ev["label"],
             "date": ev["date"],
             "type": ev.get("type"),
             "outcome": outcome,
-            "event_study": event_study(my_panel, ev["date"], outcome),
+            "event_study": event_study(my_panel, ev["date"], outcome, exclude_days=exclude_days),
             "diff_in_diff": diff_in_diff(my_panel, country_panel, ev["date"], outcome),
             "synthetic_control": synthetic_control(my_panel, country_panel, ev["date"], outcome),
         }

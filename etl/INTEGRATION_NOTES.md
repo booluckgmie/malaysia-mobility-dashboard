@@ -1,8 +1,8 @@
 # Policy Impact panel — integration notes
 
 `etl/causal_analysis.py` runs an event-study around six real policy
-events (MCO 1.0, FMCO, endemic reopening, the 2023 diesel float, the 2024
-RON95 targeted subsidy, the 2026 WFH mandate) using the data already
+events (MCO 1.0, FMCO, endemic reopening, the 2024 diesel float, the 2025
+BUDI95 targeted subsidy, the 2026 WFH mandate) using the data already
 curated in this repo, and writes `public/data/policy_impact.json`.
 `PolicyImpactPanel.jsx` renders it as a new "Policy Impact" section in the
 app, wired into the daily ETL workflow after `country_compare.py`.

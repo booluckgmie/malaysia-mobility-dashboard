@@ -29,15 +29,19 @@ export default function SectorBreakdown() {
         <div className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-3">Sector impact model</div>
         <h2 className="text-3xl font-light text-gray-800">Who is actually cutting trips?</h2>
         <p className="text-sm text-gray-500 mt-3 max-w-lg mx-auto">DOSM Employment Census 2023 · WFH% from Labour Force Survey estimates</p>
+        <p className="text-xs text-amber-600 mt-2 max-w-md mx-auto">
+          Theoretical ceiling assuming every sector is already at its full target WFH rate — not a measured result.
+        </p>
       </div>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
         {[
           { label: 'Total trips cut/day', value: fmtM(totalTrips), sub: 'across all WFH sectors', color: 'text-blue-600' },
-          { label: 'Fuel saved/week', value: (totalLitres / 1e6).toFixed(1) + 'M L', sub: 'across public + private WFH', color: 'text-green-600' },
-          { label: 'vs MCO peak saving', value: Math.round((totalLitres / MCO_LITRES_WEEK) * 100) + '%', sub: '~85M L/week at lockdown', color: 'text-amber-600' },
+          { label: 'Fuel saved/week (model)', value: (totalLitres / 1e6).toFixed(1) + 'M L', sub: 'theoretical ceiling, full compliance', color: 'text-green-600' },
+          { label: 'vs MCO peak saving', value: Math.round((totalLitres / MCO_LITRES_WEEK) * 100) + '%', sub: '~85M L/week at lockdown (same basis)', color: 'text-amber-600' },
           { label: 'Private sector gap', value: '~8M L/wk', sub: 'added per +10% adoption', color: 'text-red-600' },
+          { label: 'Week 1 (official, actual)', value: '334,000 L', sub: 'government-reported real savings', color: 'text-gray-600' },
         ].map(c => (
           <div key={c.label} className="glass rounded-2xl p-5">
             <div className={`text-2xl font-semibold ${c.color}`}>{c.value}</div>
@@ -99,7 +103,9 @@ export default function SectorBreakdown() {
         </div>
         <div className="px-6 py-3 border-t border-gray-100">
           <div className="text-xs text-gray-400">
-            Formula: Employees × WFH% × 2 trips/day × avg_km × 5 days × 8L/100km · Source: DOSM Employment Census 2023
+            Formula: Employees × WFH% × 2 trips/day × avg_km × 5 days × 8L/100km · Source: DOSM Employment Census 2023 ·
+            Theoretical model (assumes full target compliance), not a measured outcome — the government's own week-1
+            report (15-21 Apr 2026) showed 334,000 L actually saved economy-wide.
           </div>
         </div>
       </div>

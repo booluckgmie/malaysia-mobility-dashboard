@@ -132,9 +132,9 @@ export default function MFIndexGauge({ score = 58 }) {
           ))}
 
           <div className="glass-sm rounded-xl p-4 border-l-2 border-green-400">
-            <div className="text-xs text-gray-400 mb-1">vs MCO fuel saving</div>
+            <div className="text-xs text-gray-400 mb-1">vs MCO fuel saving (modelled ceiling)</div>
             <div className="text-2xl font-semibold text-green-600">{vsPercent}%</div>
-            <div className="text-xs text-gray-500">of MCO peak ~85M L/week</div>
+            <div className="text-xs text-gray-500">of MCO peak ~85M L/week · theoretical, not measured</div>
           </div>
         </div>
       </div>

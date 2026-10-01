@@ -11,7 +11,7 @@ const ERA_BY_TYPE = { lockdown: 'mco', reopening: 'recover', fuel_policy: 'recov
 /**
  * Reads public/data/policy_impact.json (written by etl/causal_analysis.py)
  * and renders an event-study chart per real policy event: MCO/FMCO
- * lockdowns, the 2023 diesel float, the 2024 RON95 targeted subsidy, and
+ * lockdowns, the 2024 diesel float, the 2025 BUDI95 targeted subsidy, and
  * the 2026 WFH mandate. DiD / synthetic-control-vs-peers are shown as
  * "not yet available" — this repo doesn't collect a historical
  * comparator-country panel, so those methods report an honest reason

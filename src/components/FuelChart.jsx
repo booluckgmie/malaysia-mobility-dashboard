@@ -159,9 +159,9 @@ export default function FuelChart() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
         {[
           { period: 'Apr 2020', event: 'RON95 crashed to RM1.25 (global oil crash)',  color: '#993C1D' },
-          { period: 'Jun 2023', event: 'Diesel de-subsidised to RM3.35',               color: '#BA7517' },
-          { period: 'Jun 2024', event: 'RON95 targeted subsidy + BUDI 95 launched',    color: '#185FA5' },
-          { period: 'Apr 2026', event: 'RON95 held at RM2.05 during WFH policy',       color: '#A32D2D' },
+          { period: 'Jun 2024', event: 'Diesel de-subsidised to RM3.35 (10 Jun)',      color: '#BA7517' },
+          { period: 'Sep 2025', event: 'BUDI95 targeted subsidy launched (30 Sep)',    color: '#185FA5' },
+          { period: 'Apr 2026', event: 'RON95 spiked to RM4.27 — triggered WFH policy', color: '#A32D2D' },
         ].map(a => (
           <div key={a.period} className="glass-sm rounded-xl p-2.5">
             <div className="text-xs font-medium mb-0.5" style={{ color: a.color }}>{a.period}</div>

@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-30T20:30:38.846116+00:00",
+  "updated_at": "2026-10-01T17:19:32.166198+00:00",
   "mf_index": {
-    "score": 43,
+    "score": 72,
     "components": {
-      "ridership_norm": 76.1,
-      "fuel_norm": 0,
-      "wfh_adoption": 56.8
+      "ridership_norm": 72.7,
+      "fuel_norm": 100,
+      "wfh_adoption": 56.9
     },
-    "interpretation": "WFH working — fuel saving",
+    "interpretation": "Near-normal mobility",
     "reference_points": {
       "mco_2021": 18,
       "pre_covid": 85,
@@ -15,18 +15,19 @@
     }
   },
   "ridership": {
-    "latest_daily_trips": 1087820,
+    "latest_daily_trips": 1235713,
     "last_30_days": [
       {
         "date": "2026-08-02",
-        "trips": 909862,
+        "trips": 961811,
         "bus": 197366,
-        "rail": 712496,
+        "rail": 764445,
         "bus_rkl": 149004,
         "bus_rkn": 0,
         "bus_rpn": 48362,
         "rail_lrt_ampang": 144442,
         "rail_lrt_kj": 153569,
+        "rail_lrt_shah_alam": 51949,
         "rail_monorail": 50461,
         "rail_mrt_kajang": 196373,
         "rail_mrt_pjy": 100425,
@@ -38,14 +39,15 @@
       },
       {
         "date": "2026-08-03",
-        "trips": 1445008,
+        "trips": 1487349,
         "bus": 295377,
-        "rail": 1149631,
+        "rail": 1191972,
         "bus_rkl": 244649,
         "bus_rkn": 0,
         "bus_rpn": 50728,
         "rail_lrt_ampang": 229112,
         "rail_lrt_kj": 297297,
+        "rail_lrt_shah_alam": 42341,
         "rail_monorail": 61390,
         "rail_mrt_kajang": 302305,
         "rail_mrt_pjy": 192025,
@@ -57,14 +59,15 @@
       },
       {
         "date": "2026-08-04",
-        "trips": 1478188,
+        "trips": 1522257,
         "bus": 299085,
-        "rail": 1179103,
+        "rail": 1223172,
         "bus_rkl": 249307,
         "bus_rkn": 0,
         "bus_rpn": 49778,
         "rail_lrt_ampang": 232768,
         "rail_lrt_kj": 309268,
+        "rail_lrt_shah_alam": 44069,
         "rail_monorail": 63165,
         "rail_mrt_kajang": 312601,
         "rail_mrt_pjy": 198162,
@@ -76,14 +79,15 @@
       },
       {
         "date": "2026-08-05",
-        "trips": 1497977,
+        "trips": 1543545,
         "bus": 304486,
-        "rail": 1193491,
+        "rail": 1239059,
         "bus_rkl": 253725,
         "bus_rkn": 0,
         "bus_rpn": 50761,
         "rail_lrt_ampang": 235477,
         "rail_lrt_kj": 312477,
+        "rail_lrt_shah_alam": 45568,
         "rail_monorail": 63484,
         "rail_mrt_kajang": 318874,
         "rail_mrt_pjy": 199144,
@@ -95,14 +99,15 @@
       },
       {
         "date": "2026-08-06",
-        "trips": 1482792,
+        "trips": 1527774,
         "bus": 300001,
-        "rail": 1182791,
+        "rail": 1227773,
         "bus_rkl": 249449,
         "bus_rkn": 0,
         "bus_rpn": 50552,
         "rail_lrt_ampang": 231896,
         "rail_lrt_kj": 307428,
+        "rail_lrt_shah_alam": 44982,
         "rail_monorail": 64311,
         "rail_mrt_kajang": 314378,
         "rail_mrt_pjy": 196293,
@@ -114,14 +119,15 @@
       },
       {
         "date": "2026-08-07",
-        "trips": 1506446,
+        "trips": 1552351,
         "bus": 300425,
-        "rail": 1206021,
+        "rail": 1251926,
         "bus_rkl": 246801,
         "bus_rkn": 0,
         "bus_rpn": 53624,
         "rail_lrt_ampang": 240638,
         "rail_lrt_kj": 306581,
+        "rail_lrt_shah_alam": 45905,
         "rail_monorail": 68528,
         "rail_mrt_kajang": 317091,
         "rail_mrt_pjy": 194749,
@@ -133,14 +139,15 @@
       },
       {
         "date": "2026-08-08",
-        "trips": 1057303,
+        "trips": 1110968,
         "bus": 214183,
-        "rail": 843120,
+        "rail": 896785,
         "bus_rkl": 167143,
         "bus_rkn": 0,
         "bus_rpn": 47040,
         "rail_lrt_ampang": 171828,
         "rail_lrt_kj": 185910,
+        "rail_lrt_shah_alam": 53665,
         "rail_monorail": 61954,
         "rail_mrt_kajang": 235753,
         "rail_mrt_pjy": 122202,
@@ -152,14 +159,15 @@
       },
       {
         "date": "2026-08-09",
-        "trips": 930329,
+        "trips": 984874,
         "bus": 202436,
-        "rail": 727893,
+        "rail": 782438,
         "bus_rkl": 152649,
         "bus_rkn": 0,
         "bus_rpn": 49787,
         "rail_lrt_ampang": 145607,
         "rail_lrt_kj": 156383,
+        "rail_lrt_shah_alam": 54545,
         "rail_monorail": 55256,
         "rail_mrt_kajang": 200872,
         "rail_mrt_pjy": 103573,
@@ -171,14 +179,15 @@
       },
       {
         "date": "2026-08-10",
-        "trips": 1449011,
+        "trips": 1493912,
         "bus": 294582,
-        "rail": 1154429,
+        "rail": 1199330,
         "bus_rkl": 245874,
         "bus_rkn": 0,
         "bus_rpn": 48708,
         "rail_lrt_ampang": 230168,
         "rail_lrt_kj": 296050,
+        "rail_lrt_shah_alam": 44901,
         "rail_monorail": 62617,
         "rail_mrt_kajang": 302864,
         "rail_mrt_pjy": 194118,
@@ -190,14 +199,15 @@
       },
       {
         "date": "2026-08-11",
-        "trips": 1488024,
+        "trips": 1532466,
         "bus": 302774,
-        "rail": 1185250,
+        "rail": 1229692,
         "bus_rkl": 250957,
         "bus_rkn": 0,
         "bus_rpn": 51817,
         "rail_lrt_ampang": 234981,
         "rail_lrt_kj": 309027,
+        "rail_lrt_shah_alam": 44442,
         "rail_monorail": 64832,
         "rail_mrt_kajang": 312879,
         "rail_mrt_pjy": 199393,
@@ -209,14 +219,15 @@
       },
       {
         "date": "2026-08-12",
-        "trips": 1484967,
+        "trips": 1534614,
         "bus": 300681,
-        "rail": 1184286,
+        "rail": 1233933,
         "bus_rkl": 249472,
         "bus_rkn": 0,
         "bus_rpn": 51209,
         "rail_lrt_ampang": 235476,
         "rail_lrt_kj": 310760,
+        "rail_lrt_shah_alam": 49647,
         "rail_monorail": 63184,
         "rail_mrt_kajang": 316120,
         "rail_mrt_pjy": 194481,
@@ -228,14 +239,15 @@
       },
       {
         "date": "2026-08-13",
-        "trips": 1456558,
+        "trips": 1503248,
         "bus": 293215,
-        "rail": 1163343,
+        "rail": 1210033,
         "bus_rkl": 243415,
         "bus_rkn": 0,
         "bus_rpn": 49800,
         "rail_lrt_ampang": 229343,
         "rail_lrt_kj": 300362,
+        "rail_lrt_shah_alam": 46690,
         "rail_monorail": 62818,
         "rail_mrt_kajang": 309327,
         "rail_mrt_pjy": 193971,
@@ -247,14 +259,15 @@
       },
       {
         "date": "2026-08-14",
-        "trips": 1438731,
+        "trips": 1488580,
         "bus": 282688,
-        "rail": 1156043,
+        "rail": 1205892,
         "bus_rkl": 236938,
         "bus_rkn": 0,
         "bus_rpn": 45750,
         "rail_lrt_ampang": 227295,
         "rail_lrt_kj": 292912,
+        "rail_lrt_shah_alam": 49849,
         "rail_monorail": 65749,
         "rail_mrt_kajang": 305164,
         "rail_mrt_pjy": 188963,
@@ -266,14 +279,15 @@
       },
       {
         "date": "2026-08-15",
-        "trips": 1003565,
+        "trips": 1032330,
         "bus": 202327,
-        "rail": 801238,
+        "rail": 830003,
         "bus_rkl": 156793,
         "bus_rkn": 0,
         "bus_rpn": 45534,
         "rail_lrt_ampang": 160784,
         "rail_lrt_kj": 173693,
+        "rail_lrt_shah_alam": 28765,
         "rail_monorail": 58915,
         "rail_mrt_kajang": 225530,
         "rail_mrt_pjy": 119953,
@@ -285,14 +299,15 @@
       },
       {
         "date": "2026-08-16",
-        "trips": 855877,
+        "trips": 880673,
         "bus": 187806,
-        "rail": 668071,
+        "rail": 692867,
         "bus_rkl": 141443,
         "bus_rkn": 0,
         "bus_rpn": 46363,
         "rail_lrt_ampang": 134808,
         "rail_lrt_kj": 144796,
+        "rail_lrt_shah_alam": 24796,
         "rail_monorail": 47853,
         "rail_mrt_kajang": 183012,
         "rail_mrt_pjy": 96208,
@@ -304,14 +319,15 @@
       },
       {
         "date": "2026-08-17",
-        "trips": 1431202,
+        "trips": 1465561,
         "bus": 293430,
-        "rail": 1137772,
+        "rail": 1172131,
         "bus_rkl": 243234,
         "bus_rkn": 0,
         "bus_rpn": 50196,
         "rail_lrt_ampang": 227782,
         "rail_lrt_kj": 292693,
+        "rail_lrt_shah_alam": 34359,
         "rail_monorail": 61299,
         "rail_mrt_kajang": 297480,
         "rail_mrt_pjy": 193502,
@@ -323,14 +339,15 @@
       },
       {
         "date": "2026-08-18",
-        "trips": 1463304,
+        "trips": 1498453,
         "bus": 296320,
-        "rail": 1166984,
+        "rail": 1202133,
         "bus_rkl": 247052,
         "bus_rkn": 0,
         "bus_rpn": 49268,
         "rail_lrt_ampang": 230932,
         "rail_lrt_kj": 304963,
+        "rail_lrt_shah_alam": 35149,
         "rail_monorail": 62968,
         "rail_mrt_kajang": 309250,
         "rail_mrt_pjy": 197141,
@@ -342,14 +359,15 @@
       },
       {
         "date": "2026-08-19",
-        "trips": 1466449,
+        "trips": 1501646,
         "bus": 296207,
-        "rail": 1170242,
+        "rail": 1205439,
         "bus_rkl": 246306,
         "bus_rkn": 0,
         "bus_rpn": 49901,
         "rail_lrt_ampang": 233226,
         "rail_lrt_kj": 303418,
+        "rail_lrt_shah_alam": 35197,
         "rail_monorail": 62458,
         "rail_mrt_kajang": 312436,
         "rail_mrt_pjy": 197547,
@@ -361,14 +379,15 @@
       },
       {
         "date": "2026-08-20",
-        "trips": 1451995,
+        "trips": 1486329,
         "bus": 294453,
-        "rail": 1157542,
+        "rail": 1191876,
         "bus_rkl": 244432,
         "bus_rkn": 0,
         "bus_rpn": 50021,
         "rail_lrt_ampang": 230425,
         "rail_lrt_kj": 298541,
+        "rail_lrt_shah_alam": 34334,
         "rail_monorail": 62274,
         "rail_mrt_kajang": 305849,
         "rail_mrt_pjy": 193050,
@@ -380,14 +399,15 @@
       },
       {
         "date": "2026-08-21",
-        "trips": 1456450,
+        "trips": 1490680,
         "bus": 289539,
-        "rail": 1166911,
+        "rail": 1201141,
         "bus_rkl": 238121,
         "bus_rkn": 0,
         "bus_rpn": 51418,
         "rail_lrt_ampang": 228212,
         "rail_lrt_kj": 296126,
+        "rail_lrt_shah_alam": 34230,
         "rail_monorail": 63295,
         "rail_mrt_kajang": 306015,
         "rail_mrt_pjy": 196088,
@@ -399,14 +419,15 @@
       },
       {
         "date": "2026-08-22",
-        "trips": 1005350,
+        "trips": 1030724,
         "bus": 210126,
-        "rail": 795224,
+        "rail": 820598,
         "bus_rkl": 160800,
         "bus_rkn": 0,
         "bus_rpn": 49326,
         "rail_lrt_ampang": 154865,
         "rail_lrt_kj": 176169,
+        "rail_lrt_shah_alam": 25374,
         "rail_monorail": 53822,
         "rail_mrt_kajang": 220694,
         "rail_mrt_pjy": 126941,
@@ -418,14 +439,15 @@
       },
       {
         "date": "2026-08-23",
-        "trips": 887069,
+        "trips": 910749,
         "bus": 187903,
-        "rail": 699166,
+        "rail": 722846,
         "bus_rkl": 137651,
         "bus_rkn": 0,
         "bus_rpn": 50252,
         "rail_lrt_ampang": 138717,
         "rail_lrt_kj": 153103,
+        "rail_lrt_shah_alam": 23680,
         "rail_monorail": 46609,
         "rail_mrt_kajang": 191876,
         "rail_mrt_pjy": 109440,
@@ -437,14 +459,15 @@
       },
       {
         "date": "2026-08-24",
-        "trips": 1352388,
+        "trips": 1384773,
         "bus": 274886,
-        "rail": 1077502,
+        "rail": 1109887,
         "bus_rkl": 227074,
         "bus_rkn": 0,
         "bus_rpn": 47812,
         "rail_lrt_ampang": 214268,
         "rail_lrt_kj": 269637,
+        "rail_lrt_shah_alam": 32385,
         "rail_monorail": 57852,
         "rail_mrt_kajang": 284615,
         "rail_mrt_pjy": 184096,
@@ -456,14 +479,15 @@
       },
       {
         "date": "2026-08-25",
-        "trips": 828990,
+        "trips": 852136,
         "bus": 170144,
-        "rail": 658846,
+        "rail": 681992,
         "bus_rkl": 131738,
         "bus_rkn": 0,
         "bus_rpn": 38406,
         "rail_lrt_ampang": 125516,
         "rail_lrt_kj": 143736,
+        "rail_lrt_shah_alam": 23146,
         "rail_monorail": 41045,
         "rail_mrt_kajang": 184354,
         "rail_mrt_pjy": 109851,
@@ -475,14 +499,15 @@
       },
       {
         "date": "2026-08-26",
-        "trips": 1419783,
+        "trips": 1452417,
         "bus": 290997,
-        "rail": 1128786,
+        "rail": 1161420,
         "bus_rkl": 242051,
         "bus_rkn": 0,
         "bus_rpn": 48946,
         "rail_lrt_ampang": 223518,
         "rail_lrt_kj": 290616,
+        "rail_lrt_shah_alam": 32634,
         "rail_monorail": 56782,
         "rail_mrt_kajang": 298101,
         "rail_mrt_pjy": 195618,
@@ -494,14 +519,15 @@
       },
       {
         "date": "2026-08-27",
-        "trips": 1401026,
+        "trips": 1433313,
         "bus": 281507,
-        "rail": 1119519,
+        "rail": 1151806,
         "bus_rkl": 233915,
         "bus_rkn": 0,
         "bus_rpn": 47592,
         "rail_lrt_ampang": 221998,
         "rail_lrt_kj": 285779,
+        "rail_lrt_shah_alam": 32287,
         "rail_monorail": 57290,
         "rail_mrt_kajang": 293121,
         "rail_mrt_pjy": 190601,
@@ -513,14 +539,15 @@
       },
       {
         "date": "2026-08-28",
-        "trips": 1430614,
+        "trips": 1463596,
         "bus": 288465,
-        "rail": 1142149,
+        "rail": 1175131,
         "bus_rkl": 238296,
         "bus_rkn": 0,
         "bus_rpn": 50169,
         "rail_lrt_ampang": 224662,
         "rail_lrt_kj": 282980,
+        "rail_lrt_shah_alam": 32982,
         "rail_monorail": 61090,
         "rail_mrt_kajang": 297190,
         "rail_mrt_pjy": 190485,
@@ -532,14 +559,15 @@
       },
       {
         "date": "2026-08-29",
-        "trips": 1033288,
+        "trips": 1058210,
         "bus": 210458,
-        "rail": 822830,
+        "rail": 847752,
         "bus_rkl": 170207,
         "bus_rkn": 0,
         "bus_rpn": 40251,
         "rail_lrt_ampang": 160705,
         "rail_lrt_kj": 175979,
+        "rail_lrt_shah_alam": 24922,
         "rail_monorail": 58900,
         "rail_mrt_kajang": 223182,
         "rail_mrt_pjy": 132258,
@@ -551,14 +579,15 @@
       },
       {
         "date": "2026-08-30",
-        "trips": 1242505,
+        "trips": 1273017,
         "bus": 243606,
-        "rail": 998899,
+        "rail": 1029411,
         "bus_rkl": 196685,
         "bus_rkn": 0,
         "bus_rpn": 46921,
         "rail_lrt_ampang": 190993,
         "rail_lrt_kj": 230076,
+        "rail_lrt_shah_alam": 30512,
         "rail_monorail": 72684,
         "rail_mrt_kajang": 274653,
         "rail_mrt_pjy": 164920,
@@ -570,14 +599,15 @@
       },
       {
         "date": "2026-08-31",
-        "trips": 1087820,
+        "trips": 1117305,
         "bus": 280530,
-        "rail": 807290,
+        "rail": 836775,
         "bus_rkl": 238158,
         "bus_rkn": 0,
         "bus_rpn": 42372,
         "rail_lrt_ampang": 148823,
         "rail_lrt_kj": 165188,
+        "rail_lrt_shah_alam": 29485,
         "rail_monorail": 56419,
         "rail_mrt_kajang": 214462,
         "rail_mrt_pjy": 149695,
@@ -662,13 +692,58 @@
     ]
   },
   "fuel": {
-    "latest_ron95": -0.05000000000000071,
-    "latest_diesel": -0.15000000000000036,
+    "latest_ron95": 4.52,
+    "latest_diesel": 5.27,
     "history": [
       {
-        "date": "2026-07-30",
-        "ron95": 0.19999999999999973,
-        "diesel": 0.20000000000000018
+        "date": "2026-05-21",
+        "ron95": 4.07,
+        "diesel": 4.97
+      },
+      {
+        "date": "2026-05-28",
+        "ron95": 3.92,
+        "diesel": 4.87
+      },
+      {
+        "date": "2026-06-04",
+        "ron95": 3.72,
+        "diesel": 4.67
+      },
+      {
+        "date": "2026-06-11",
+        "ron95": 3.72,
+        "diesel": 4.67
+      },
+      {
+        "date": "2026-06-18",
+        "ron95": 3.72,
+        "diesel": 4.37
+      },
+      {
+        "date": "2026-06-25",
+        "ron95": 3.47,
+        "diesel": 4.07
+      },
+      {
+        "date": "2026-07-01",
+        "ron95": 3.37,
+        "diesel": 3.97
+      },
+      {
+        "date": "2026-07-09",
+        "ron95": 3.37,
+        "diesel": 3.97
+      },
+      {
+        "date": "2026-07-16",
+        "ron95": 3.42,
+        "diesel": 4.07
+      },
+      {
+        "date": "2026-07-23",
+        "ron95": 3.62,
+        "diesel": 4.42
       },
       {
         "date": "2026-07-30",
@@ -677,18 +752,8 @@
       },
       {
         "date": "2026-08-06",
-        "ron95": -0.04999999999999982,
-        "diesel": -0.04999999999999982
-      },
-      {
-        "date": "2026-08-06",
         "ron95": 3.77,
         "diesel": 4.57
-      },
-      {
-        "date": "2026-08-13",
-        "ron95": -0.1499999999999999,
-        "diesel": -0.10000000000000053
       },
       {
         "date": "2026-08-13",
@@ -697,28 +762,13 @@
       },
       {
         "date": "2026-08-20",
-        "ron95": 0.1499999999999999,
-        "diesel": 0.20000000000000018
-      },
-      {
-        "date": "2026-08-20",
         "ron95": 3.77,
         "diesel": 4.67
       },
       {
         "date": "2026-08-27",
-        "ron95": 0.04999999999999982,
-        "diesel": 0.04999999999999982
-      },
-      {
-        "date": "2026-08-27",
         "ron95": 3.82,
         "diesel": 4.72
-      },
-      {
-        "date": "2026-09-03",
-        "ron95": -0.04999999999999982,
-        "diesel": -0.04999999999999982
       },
       {
         "date": "2026-09-03",
@@ -731,24 +781,9 @@
         "diesel": 4.92
       },
       {
-        "date": "2026-09-10",
-        "ron95": 0.24999999999999956,
-        "diesel": 0.25
-      },
-      {
         "date": "2026-09-17",
         "ron95": 4.37,
         "diesel": 5.27
-      },
-      {
-        "date": "2026-09-17",
-        "ron95": 0.35000000000000053,
-        "diesel": 0.34999999999999964
-      },
-      {
-        "date": "2026-09-24",
-        "ron95": 0.20000000000000018,
-        "diesel": 0.15000000000000036
       },
       {
         "date": "2026-09-24",
@@ -759,17 +794,12 @@
         "date": "2026-10-01",
         "ron95": 4.52,
         "diesel": 5.27
-      },
-      {
-        "date": "2026-10-01",
-        "ron95": -0.05000000000000071,
-        "diesel": -0.15000000000000036
       }
     ],
     "historical_extended": [
       {
         "period": "Jan 2019",
-        "ron95": 2.08,
+        "ron95": 2.2,
         "diesel": 2.18,
         "phase": "pre"
       },
@@ -782,13 +812,13 @@
       {
         "period": "Apr 2020",
         "ron95": 1.25,
-        "diesel": 1.38,
+        "diesel": 1.46,
         "phase": "mco"
       },
       {
         "period": "Dec 2020",
-        "ron95": 1.62,
-        "diesel": 1.75,
+        "ron95": 1.7,
+        "diesel": 1.9,
         "phase": "mco"
       },
       {
@@ -812,25 +842,50 @@
       {
         "period": "Jun 2023",
         "ron95": 2.05,
-        "diesel": 3.35,
+        "diesel": 2.15,
         "phase": "recover"
       },
       {
         "period": "Jun 2024",
         "ron95": 2.05,
         "diesel": 3.35,
-        "phase": "recover"
+        "phase": "recover",
+        "note": "diesel float, 2024-06-10"
       },
       {
         "period": "Jan 2025",
         "ron95": 2.05,
-        "diesel": 3.35,
+        "diesel": 2.98,
         "phase": "recover"
       },
       {
-        "period": "Apr 2026",
+        "period": "Sep 2025",
         "ron95": 2.05,
-        "diesel": 3.35,
+        "diesel": 2.88,
+        "phase": "recover",
+        "note": "last blanket-subsidy reading before BUDI95"
+      },
+      {
+        "period": "30 Sep 2025",
+        "ron95": 2.6,
+        "ron95_budi95": 1.99,
+        "diesel": 2.88,
+        "phase": "recover",
+        "note": "BUDI95 targeted subsidy launch — market rate vs subsidised rate for eligible citizens"
+      },
+      {
+        "period": "Apr 2026",
+        "ron95": 4.27,
+        "ron95_budi95": 1.99,
+        "diesel": 6.72,
+        "phase": "crisis",
+        "note": "fuel price spike that precipitated the WFH mandate"
+      },
+      {
+        "period": "Oct 2026",
+        "ron95": 4.52,
+        "ron95_budi95": 1.99,
+        "diesel": 5.27,
         "phase": "crisis"
       }
     ]
@@ -893,12 +948,18 @@
     ],
     "total_litres_saved_per_week": 35728000,
     "total_trips_cut_per_day": 4804000,
-    "vs_mco_pct": 42.0
+    "vs_mco_pct": 42.0,
+    "model_type": "theoretical_full_compliance_ceiling",
+    "real_world_anchor": {
+      "period": "2026-04-15 to 2026-04-21",
+      "litres_saved": 334000,
+      "note": "Government-reported actual week-1 savings, for comparison against the modelled ceiling above."
+    }
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 168,
-    "adoption_estimate_pct": 56.8
+    "days_active": 169,
+    "adoption_estimate_pct": 56.9
   },
   "api_sources": {
     "ridership": "api.data.gov.my · ridership_headline · no auth",

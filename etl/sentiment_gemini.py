@@ -119,14 +119,15 @@ def build_prompt(data: dict) -> str:
 - RON95 price: RM {fuel.get('latest_ron95', 2.05):.2f} / litre
 - Diesel price: RM {fuel.get('latest_diesel', 3.35):.2f} / litre
 - WFH policy: Active for {wfh.get('days_active', 0)} days (since 15 Apr 2026)
-- Total fuel saved/week: {sect.get('total_litres_saved_per_week', 0) / 1e6:.1f}M litres
-- vs MCO peak saving: {sect.get('vs_mco_pct', 34)}% of MCO's ~85M L/week
+- Total fuel saved/week: {sect.get('total_litres_saved_per_week', 0) / 1e6:.1f}M litres (THEORETICAL — assumes every sector already hit its full target WFH rate; this is a modelled ceiling, not a measured result)
+- vs MCO peak saving: {sect.get('vs_mco_pct', 34)}% of MCO's ~85M L/week (same theoretical basis)
+- Real-world anchor: government reported only 334,000 litres actually saved economy-wide in the mandate's first week (15-21 Apr 2026) — ~1% of the theoretical ceiling above, reflecting much slower real compliance ramp-up. Do not present the theoretical figure as an achieved result.
 
 ## Sector Breakdown
 {sectors_json}
 
 ## Reference Points
-- Pre-pandemic (2019): MF-Index 85, ridership 522M/yr, RON95 RM2.08
+- Pre-pandemic (2019): MF-Index 85, ridership 522M/yr (Prasarana+KTMB annual reports, broader basis than live API), RON95 RM2.20
 - MCO peak (2021): MF-Index 18, ridership 175M/yr, RON95 RM1.25, WFH ~65%
 - Recovery (2025): MF-Index 82, ridership 506M/yr
 

@@ -193,7 +193,7 @@
   "fuel_history": [
     {
       "period": "Jan 2019",
-      "ron95": 2.08,
+      "ron95": 2.20,
       "diesel": 2.18,
       "phase": "pre"
     },
@@ -206,13 +206,13 @@
     {
       "period": "Apr 2020",
       "ron95": 1.25,
-      "diesel": 1.38,
+      "diesel": 1.46,
       "phase": "mco"
     },
     {
       "period": "Dec 2020",
-      "ron95": 1.62,
-      "diesel": 1.75,
+      "ron95": 1.70,
+      "diesel": 1.90,
       "phase": "mco"
     },
     {
@@ -236,32 +236,57 @@
     {
       "period": "Jun 2023",
       "ron95": 2.05,
-      "diesel": 3.35,
+      "diesel": 2.15,
       "phase": "recover"
     },
     {
       "period": "Jun 2024",
       "ron95": 2.05,
       "diesel": 3.35,
-      "phase": "recover"
+      "phase": "recover",
+      "note": "diesel float, 2024-06-10"
     },
     {
       "period": "Jan 2025",
       "ron95": 2.05,
-      "diesel": 3.35,
+      "diesel": 2.98,
       "phase": "recover"
     },
     {
-      "period": "Apr 2026",
+      "period": "Sep 2025",
       "ron95": 2.05,
-      "diesel": 3.35,
+      "diesel": 2.88,
+      "phase": "recover",
+      "note": "last blanket-subsidy reading before BUDI95"
+    },
+    {
+      "period": "30 Sep 2025",
+      "ron95": 2.60,
+      "ron95_budi95": 1.99,
+      "diesel": 2.88,
+      "phase": "recover",
+      "note": "BUDI95 targeted subsidy launch — market rate vs subsidised rate for eligible citizens"
+    },
+    {
+      "period": "Apr 2026",
+      "ron95": 4.27,
+      "ron95_budi95": 1.99,
+      "diesel": 6.72,
+      "phase": "crisis",
+      "note": "fuel price spike that precipitated the WFH mandate"
+    },
+    {
+      "period": "Oct 2026",
+      "ron95": 4.52,
+      "ron95_budi95": 1.99,
+      "diesel": 5.27,
       "phase": "crisis"
     }
   ],
   "sources": {
     "ridership": "Prasarana Annual Reports 2017-2025, KTMB Annual Reports 2017-2025",
     "google_mobility": "Google Community Mobility Reports Malaysia 2020-Q1 2024",
-    "fuel": "KPDNHEP weekly gazette 2019-2025",
-    "note": "2026 figures mirror src/data/baseline.js (WFH policy model projections), kept in sync for etl/causal_analysis.py"
+    "fuel": "api.data.gov.my/data-catalogue?id=fuelprice (KPDNHEP weekly gazette), series_type='level' rows only",
+    "note": "2026 ridership/mobility figures are WFH policy model projections (see src/data/baseline.js); fuel_history is real observed data throughout, including 2026"
   }
 }

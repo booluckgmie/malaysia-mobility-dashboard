@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:31:43.417598Z",
+  "generated_at": "2026-10-01T17:19:48.802034Z",
   "events": [
     {
       "id": "mco_2020",
@@ -13,31 +13,27 @@
         "series": [
           {
             "rel_day": -807,
-            "outcome_norm": 21.729
+            "outcome_norm": -1.33
           },
           {
             "rel_day": -442,
-            "outcome_norm": 25.01
-          },
-          {
-            "rel_day": -77,
-            "outcome_norm": -46.739
+            "outcome_norm": 1.33
           },
           {
             "rel_day": 289,
-            "outcome_norm": -58.067
+            "outcome_norm": -66.01
           },
           {
             "rel_day": 654,
-            "outcome_norm": -15.942
+            "outcome_norm": -31.865
           }
         ],
-        "pre_mean": 417.57,
+        "pre_mean": 515.15,
         "post_mean": 263.05,
-        "pct_change": -37.0,
-        "t_stat": 1.176,
-        "p_value": 0.329,
-        "n_pre": 3,
+        "pct_change": -48.94,
+        "t_stat": 2.858,
+        "p_value": 0.2119,
+        "n_pre": 2,
         "n_post": 2
       },
       "diff_in_diff": {
@@ -190,9 +186,9 @@
       }
     },
     {
-      "id": "diesel_float_2023",
+      "id": "diesel_float_2024",
       "label": "Diesel Subsidy Rationalisation",
-      "date": "2023-06-10",
+      "date": "2024-06-10",
       "type": "fuel_policy",
       "outcome": "fuel_diesel",
       "event_study": {
@@ -200,41 +196,41 @@
         "unit": "pct_change_vs_pre_mean",
         "series": [
           {
-            "rel_day": -921,
-            "outcome_norm": -24.242
+            "rel_day": -891,
+            "outcome_norm": -15.686
           },
           {
-            "rel_day": -831,
-            "outcome_norm": -6.926
-          },
-          {
-            "rel_day": -739,
-            "outcome_norm": -6.926
-          },
-          {
-            "rel_day": -525,
-            "outcome_norm": -6.926
+            "rel_day": -375,
+            "outcome_norm": -15.686
           },
           {
             "rel_day": -9,
-            "outcome_norm": 45.022
+            "outcome_norm": 31.373
           },
           {
-            "rel_day": 357,
-            "outcome_norm": 45.022
+            "rel_day": 205,
+            "outcome_norm": 16.863
           },
           {
-            "rel_day": 571,
-            "outcome_norm": 45.022
+            "rel_day": 448,
+            "outcome_norm": 12.941
+          },
+          {
+            "rel_day": 477,
+            "outcome_norm": 12.941
+          },
+          {
+            "rel_day": 660,
+            "outcome_norm": 163.529
           }
         ],
-        "pre_mean": 2.31,
-        "post_mean": 3.35,
-        "pct_change": 45.02,
-        "t_stat": -3.833,
-        "p_value": 0.0186,
-        "n_pre": 5,
-        "n_post": 2
+        "pre_mean": 2.55,
+        "post_mean": 3.86,
+        "pct_change": 51.57,
+        "t_stat": -1.274,
+        "p_value": 0.2723,
+        "n_pre": 3,
+        "n_post": 4
       },
       "diff_in_diff": {
         "available": false,
@@ -246,43 +242,51 @@
       }
     },
     {
-      "id": "ron95_targeted_subsidy_2024",
-      "label": "RON95 Targeted Subsidy Launch",
-      "date": "2024-06-01",
+      "id": "budi95_targeted_subsidy_2025",
+      "label": "BUDI95 Targeted Subsidy Launch",
+      "date": "2025-09-30",
       "type": "fuel_policy",
-      "outcome": "ridership_annual",
+      "outcome": "fuel_ron95",
       "event_study": {
         "available": true,
         "unit": "pct_change_vs_pre_mean",
         "series": [
           {
-            "rel_day": -882,
-            "outcome_norm": -17.25
+            "rel_day": -852,
+            "outcome_norm": 0.0
           },
           {
-            "rel_day": -517,
-            "outcome_norm": 3.049
+            "rel_day": -486,
+            "outcome_norm": 0.0
           },
           {
-            "rel_day": -152,
-            "outcome_norm": 14.2
+            "rel_day": -272,
+            "outcome_norm": 0.0
           },
           {
-            "rel_day": 214,
-            "outcome_norm": 19.246
+            "rel_day": -29,
+            "outcome_norm": 0.0
           },
           {
-            "rel_day": 579,
-            "outcome_norm": 4.959
+            "rel_day": 0,
+            "outcome_norm": 26.829
+          },
+          {
+            "rel_day": 183,
+            "outcome_norm": 108.293
+          },
+          {
+            "rel_day": 366,
+            "outcome_norm": 120.488
           }
         ],
-        "pre_mean": 424.17,
-        "post_mean": 475.5,
-        "pct_change": 12.1,
-        "t_stat": -1.039,
-        "p_value": 0.3759,
-        "n_pre": 3,
-        "n_post": 2
+        "pre_mean": 2.05,
+        "post_mean": 3.8,
+        "pct_change": 85.2,
+        "t_stat": -2.898,
+        "p_value": 0.1013,
+        "n_pre": 4,
+        "n_post": 3
       },
       "diff_in_diff": {
         "available": false,

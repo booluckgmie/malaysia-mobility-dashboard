@@ -27,9 +27,9 @@ export default function HeroSection({ mfScore = 58, ridershipLatest, fuelPrice, 
 
   const kpis = [
     { icon: Train,      label: 'PT Ridership', value: ridershipLatest ? fmtM(ridershipLatest) : '~1.4M', sub: 'daily trips (live)', color: 'text-blue-600' },
-    { icon: Fuel,       label: 'RON95 Price',  value: fuelPrice ? fmtRM(fuelPrice) : 'RM 2.05', sub: 'per litre (subsidised)', color: 'text-amber-600' },
+    { icon: Fuel,       label: 'RON95 Price',  value: fuelPrice ? fmtRM(fuelPrice) : 'RM 4.52', sub: 'per litre (market rate)', color: 'text-amber-600' },
     { icon: Users,      label: 'WFH Active',   value: wfhDays + ' days', sub: 'since 15 Apr 2026', color: 'text-green-600' },
-    { icon: TrendingDown, label: 'Fuel Saved',  value: '~2.9M L', sub: 'per week (projection)', color: 'text-emerald-600' },
+    { icon: TrendingDown, label: 'Fuel Saved',  value: '~35.7M L', sub: 'per week (modelled ceiling, not measured)', color: 'text-emerald-600' },
   ]
 
   return (

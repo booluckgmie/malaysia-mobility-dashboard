@@ -31,16 +31,20 @@ export default function App() {
 
   // Live data hooks
   const { data: riderData } = useLiveRidership(5)
-  const { data: fuelData  } = useLiveFuelPrice(3)
+  const { data: fuelData  } = useLiveFuelPrice(10)
 
   // Pipeline pre-computed data
   const pipeline = useDataPipeline()
 
   // Compute live MF-Index
-  const latestRidership = riderData && riderData.length > 0 
-  ? (riderData[riderData.length - 1]?.trips || riderData[riderData.length - 1]?.total || 0) 
+  const latestRidership = riderData && riderData.length > 0
+  ? (riderData[riderData.length - 1]?.trips || riderData[riderData.length - 1]?.total || 0)
   : 0
-  const latestFuel      = fuelData  ? Number(fuelData[fuelData.length - 1]?.ron95 || 2.05) : 2.05
+  // fuelData holds BOTH series_type='level' (actual price) and 'change_weekly'
+  // (that week's delta) rows per date — must filter to 'level' or the last
+  // entry can be a near-zero/negative delta instead of the real pump price.
+  const fuelLevels      = fuelData ? fuelData.filter(d => d.series_type === 'level') : []
+  const latestFuel      = fuelLevels.length > 0 ? Number(fuelLevels[fuelLevels.length - 1]?.ron95 || 2.05) : 2.05
   const riderNorm       = latestRidership ? normaliseRidership(latestRidership) : 70
   const fuelNorm        = normaliseFuelPolicy(latestFuel)
   const mfScore         = computeMFIndex({ ridershipNorm: riderNorm, fuelNorm, wfhAdoption: 0.40 })

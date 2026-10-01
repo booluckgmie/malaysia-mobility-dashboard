@@ -21,7 +21,7 @@ const FALLBACK_SENTIMENT = {
   overall_score: 62,
   summary: 'Malaysia\'s WFH fuel-crisis policy is showing early positive signals in mobility reduction, but long-term effectiveness depends on private sector participation and structural PT investment.',
   signals: [
-    { dimension: 'Fuel savings impact', score: 71, direction: 'positive', analysis: 'Public sector WFH is delivering ~2.9M litres/week savings — meaningful but equivalent to only 34% of MCO peak savings. Requires private sector extension to be transformative.' },
+    { dimension: 'Fuel savings impact', score: 71, direction: 'positive', analysis: 'The sector model\'s full-compliance ceiling is ~35.7M litres/week (42% of MCO peak) — but the government\'s own week-1 report showed just 334,000 litres actually saved. Real compliance needs to ramp up, and private sector extension would raise the ceiling further.' },
     { dimension: 'PT ridership pressure', score: 55, direction: 'neutral', analysis: 'Ridership will decline 8–12% as commuter trips fall. This is good for subsidy relief but may hurt Prasarana revenue and create a policy tension with PT investment goals.' },
     { dimension: 'Economic risk', score: 68, direction: 'positive', analysis: 'Unlike MCO, economic activity in retail, logistics, and manufacturing continues uninterrupted. Private professional services WFH at ~40% shows minimal output impact based on 2020–2022 precedent.' },
     { dimension: 'Policy equity', score: 41, direction: 'negative', analysis: 'WFH mandate disproportionately benefits urban, office-based workers. Blue-collar, logistics, and field workers — who travel furthest and spend most on fuel — receive no relief from this policy.' },

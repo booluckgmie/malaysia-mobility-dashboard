@@ -10,7 +10,14 @@ export function computeMFIndex({ ridershipNorm, fuelNorm, wfhAdoption }) {
   return Math.round(Math.max(0, Math.min(100, raw)))
 }
 
-export function normaliseRidership(dailyTrips, baseline = 1430000) {
+// NOTE: 1,430,000 (522M/365) mixes bases — the embedded "522M annual trips
+// (2019)" figure is from Prasarana/KTMB annual reports, which count a wider
+// set of services than the data.gov.my ridership_headline columns used for
+// the live dailyTrips figure (summing those columns for all of 2019 gives
+// ~236M, not 522M). The network has also grown since 2019, so same-basis
+// totals today already exceed 522M/365 most days anyway. Use this API's own
+// recent observed ceiling instead (self-consistent, keeps pace with growth).
+export function normaliseRidership(dailyTrips, baseline = 1_700_000) {
   return Math.min(100, Math.round((dailyTrips / baseline) * 100))
 }
 
