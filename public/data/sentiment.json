@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-10-13T20:58:25.326358+00:00",
+  "generated_at": "2026-10-14T19:57:31.974277+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
   "overall_score": 68,
-  "summary": "Mobility is returning to near‑normal levels with an MF‑Index of 72, and fuel policy remains strong. However, actual fuel savings are far below the theoretical ceiling and high‑risk sectors continue to drive elevated travel, limiting the net environmental benefit.",
+  "summary": "Malaysia's mobility is near normal with an MF-Index of 72 and PT ridership at about 86% of pre‑pandemic levels. Fuel price remains high, but actual fuel savings from the work‑from‑home mandate are negligible, exposing economic and equity gaps in high‑mobility sectors.",
   "signals": [
     {
-      "dimension": "fuel savings impact",
-      "score": 30,
+      "dimension": "fuel_savings_impact",
+      "score": 20,
       "dir": "negative",
-      "detail": "The theoretical ceiling of 35.7 M litres/week translates to a modest 42% of the MCO peak, but only 0.334 M litres were actually saved in the first week of the mandate, representing just 1% of the ceiling. This gap indicates poor compliance and limited immediate fuel‑saving impact."
+      "detail": "The theoretical ceiling of 35.7 M litres/week is far from reality; only 334 000 litres were saved in the first week, roughly 1% of the target. This indicates the current WFH mandate delivers minimal fuel‑saving benefits and cannot be counted on for emissions reduction."
     },
     {
-      "dimension": "PT ridership effects",
-      "score": 65,
-      "dir": "neutral",
-      "detail": "Daily public‑transport trips stand at 1,235,713, roughly 13% below the pre‑pandemic daily average of 1.43 M. While ridership remains robust, the shortfall suggests lingering modal inertia despite a strong fuel‑policy component."
-    },
-    {
-      "dimension": "economic risk",
-      "score": 40,
-      "dir": "negative",
-      "detail": "Retail & Services, Logistics, and Construction exhibit mobility scores of 85‑95 and WFH rates under 15%, flagging high congestion and emissions risk. These sectors could strain urban infrastructure and undermine economic productivity if travel patterns persist."
-    },
-    {
-      "dimension": "policy equity",
-      "score": 45,
-      "dir": "negative",
-      "detail": "WFH adoption varies sharply—from 60% in Public & GLCs to 5% in Construction—creating unequal exposure to travel costs and health risks. The current policy framework does not adequately address these disparities."
-    },
-    {
-      "dimension": "long-term modal shift",
+      "dimension": "pt_ridership_effects",
       "score": 55,
       "dir": "neutral",
-      "detail": "High fuel prices (RON95 RM4.67/L, diesel RM5.27/L) and a perfect fuel‑policy score could incentivise a shift to public transport, yet ridership remains below pre‑pandemic levels. The potential for a durable modal shift is present but not yet realized."
+      "detail": "Daily public‑transport trips total 1.24 M, about 86% of the 2019 baseline, showing solid recovery but still below pre‑pandemic demand. High fuel prices could spur further uptake, yet the modest WFH rate limits commuting trips."
+    },
+    {
+      "dimension": "economic_risk",
+      "score": 30,
+      "dir": "negative",
+      "detail": "Retail & Services, Logistics and Construction report mobility scores of 85‑95 with WFH adoption under 15%, creating high exposure to congestion, fuel cost volatility and productivity risk. These sectors drive a disproportionate share of economic uncertainty."
+    },
+    {
+      "dimension": "policy_equity",
+      "score": 40,
+      "dir": "negative",
+      "detail": "WFH adoption varies sharply: public/GLC employees enjoy 60% remote work while construction workers are at 5%. The uneven distribution places a heavier commuting burden on lower‑income, high‑risk workers, raising equity concerns."
+    },
+    {
+      "dimension": "long_term_modal_shift",
+      "score": 45,
+      "dir": "neutral",
+      "detail": "With RON95 at RM4.62 / L, price signals favour public transport, yet ridership remains below historic levels. Sustained incentives and infrastructure upgrades are needed to lock in a lasting shift away from private car use."
     }
   ],
-  "recommendation": "Introduce tiered incentives for high‑mobility sectors to adopt flexible work and low‑carbon travel, targeting a 20% increase in WFH for Retail, Logistics and Construction by Q2 2027. Simultaneously, expand real‑time PT subsidies to bridge the 13% ridership gap and monitor fuel‑saving compliance with weekly reporting.",
-  "data_date": "2026-10-13",
+  "recommendation": "Introduce sector‑targeted incentives to raise WFH adoption to at least 30% in Logistics and Construction by Q2 2027, and launch a fuel‑rebate scheme for PT users to push daily ridership to 90% of pre‑pandemic levels. Parallelly, expand low‑emission last‑mile options for high‑risk sectors to improve equity and reduce economic exposure.",
+  "data_date": "2026-10-14",
   "alert": null
 }
