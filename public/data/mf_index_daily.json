@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-28T20:45:17.142024+00:00",
+  "updated_at": "2026-10-29T20:50:25.851140+00:00",
   "mf_index": {
     "score": 71,
     "components": {
       "ridership_norm": 72.7,
       "fuel_norm": 100,
-      "wfh_adoption": 59.6
+      "wfh_adoption": 59.7
     },
     "interpretation": "Near-normal mobility",
     "reference_points": {
@@ -692,14 +692,9 @@
     ]
   },
   "fuel": {
-    "latest_ron95": 4.32,
-    "latest_diesel": 5.07,
+    "latest_ron95": 4.42,
+    "latest_diesel": 5.27,
     "history": [
-      {
-        "date": "2026-06-11",
-        "ron95": 3.72,
-        "diesel": 4.67
-      },
       {
         "date": "2026-06-18",
         "ron95": 3.72,
@@ -794,6 +789,11 @@
         "date": "2026-10-22",
         "ron95": 4.32,
         "diesel": 5.07
+      },
+      {
+        "date": "2026-10-29",
+        "ron95": 4.42,
+        "diesel": 5.27
       }
     ],
     "historical_extended": [
@@ -958,8 +958,8 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 196,
-    "adoption_estimate_pct": 59.6
+    "days_active": 197,
+    "adoption_estimate_pct": 59.7
   },
   "api_sources": {
     "ridership": "api.data.gov.my · ridership_headline · no auth",
