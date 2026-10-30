@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-29T20:50:25.851140+00:00",
+  "updated_at": "2026-10-30T20:21:57.344872+00:00",
   "mf_index": {
     "score": 71,
     "components": {
       "ridership_norm": 72.7,
       "fuel_norm": 100,
-      "wfh_adoption": 59.7
+      "wfh_adoption": 59.8
     },
     "interpretation": "Near-normal mobility",
     "reference_points": {
@@ -958,8 +958,8 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 197,
-    "adoption_estimate_pct": 59.7
+    "days_active": 198,
+    "adoption_estimate_pct": 59.8
   },
   "api_sources": {
     "ridership": "api.data.gov.my · ridership_headline · no auth",
