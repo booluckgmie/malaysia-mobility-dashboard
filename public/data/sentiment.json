@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-10-31T19:41:53.802127+00:00",
+  "generated_at": "2026-11-01T20:07:58.145964+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
-  "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 74,
-  "summary": "Mobility is returning to near‑normal levels (MF‑Index 71) and fuel prices remain high, curbing travel demand. Public transport ridership is recovering but still below pre‑pandemic levels, while actual fuel savings from work‑from‑home are far below the theoretical ceiling. High‑mobility sectors such as logistics and construction pose economic and environmental risks that need targeted policy attention.",
+  "overall_sentiment": "cautiously_negative",
+  "overall_score": 58,
+  "summary": "Mobility is returning to near‑normal levels (MF‑Index 71) but fuel price pressures remain high and actual fuel savings are far below the theoretical ceiling. Public transport ridership is recovering yet still 10% below the 2025 benchmark, while high‑risk sectors show limited work‑from‑home adoption, raising economic and equity concerns.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
-      "score": 30,
+      "score": 20,
       "dir": "negative",
-      "detail": "Although the modelled ceiling suggests 35.7 M L/week could be saved, only 0.334 M L were actually saved in the first week of the mandate, indicating very low compliance and limited real‑world fuel‑saving impact."
+      "detail": "Only 334,000 litres were saved in the first week of the mandate, less than 1% of the modelled ceiling of 35.7 M L/week, indicating a large compliance gap despite a 100/100 fuel policy component."
     },
     {
       "dimension": "pt_ridership_effects",
       "score": 70,
-      "dir": "positive",
-      "detail": "Daily PT trips reached 1.24 M, reflecting a rebound toward the 2019 level (≈1.43 M daily) and supporting the ridership component of 72.7/100, but further growth is needed to fully restore pre‑pandemic volumes."
+      "dir": "neutral",
+      "detail": "Daily PT trips total 1,235,713, projecting to about 451 M trips annually—roughly 10% below the 2025 recovery level of 506 M, showing a modest rebound but still short of pre‑pandemic demand."
     },
     {
       "dimension": "economic_risk",
-      "score": 45,
+      "score": 55,
       "dir": "negative",
-      "detail": "Sectors with the highest mobility scores (logistics 92, construction 95, retail 85) remain at high risk of congestion, emissions and supply‑chain strain, offsetting the benefits of higher fuel prices."
+      "detail": "Retail & Services, Logistics and Construction exhibit mobility scores above 85 with WFH rates under 15%, exposing these sectors to fuel price volatility and congestion risks as the economy normalises."
     },
     {
       "dimension": "policy_equity",
-      "score": 40,
+      "score": 45,
       "dir": "negative",
-      "detail": "Work‑from‑home adoption is uneven: public & GLCs at 60% versus retail (15%), logistics (8%) and construction (5%). This disparity concentrates travel burden on lower‑wage, high‑mobility workers and raises equity concerns."
+      "detail": "WFH adoption is uneven—public & GLCs at 60% versus Construction at 5%—creating disparate exposure to commuting costs and limiting the fairness of the current mandate."
     },
     {
       "dimension": "long_term_modal_shift",
-      "score": 55,
+      "score": 65,
       "dir": "neutral",
-      "detail": "Elevated fuel prices (RON95 RM4.42/L) create incentives for a shift to public transport, yet PT capacity constraints and modest ridership recovery limit the magnitude of a lasting modal transition."
+      "detail": "High fuel prices (RON95 RM 4.42/L) and a perfect fuel‑policy score suggest price‑driven incentives for modal shift, yet the MF‑Index remains near‑normal and PT ridership has not fully capitalised on this pressure."
     }
   ],
-  "recommendation": "Introduce targeted incentives for remote work in logistics, retail and construction to raise sectoral WFH rates to at least 30% by Q2 2027, and implement a fuel‑efficiency rebate that aims for a verified weekly saving of 2 M L. Simultaneously, expand PT capacity and subsidise fares to lift daily ridership to 1.5 M trips by end‑2027, while monitoring equity impacts across sectors.",
-  "data_date": "2026-10-31",
+  "recommendation": "Introduce targeted WFH incentives for Logistics, Retail & Services, and Construction to raise sectoral WFH rates to at least 30% by Q2 2027, coupled with a graduated fuel‑tax rebate for commuters who shift to public transport. Aim to lift daily PT trips to 1.35 M (≈480 M annually) and achieve a minimum 5% real fuel‑saving benchmark within the next six months.",
+  "data_date": "2026-11-01",
   "alert": null
 }
