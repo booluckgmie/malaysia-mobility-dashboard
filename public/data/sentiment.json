@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-11-02T23:18:14.554922+00:00",
+  "generated_at": "2026-11-03T21:28:57.547625+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
-  "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 68,
-  "summary": "Mobility is returning toward pre‑pandemic levels with an MF‑Index of 71, but public transport ridership remains about 14% below 2019 levels and actual fuel savings are far below the theoretical ceiling. High‑risk sectors such as retail, logistics and construction continue to show very high mobility scores, signalling exposure to congestion and emissions risks.",
+  "overall_sentiment": "cautiously_negative",
+  "overall_score": 45,
+  "summary": "Malaysia's mobility is stabilising at a MF-Index of 71, but fuel‑saving outcomes are far below targets and public transport ridership remains below pre‑pandemic levels. High‑risk sectors such as logistics and construction continue to drive mobility, raising economic and environmental concerns.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
-      "score": 30,
+      "score": 20,
       "dir": "negative",
-      "detail": "While the modelled ceiling suggests 35.7 M L/week could be saved, only 334 k L were actually saved in the first week of the mandate, representing less than 1% of the target and indicating minimal real‑world impact on fuel consumption."
+      "detail": "The theoretical ceiling of 35.7 million litres saved per week contrasts sharply with the measured 334,000 litres in the first week, indicating a compliance gap despite a perfect fuel‑policy component score."
     },
     {
       "dimension": "pt_ridership_effects",
       "score": 65,
       "dir": "neutral",
-      "detail": "Daily PT trips total 1.24 M, roughly 14% below the pre‑pandemic average of 1.43 M. The ridership component of the MF‑Index (72.7) shows modest recovery, but further incentives are needed to close the gap."
+      "detail": "Daily PT trips total 1.24 million, roughly 13% below the pre‑pandemic daily average (~1.43 million), suggesting modest recovery but insufficient to offset rising private‑vehicle use."
     },
     {
       "dimension": "economic_risk",
       "score": 45,
       "dir": "negative",
-      "detail": "Retail & Services, Logistics and Construction sectors report mobility scores of 85‑95 and WFH rates under 15%, exposing the economy to congestion, higher fuel demand and potential productivity losses if traffic conditions worsen."
+      "detail": "Mobility scores above 85 in logistics, construction and retail signal high travel intensity, exposing the economy to congestion, higher logistics costs and emission penalties."
     },
     {
       "dimension": "policy_equity",
-      "score": 50,
-      "dir": "neutral",
-      "detail": "WFH adoption is uneven: public & GLC employees enjoy 60% WFH, whereas high‑risk private sectors are below 15%. This disparity limits the overall effectiveness of the remote‑work mandate and raises equity concerns."
+      "score": 40,
+      "dir": "negative",
+      "detail": "WFH adoption is uneven: public sector reaches 60% (low risk) while retail and logistics lag at 15% and 8% respectively, creating inequitable exposure to mobility‑related costs."
     },
     {
       "dimension": "long_term_modal_shift",
       "score": 55,
       "dir": "neutral",
-      "detail": "Elevated fuel prices (RON95 RM4.42/L, diesel RM5.27/L) could encourage a shift to public transport or low‑emission modes, yet low actual fuel savings and high private‑sector mobility suggest the shift is not yet materialising."
+      "detail": "Elevated fuel prices (RON95 RM4.42/L) could incentivise a shift to mass transit, yet low fuel‑saving performance and stagnant PT ridership limit the momentum of a lasting modal transition."
     }
   ],
-  "recommendation": "Introduce sector‑specific WFH targets – at least 30% for Retail & Services, Logistics and Construction by Q2 2027 – coupled with a modest PT fare subsidy for commuters in high‑mobility zones. Complement these measures with a fuel‑tax rebate for low‑emission vehicle purchases to accelerate modal shift and improve equity.",
-  "data_date": "2026-11-02",
+  "recommendation": "Introduce tiered WFH incentives for high‑mobility sectors aiming for at least 30% adoption in logistics and construction within 12 months, and pair them with a 10% fare subsidy for PT to boost daily ridership above 1.3 million trips. Simultaneously, enforce quarterly fuel‑efficiency reporting for large fleets to close the compliance gap.",
+  "data_date": "2026-11-03",
   "alert": null
 }
