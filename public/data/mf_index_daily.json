@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T21:28:47.170582+00:00",
+  "updated_at": "2026-11-04T21:42:12.159520+00:00",
   "mf_index": {
     "score": 71,
     "components": {
@@ -692,14 +692,9 @@
     ]
   },
   "fuel": {
-    "latest_ron95": 4.42,
-    "latest_diesel": 5.27,
+    "latest_ron95": 4.27,
+    "latest_diesel": 5.12,
     "history": [
-      {
-        "date": "2026-06-18",
-        "ron95": 3.72,
-        "diesel": 4.37
-      },
       {
         "date": "2026-06-25",
         "ron95": 3.47,
@@ -794,6 +789,11 @@
         "date": "2026-10-29",
         "ron95": 4.42,
         "diesel": 5.27
+      },
+      {
+        "date": "2026-11-05",
+        "ron95": 4.27,
+        "diesel": 5.12
       }
     ],
     "historical_extended": [
@@ -958,7 +958,7 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 202,
+    "days_active": 203,
     "adoption_estimate_pct": 60.0
   },
   "api_sources": {
