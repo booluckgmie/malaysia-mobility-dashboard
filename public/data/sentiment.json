@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-11-06T21:15:25.200179+00:00",
+  "generated_at": "2026-11-07T19:51:31.116809+00:00",
   "model": "openai/gpt-oss-120b",
   "source": "groq",
   "overall_sentiment": "cautiously_optimistic",
-  "overall_score": 60,
-  "summary": "Mobility is returning to near‑normal levels (MF‑Index 71) and fuel prices remain high, but the work‑from‑home mandate is delivering only a fraction of its projected fuel savings. Public transport ridership is modestly below pre‑pandemic levels, while high‑mobility, low‑WFH sectors pose economic and environmental risks.",
+  "overall_score": 76,
+  "summary": "Mobility is near normal with an MF-Index of 71 and strong fuel‑policy scores, but public transport ridership remains below pre‑pandemic levels and actual fuel savings are far short of the theoretical ceiling. High mobility scores in logistics, construction and retail pose economic and environmental risks that require targeted policy action.",
   "signals": [
     {
       "dimension": "fuel_savings_impact",
-      "score": 20,
+      "score": 30,
       "dir": "negative",
-      "detail": "Only 334,000 litres were saved in the first week of the mandate, roughly 1% of the modelled ceiling of 35.7 M L/week, indicating that the policy’s fuel‑saving impact is currently negligible despite a 100‑point fuel policy component."
+      "detail": "The modelled ceiling of 35.7 million litres saved per week contrasts sharply with the measured 0.334 million litres in the first week of the mandate, indicating very low real‑world compliance despite a perfect fuel‑policy component score."
     },
     {
       "dimension": "pt_ridership_effects",
       "score": 65,
       "dir": "neutral",
-      "detail": "Daily PT trips total 1.24 M, about 13% below the pre‑pandemic daily average (~1.43 M). The ridership component of the MF‑Index sits at 72.7, suggesting a moderate but not yet critical dip in public‑transport usage."
+      "detail": "Daily PT trips total 1.24 million, yielding a ridership component of 72.7. This is still about 15 % below the 2025 recovery level and the 2019 baseline, suggesting modest recovery but insufficient to offset rising fuel consumption."
     },
     {
       "dimension": "economic_risk",
-      "score": 45,
+      "score": 40,
       "dir": "negative",
-      "detail": "Retail & Services, Logistics, and Construction show mobility scores of 85‑95 with WFH rates under 15%, flagging high exposure to congestion, fuel cost volatility, and productivity losses in sectors that drive the economy."
+      "detail": "Logistics, construction and retail sectors show mobility scores above 90 and are classified as high risk, implying continued pressure on road networks, congestion and emissions while these sectors lag in WFH adoption."
     },
     {
       "dimension": "policy_equity",
-      "score": 40,
+      "score": 45,
       "dir": "negative",
-      "detail": "While overall WFH adoption is 60%, it is uneven: public & GLCs enjoy 60% WFH, but high‑risk sectors lag at 5‑15%, creating an inequitable distribution of mobility burden and limiting the policy’s overall effectiveness."
+      "detail": "WFH adoption varies widely—from 60 % in public/GLC jobs to under 10 % in logistics, construction and retail—creating unequal exposure to fuel costs and commuting burdens across the workforce."
     },
     {
       "dimension": "long_term_modal_shift",
       "score": 55,
       "dir": "neutral",
-      "detail": "Elevated RON95 (RM4.27) and diesel (RM5.12) prices could encourage a shift to mass transit, yet ridership remains below pre‑COVID levels and fuel‑saving outcomes are minimal, indicating only a tentative move toward modal change."
+      "detail": "High RON95 price (RM4.27/L) could incentivise a shift to mass transit, yet ridership growth is modest and high‑risk sectors remain car‑dependent, limiting the expected modal shift."
     }
   ],
-  "recommendation": "Strengthen compliance monitoring for the WFH mandate in high‑mobility sectors, targeting at least 30% WFH in Retail, Logistics and Construction within six months. Pair this with a graduated fuel‑tax rebate for firms that achieve verified reductions in vehicle kilometres. Simultaneously, boost PT incentives (fare discounts, service frequency) to close the 13% ridership gap by end‑2027.",
-  "data_date": "2026-11-06",
+  "recommendation": "Introduce tiered WFH incentives for logistics, construction and retail to raise sectoral adoption to at least 30 % within six months, and complement this with targeted fuel‑efficiency subsidies for commercial fleets. Simultaneously, boost PT service frequency and fare discounts in high‑traffic corridors to accelerate ridership recovery and reduce reliance on private vehicles.",
+  "data_date": "2026-11-07",
   "alert": null
 }
