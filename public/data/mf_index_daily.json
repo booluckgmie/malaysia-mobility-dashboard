@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T02:44:12.261982+00:00",
+  "updated_at": "2026-11-25T00:18:59.450935+00:00",
   "mf_index": {
     "score": 72,
     "components": {
@@ -958,7 +958,7 @@
   },
   "wfh_policy": {
     "start_date": "2026-04-15",
-    "days_active": 223,
+    "days_active": 224,
     "adoption_estimate_pct": 60.0
   },
   "api_sources": {
